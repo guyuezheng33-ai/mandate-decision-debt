@@ -3,17 +3,17 @@
 > 每条工作项都应该说得出**是谁、在哪份文档、什么时候**授权了它 —— 以及那份授权**今天还算不算数**。
 > 说不出来的时候，这个缺口就是 Decision Debt，0–100 分。
 
-Mandate 是一个 Forge 应用：审计每条 Jira 工作项背后的授权边（谁、哪份页面、何时），按六条条件检查该授权在 *t* 时刻是否仍成立，把未满足条件用三值证据量化为 0–100 的 Decision Debt，并给出一个 owner 级动作；只有 `absent` 触发 finding，打分确定性、基线可复现，P50 低于 300ms。
+Mandate 是一个 Forge 应用：审计每条 Jira 工作项背后的授权边（谁、哪份页面、何时），按六条条件检查该授权在 *t* 时刻是否仍成立，把未满足条件用三值证据量化为 0–100 的 Decision Debt，并给出一个 owner 级动作；只有 `absent` 触发 finding，打分确定性、基线可复现，打分预算 300ms（开发机实测 42.9ms）。
 
 完整定义（形式化模型、品类、价值、证明义务）见 [`docs/PRODUCT-DEFINITION.md`](docs/PRODUCT-DEFINITION.md)。
 
-为 Atlassian Codegeist 2026 而写。主用户是 **交付负责人**：手上同时跑 3–8 条工作线，每周都要回答一次"这个东西为什么在做"。
+为 Atlassian Codegeist 2026 而写。主用户是 **交付负责人**：手上同时跑多条工作线，每周都要回答一次"这个东西为什么在做"。
 
 ---
 
 ## 它做什么
 
-四个入口，一套判据：
+多个入口，一套判据：
 
 | 入口 | 它回答的问题 |
 |---|---|
@@ -22,7 +22,9 @@ Mandate 是一个 Forge 应用：审计每条 Jira 工作项背后的授权边�
 | Rovo agent | 这个项目里哪些工作，压在需要重新确认的证据上？ |
 | MCP（Cursor / Claude） | 同一套判据，在 IDE 里直接调。 |
 
-四个入口都调同三个只读 action（`get-issue-provenance` / `list-context-debt` / `trace-drift`）；面板经 `@forge/resolver` 进，agent 与 MCP 经 `action` 模块进。没有任何东西算两遍，也没有任何东西在提示词里算。
+项目页模块在 manifest 中；team-managed 项目 Jira 不暴露项目页槽位，所以图库里的项目页是标了 `Sample data` 的 fixture。真实租户跑通的是 issue panel、Rovo agent、MCP 三个入口。
+
+这些入口都调同三个只读 action（`get-issue-provenance` / `list-context-debt` / `trace-drift`）；面板经 `@forge/resolver` 进，agent 与 MCP 经 `action` 模块进。没有任何东西算两遍，也没有任何东西在提示词里算。
 
 ## 六条判据（事实，不是模型猜测）
 
