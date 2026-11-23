@@ -1,0 +1,172 @@
+# Mandate — 决策台账
+# app.id 需要在 forge register 之后回填；图标已作为资源随包（assets/icon-48.png），不依赖公网 URL。
+# Rovo 的三条工具不是"函数名"，而是 action：action 才是 Agent / MCP 能调用的单位，
+# rovo:mcp.tools 里列的必须是 action 的 key（见 manifest-reference/modules/rovo-action）。
+
+app:
+  id: ari:cloud:ecosystem::app/c3df8fe6-3626-4829-9025-47d55b1bde54
+  runtime:
+    name: nodejs22.x
+
+modules:
+  function:
+    # 面板 + 四个 resolver action（call.functionKey 分派）
+    - key: mandate-resolver
+      handler: index.handler
+    # Rovo action 的入口：每个 action 一个函数，payload 是扁平输入而不是 functionKey
+    - key: mandate-act-provenance
+      handler: agent/handlers.getIssueProvenance
+    - key: mandate-act-project
+      handler: agent/handlers.listContextDebt
+    - key: mandate-act-drift
+      handler: agent/handlers.traceDrift
+
+  # 入口 1：单条工作的依据链（主叙事就在这一屏）
+  jira:issuePanel:
+    - key: mandate-issue-panel
+      resource: main
+      resolver:
+        function: mandate-resolver
+      title: Mandate · Decision Debt
+      icon: resource:assets;icon-48.png
+
+  # 入口 1b：项目页——同一台引擎的项目视角（覆盖率第一行，再给排序）
+  jira:projectPage:
+    - key: mandate-project-page
+      resource: main
+      resolver:
+        function: mandate-resolver
+      title: Mandate · project context debt
+      icon: resource:assets;icon-48.png
+
+  # 入口 2 / 3 的执行单位：三个只读 action
+  action:
+    - key: get-issue-provenance
+      name: Get issue provenance
+      function: mandate-act-provenance
+      actionVerb: GET
+      description: >
+        Return the evidence chain behind one Jira work item: which pages
+        authorise it, when they last changed, who contributed, and which goal it
+        serves — plus a Decision Debt score with the finding that produced it.
+      inputs:
+        issueKey:
+          title: Jira issue key
+          type: string
+          required: true
+          description: The work item to audit, for example KAN-3.
+        profile:
+          title: Lens
+          type: string
+          required: false
+          description: One of software, launch, portfolio. Defaults to software.
+        lang:
+          title: Language
+          type: string
+          required: false
+          description: en or zh. Defaults to en.
+
+    - key: list-context-debt
+      name: List project context debt
+      function: mandate-act-project
+      actionVerb: GET
+      description: >
+        Score a whole project in one pass: aggregate Decision Debt, coverage,
+        and the top items ordered by debt. One query, never one query per work
+        item.
+      inputs:
+        projectKey:
+          title: Jira project key
+          type: string
+          required: true
+          description: The project to scan, for example KAN.
+        limit:
+          title: Max items
+          type: integer
+          required: false
+          description: Up to 50 work items. Defaults to 25.
+        profile:
+          title: Lens
+          type: string
+          required: false
+          description: One of software, launch, portfolio.
+        lang:
+          title: Language
+          type: string
+          required: false
+          description: en or zh.
+
+    - key: trace-drift
+      name: Trace decision drift
+      function: mandate-act-drift
+      actionVerb: GET
+      description: >
+        Compare the day a decision record last changed with the day the work
+        started, and state how long the change went unconfirmed. Returns the two
+        dates rather than a verdict.
+      inputs:
+        issueKey:
+          title: Jira issue key
+          type: string
+          required: true
+          description: The work item whose decision chain should be compared.
+        profile:
+          title: Lens
+          type: string
+          required: false
+          description: One of software, launch, portfolio.
+        lang:
+          title: Language
+          type: string
+          required: false
+          description: en or zh.
+
+  # 入口 2：Rovo agent（Best Agents）
+  rovo:agent:
+    - key: mandate-context-auditor
+      name: Context Auditor
+      description: Answers "which decision does this work rest on, and does it still
+        hold today" — and returns one action a named owner can take.
+      prompt: resource:prompt;prompt.md
+      conversationStarters:
+        - Which work in this project is resting on evidence that needs
+          re-confirmation?
+        - Why is KAN-3 flagged?
+        - When did this decision record last change, and who re-confirmed it?
+      actions:
+        - get-issue-provenance
+        - list-context-debt
+        - trace-drift
+
+  # 入口 3：MCP（Best MCP）。一个 app 只能有一个 rovo:mcp，最多 50 个 tool。
+  # tools 里列的是 action key，不是函数名。
+  rovo:mcp:
+    - key: mandate-mcp
+      name: Mandate
+      tools:
+        - get-issue-provenance
+        - list-context-debt
+        - trace-drift
+
+resources:
+  - key: main
+    path: src/ui
+  # prompt 作为资源：manifest 里只放引用，长文本不进 manifest（也有助于过 manifest 体积限制）
+  - key: prompt
+    path: src/agent
+  # 图标随包走，不依赖公网 URL：少一个账号项，也少一个评审时 404 的可能
+  - key: assets
+    path: assets
+
+permissions:
+  scopes:
+    # 读取工作项与链接（降级路径也要它）
+    - read:jira-work
+    # Teamwork Graph：按对象粒度授权，缺一个就降级而不是报错
+    - read:graph:issue:jira
+    - read:graph:user:atlassian
+    # team scope 不申请：P6 只数复核痕迹里的具体人，不需要团队名册；
+    # 没有代码消费的权限不写在 manifest 里（评审会问"你要它干什么"）。
+    # - read:graph:team:atlassian
+    # 第 13 项（门控功能）：留痕写入。v1 先不申请，做完前 12 项验收再打开
+    # - write:jira-work

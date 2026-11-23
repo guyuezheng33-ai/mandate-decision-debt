@@ -1,0 +1,33 @@
+{
+  "schema": "mandate/incremental-eval@1",
+  "cache": "C:\\Users\\Admin\\AppData\\Local\\Temp\\mandate-eval-cache.json",
+  "key": "issue_key",
+  "watermark_column": "updated",
+  "first_run": {
+    "rows": 21,
+    "processed": 21,
+    "reused": 0
+  },
+  "second_run": {
+    "rows": 21,
+    "processed": 0,
+    "reused": 21
+  },
+  "one_new_row": {
+    "rows": 22,
+    "processed": 1,
+    "reused": 21
+  },
+  "scale_10x": {
+    "rows": 210,
+    "first_processed": 210,
+    "second_processed": 0,
+    "second_reused": 210
+  },
+  "invariants": {
+    "second_run_zero_new": true,
+    "one_new_row_only_one": true,
+    "scale_second_zero_new": true,
+    "reused_equals_total": true
+  }
+}

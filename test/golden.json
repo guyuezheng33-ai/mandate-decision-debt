@@ -1,0 +1,191 @@
+{
+  "KAN-3": {
+    "software": {
+      "debt": 28,
+      "grade": "watch",
+      "flags": [
+        "P2",
+        "P6"
+      ],
+      "coverage": {
+        "known": 3,
+        "total": 3,
+        "ratio": 1
+      }
+    },
+    "launch": {
+      "debt": 28,
+      "grade": "watch",
+      "flags": [
+        "P2",
+        "P6"
+      ],
+      "coverage": {
+        "known": 3,
+        "total": 3,
+        "ratio": 1
+      }
+    },
+    "portfolio": {
+      "debt": 22,
+      "grade": "watch",
+      "flags": [
+        "P2",
+        "P6"
+      ],
+      "coverage": {
+        "known": 3,
+        "total": 3,
+        "ratio": 1
+      }
+    }
+  },
+  "KAN-7": {
+    "software": {
+      "debt": 43,
+      "grade": "at_risk",
+      "flags": [
+        "P4",
+        "P3",
+        "P5"
+      ],
+      "coverage": {
+        "known": 3,
+        "total": 3,
+        "ratio": 1
+      }
+    },
+    "launch": {
+      "debt": 44,
+      "grade": "at_risk",
+      "flags": [
+        "P3",
+        "P4",
+        "P5"
+      ],
+      "coverage": {
+        "known": 3,
+        "total": 3,
+        "ratio": 1
+      }
+    },
+    "portfolio": {
+      "debt": 51,
+      "grade": "at_risk",
+      "flags": [
+        "P4",
+        "P3",
+        "P5"
+      ],
+      "coverage": {
+        "known": 3,
+        "total": 3,
+        "ratio": 1
+      }
+    }
+  },
+  "KAN-9": {
+    "software": {
+      "debt": 25,
+      "grade": "watch",
+      "flags": [
+        "P1"
+      ],
+      "coverage": {
+        "known": 3,
+        "total": 3,
+        "ratio": 1
+      }
+    },
+    "launch": {
+      "debt": 25,
+      "grade": "watch",
+      "flags": [
+        "P1"
+      ],
+      "coverage": {
+        "known": 3,
+        "total": 3,
+        "ratio": 1
+      }
+    },
+    "portfolio": {
+      "debt": 25,
+      "grade": "watch",
+      "flags": [
+        "P1"
+      ],
+      "coverage": {
+        "known": 3,
+        "total": 3,
+        "ratio": 1
+      }
+    }
+  },
+  "KAN-20": {
+    "software": {
+      "debt": 0,
+      "grade": "healthy",
+      "flags": [],
+      "coverage": {
+        "known": 3,
+        "total": 3,
+        "ratio": 1
+      }
+    },
+    "launch": {
+      "debt": 22,
+      "grade": "watch",
+      "flags": [
+        "P3"
+      ],
+      "coverage": {
+        "known": 3,
+        "total": 3,
+        "ratio": 1
+      }
+    },
+    "portfolio": {
+      "debt": 0,
+      "grade": "healthy",
+      "flags": [],
+      "coverage": {
+        "known": 3,
+        "total": 3,
+        "ratio": 1
+      }
+    }
+  },
+  "KAN-11": {
+    "software": {
+      "debt": 0,
+      "grade": "unknown",
+      "flags": [],
+      "coverage": {
+        "known": 0,
+        "total": 3,
+        "ratio": 0
+      }
+    },
+    "launch": {
+      "debt": 0,
+      "grade": "unknown",
+      "flags": [],
+      "coverage": {
+        "known": 0,
+        "total": 3,
+        "ratio": 0
+      }
+    },
+    "portfolio": {
+      "debt": 0,
+      "grade": "unknown",
+      "flags": [],
+      "coverage": {
+        "known": 0,
+        "total": 3,
+        "ratio": 0
+      }
+    }
+  }
+}

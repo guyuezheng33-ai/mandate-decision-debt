@@ -1,0 +1,49 @@
+{
+  "key": "KAN-7",
+  "summary": "Auto-close dormant customer portals",
+  "projectKey": "KAN",
+  "status": "In Progress",
+  "statusCategory": "indeterminate",
+  "created": "2026-07-11T04:00:00.000Z",
+  "updated": "2026-11-17T08:30:00.000Z",
+  "asOf": "2026-11-17T08:30:00.000Z",
+  "inProgressSince": "2026-07-14T01:00:00.000Z",
+  "lastConfirmAt": "2026-11-05T02:00:00.000Z",
+  "lastReopenedAt": "2026-11-16T03:00:00.000Z",
+  "reopenedCount": 3,
+  "source": "fixture",
+  "edges": {
+    "decisions": {
+      "state": "present",
+      "items": [
+        {
+          "id": "page-9102",
+          "title": "Portal lifecycle policy — close after 60 days idle",
+          "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/9102",
+          "updated": "2026-11-02T05:00:00.000Z",
+          "owner": "acc-1123",
+          "contributors": ["acc-1123", "acc-3388"]
+        },
+        {
+          "id": "page-9310",
+          "title": "Portal lifecycle policy — close after 180 days idle",
+          "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/9310",
+          "updated": "2026-10-19T09:00:00.000Z",
+          "owner": "acc-4401",
+          "contributors": ["acc-4401", "acc-5520"]
+        }
+      ]
+    },
+    "goals": {
+      "state": "present",
+      "items": [{ "id": "goal-310", "title": "Cut idle infrastructure cost", "status": "completed" }]
+    },
+    "reviewTraces": {
+      "state": "present",
+      "items": [
+        { "pageId": "page-9102", "actorId": "acc-3388", "at": "2026-11-03T02:00:00.000Z" },
+        { "pageId": "page-9310", "actorId": "acc-5520", "at": "2026-10-21T02:00:00.000Z" }
+      ]
+    }
+  }
+}

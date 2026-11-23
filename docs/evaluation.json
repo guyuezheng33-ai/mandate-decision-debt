@@ -1,0 +1,95 @@
+{
+  "schema": "mandate/authority-eval@1",
+  "as_of": "2026-11-20",
+  "caveat": "human_label 是生成器同源标签，不是真人校准；本评估只证明管道自洽，不证明判断正确。",
+  "input": {
+    "path": "D:\\桌面\\Codegeist 2026\\data-inbox\\site\\seed-21.csv",
+    "rows": 21,
+    "positives": 17,
+    "negatives": 4,
+    "holdout_rate": 0.2
+  },
+  "point": {
+    "f1": 1,
+    "precision": 1,
+    "recall": 1,
+    "accuracy": 1,
+    "n": 21
+  },
+  "baseline": {
+    "always_flag": {
+      "f1": 0.895,
+      "precision": 0.81,
+      "recall": 1,
+      "accuracy": 0.81
+    },
+    "no_evidence_rule": {
+      "f1": 0.211,
+      "precision": 1,
+      "recall": 0.118,
+      "accuracy": 0.286
+    },
+    "tuned_debt_threshold": {
+      "threshold": 0,
+      "train_f1": 1,
+      "holdout_f1": 1
+    }
+  },
+  "interval": {
+    "metric": "f1_engine_minus_always_flag",
+    "diff": 0.105,
+    "ci_low": 0.024,
+    "ci_high": 0.235,
+    "rounds": 5000,
+    "seed": 20261122
+  },
+  "out_of_sample": {
+    "split": "time_holdout_by_updated",
+    "train_n": 16,
+    "holdout_n": 5,
+    "engine_train_f1": 1,
+    "engine_holdout_f1": 1,
+    "baseline_holdout_f1": 0.889,
+    "tuned_holdout_f1": 1
+  },
+  "robustness": {
+    "identification": "P2 counterfactual: move every decision-page update before execution start",
+    "p2_cases": 6,
+    "p2_flipped": 6,
+    "p2_flip_rate": 1,
+    "per_project": [
+      {
+        "project": "DEL",
+        "n": 7,
+        "f1": 1,
+        "positives": 6
+      },
+      {
+        "project": "PAY",
+        "n": 7,
+        "f1": 1,
+        "positives": 6
+      },
+      {
+        "project": "OPS",
+        "n": 7,
+        "f1": 1,
+        "positives": 5
+      }
+    ],
+    "lens_f1": [
+      {
+        "lens": "software",
+        "f1": 1
+      },
+      {
+        "lens": "launch",
+        "f1": 1
+      },
+      {
+        "lens": "portfolio",
+        "f1": 1
+      }
+    ]
+  }
+}

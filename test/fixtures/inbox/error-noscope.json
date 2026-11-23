@@ -1,0 +1,24 @@
+{
+  "errors": [
+    {
+      "message": "Scope 'read:graph:page:confluence' is not granted for this installation.",
+      "extensions": {
+        "code": "E_SCOPE",
+        "statusCode": 403,
+        "scope": "read:graph:page:confluence",
+        "queryKey": "MANDATE_QK_BUNDLE",
+        "requestId": "req-e3c0a347"
+      },
+      "path": [
+        "customQuery"
+      ]
+    }
+  ],
+  "data": {
+    "customQuery": null
+  },
+  "extensions": {
+    "requestId": "req-e3c0a347",
+    "traceId": "trace-4619f1db"
+  }
+}

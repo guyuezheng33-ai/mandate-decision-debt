@@ -1,0 +1,75 @@
+{
+  "data": {
+    "customQuery": {
+      "edges": [
+        {
+          "node": {
+            "columns": [
+              {
+                "key": "issue",
+                "value": {
+                  "__typename": "CypherQueryResultListNode",
+                  "nodes": [
+                    {
+                      "id": "DEL-101",
+                      "data": {
+                        "__typename": "JiraIssue",
+                        "title": "Checkout split — tax service cutover"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "key": "decisions",
+                "value": {
+                  "__typename": "CypherQueryResultListNode",
+                  "nodes": [
+                    {
+                      "id": "page-1001",
+                      "data": {
+                        "__typename": "ConfluencePage",
+                        "title": "Checkout split: tax service cutover (decision)",
+                        "webUrl": "https://SITE_ID.atlassian.net/wiki/spaces/DEL-DECISIONS/pages/1001/checkout-split-tax-service-cutover-decision"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "key": "goals",
+                "value": {
+                  "__typename": "CypherQueryResultListNode",
+                  "nodes": [
+                    {
+                      "id": "G-DEL-1",
+                      "data": {
+                        "__typename": "Goal",
+                        "title": "Delivery Platform · H2 reliability"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "key": "reviewTraces",
+                "value": {
+                  "__typename": "CypherQueryResultListNode",
+                  "nodes": []
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "pageInfo": {
+        "hasNextPage": false,
+        "endCursor": null
+      }
+    }
+  },
+  "extensions": {
+    "requestId": "req-0f79fd11",
+    "queryKey": "MANDATE_QK_BUNDLE"
+  }
+}

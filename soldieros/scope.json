@@ -1,0 +1,53 @@
+{
+ "schema": "soldieros/scope@1",
+ "problem": "每条 Jira 工作项能否说出授权依据，并把不可证的缺口量化为 0-100 Decision Debt",
+ "sample": {
+  "rule": [
+   "test/fixtures/inbox/seed-21.csv"
+  ],
+  "files": [
+   {
+    "rel": "test/fixtures/inbox/seed-21.csv",
+    "sha256": "282d34004a6d5c7ee28cc18a91e57d64a1ca7f3755f52f27a95a2d303f18ca99",
+    "rows": 21,
+    "columns": [
+     "issue_key",
+     "project",
+     "summary",
+     "status",
+     "status_category",
+     "created",
+     "updated",
+     "status_changed_at",
+     "reopened_count",
+     "reopen_events",
+     "decision_page_ids",
+     "decision_page_urls",
+     "decision_page_updated",
+     "decision_page_author",
+     "decision_page_contributor_count",
+     "goal_id",
+     "goal_status",
+     "goal_updated",
+     "reviewer_ids",
+     "review_event_dates",
+     "human_label",
+     "human_note"
+    ]
+   }
+  ],
+  "count": 1
+ },
+ "output": {
+  "fields": [
+   "issue_key",
+   "debt",
+   "grade",
+   "hit"
+  ],
+  "format": "json"
+ },
+ "digest": "9e5a08f6891f37eb5845758a3021dc463cddc942f8ad77d61fa214c228d23765",
+ "history": [],
+ "sign": ""
+}

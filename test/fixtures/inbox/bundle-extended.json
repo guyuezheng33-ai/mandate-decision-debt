@@ -1,0 +1,96 @@
+{
+  "data": {
+    "customQuery": {
+      "edges": [
+        {
+          "node": {
+            "columns": [
+              {
+                "key": "issue",
+                "value": {
+                  "__typename": "CypherQueryResultListNode",
+                  "nodes": [
+                    {
+                      "id": "DEL-101",
+                      "data": {
+                        "__typename": "JiraIssue",
+                        "title": "Checkout split — tax service cutover"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "key": "decisions",
+                "value": {
+                  "__typename": "CypherQueryResultListNode",
+                  "nodes": [
+                    {
+                      "id": "page-1001",
+                      "data": {
+                        "__typename": "ConfluencePage",
+                        "title": "Checkout split: tax service cutover (decision)",
+                        "webUrl": "https://SITE_ID.atlassian.net/wiki/spaces/DEL-DECISIONS/pages/1001/checkout-split-tax-service-cutover-decision",
+                        "lastModified": "2026-09-02T09:32:00.000+0000",
+                        "author": "user-a",
+                        "contributors": [
+                          "user-a",
+                          "user-b"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "key": "goals",
+                "value": {
+                  "__typename": "CypherQueryResultListNode",
+                  "nodes": [
+                    {
+                      "id": "G-DEL-1",
+                      "data": {
+                        "__typename": "Goal",
+                        "title": "Delivery Platform · H2 reliability",
+                        "status": "in_progress",
+                        "updated": "2026-10-02T09:22:00.000+0000",
+                        "id": "G-DEL-1"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "key": "reviewTraces",
+                "value": {
+                  "__typename": "CypherQueryResultListNode",
+                  "nodes": [
+                    {
+                      "id": "user-f-d6c8896b",
+                      "data": {
+                        "__typename": "AtlassianUser",
+                        "displayName": "user-f",
+                        "pageId": "page-1001",
+                        "accountId": "user-f",
+                        "at": "2026-09-03T09:47:00.000+0000"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "pageInfo": {
+        "hasNextPage": false,
+        "endCursor": null
+      }
+    }
+  },
+  "extensions": {
+    "requestId": "req-0f79fd11",
+    "queryKey": "MANDATE_QK_BUNDLE",
+    "tookMs": 41
+  }
+}

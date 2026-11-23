@@ -1,0 +1,48 @@
+{
+  "key": "KAN-20",
+  "summary": "Spring release announcement page",
+  "projectKey": "KAN",
+  "status": "In Progress",
+  "statusCategory": "indeterminate",
+  "created": "2026-09-18T02:00:00.000Z",
+  "updated": "2026-11-12T02:00:00.000Z",
+  "asOf": "2026-11-12T02:00:00.000Z",
+  "inProgressSince": "2026-10-01T02:00:00.000Z",
+  "lastConfirmAt": "2026-10-02T02:00:00.000Z",
+  "reopenedCount": 0,
+  "source": "fixture",
+  "edges": {
+    "decisions": {
+      "state": "present",
+      "items": [
+        {
+          "id": "page-7001",
+          "title": "Spring launch positioning",
+          "url": "https://example.atlassian.net/wiki/spaces/MKT/pages/7001",
+          "updated": "2026-09-20T02:00:00.000Z",
+          "owner": "acc-1123",
+          "contributors": ["acc-1123", "acc-4401"]
+        },
+        {
+          "id": "page-7002",
+          "title": "Spring launch message tier",
+          "url": "https://example.atlassian.net/wiki/spaces/MKT/pages/7002",
+          "updated": "2026-09-22T02:00:00.000Z",
+          "owner": "acc-4401",
+          "contributors": ["acc-4401", "acc-1199"]
+        }
+      ]
+    },
+    "goals": {
+      "state": "present",
+      "items": [{ "id": "goal-410", "title": "Launch spring release", "status": "in_progress" }]
+    },
+    "reviewTraces": {
+      "state": "present",
+      "items": [
+        { "pageId": "page-7001", "actorId": "acc-4401", "at": "2026-09-21T02:00:00.000Z" },
+        { "pageId": "page-7002", "actorId": "acc-1199", "at": "2026-09-23T02:00:00.000Z" }
+      ]
+    }
+  }
+}

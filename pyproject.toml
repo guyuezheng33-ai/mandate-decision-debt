@@ -1,0 +1,9 @@
+# 这是 Node/Forge 产品的 Python 侧工具清单，不是运行时依赖清单。
+# 产品运行时依赖全部锁在 package-lock.json（npm ci 可复现）。
+# 这里刻意声明 dependencies = []：没有 Python 运行时依赖，也不伪造依赖。
+[project]
+name = "mandate-decision-debt-tooling"
+version = "0.1.0"
+description = "Python-side tooling manifest for the Mandate Forge app; Node dependencies live in package-lock.json."
+requires-python = ">=3.11"
+dependencies = []

@@ -1,0 +1,4 @@
+﻿issueKey,hasEvidence,hasGoal,goalEnded,changeAfterStart,confirmedAfterChange,conflictSameTopic,reopenedCount,evidenceAfterLastReopen,singleContributor,secondReviewer,issueDone,note
+EXAMPLE-1,true,true,false,true,false,false,0,true,false,true,false,依据页改过但没人确认
+EXAMPLE-2,true,true,false,false,true,false,0,true,false,true,false,一切正常
+EXAMPLE-3,false,false,false,false,false,false,0,false,false,false,false,既没依据页也没目标

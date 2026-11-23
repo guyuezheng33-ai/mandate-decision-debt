@@ -1,0 +1,35 @@
+{
+  "key": "KAN-3",
+  "summary": "One-click archive for projects inactive over 90 days",
+  "projectKey": "KAN",
+  "status": "In Review",
+  "statusCategory": "indeterminate",
+  "created": "2026-06-02T09:12:00.000Z",
+  "updated": "2026-11-14T03:20:00.000Z",
+  "asOf": "2026-11-14T03:20:00.000Z",
+  "inProgressSince": "2026-06-20T02:00:00.000Z",
+  "lastConfirmAt": null,
+  "reopenedCount": 0,
+  "source": "fixture",
+  "edges": {
+    "decisions": {
+      "state": "present",
+      "items": [
+        {
+          "id": "page-8841",
+          "title": "Archive policy: archive anything inactive for 90 days",
+          "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/8841",
+          "updated": "2026-08-14T06:00:00.000Z",
+          "owner": "acc-1123",
+          "ownerName": "Alice Ng",
+          "contributors": ["acc-1123"]
+        }
+      ]
+    },
+    "goals": {
+      "state": "present",
+      "items": [{ "id": "goal-221", "title": "Reduce admin overhead by 30%", "status": "in_progress" }]
+    },
+    "reviewTraces": { "state": "absent", "items": [] }
+  }
+}

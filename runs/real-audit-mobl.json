@@ -1,0 +1,1035 @@
+{
+  "generatedAt": "2026-11-23T16:37:25.273Z",
+  "site": "https://one-atlas-ngpq.atlassian.net",
+  "project": "MOBL",
+  "sample": {
+    "requested": 8,
+    "fetched": 8
+  },
+  "counts": {
+    "stale": 1,
+    "missing": 7
+  },
+  "aggregate": {
+    "projectKey": "MOBL",
+    "profile": "software",
+    "itemCount": 8,
+    "countedCount": 8,
+    "unknownCount": 0,
+    "coverageRatio": 1,
+    "debt": 22,
+    "grade": "watch",
+    "certainty": 0.79,
+    "flaggedCount": 7,
+    "flaggedShare": 0.88,
+    "severeCount": 7,
+    "partialCount": 8,
+    "critical": 0,
+    "atRisk": 0,
+    "items": [
+      {
+        "issueKey": "MOBL-56",
+        "summary": "User Interface Revisions",
+        "status": "待办",
+        "profile": "software",
+        "debt": 25,
+        "authority": {
+          "state": "absent",
+          "verdict": "missing",
+          "owner": null,
+          "ownerName": null,
+          "kind": "page",
+          "title": null,
+          "url": null,
+          "updatedAt": null,
+          "lastConfirmAt": null,
+          "daysSinceUpdate": null,
+          "daysWithoutConfirm": null,
+          "contributors": null,
+          "decisionCount": 0
+        },
+        "grade": "watch",
+        "certainty": 0.81,
+        "partial": true,
+        "unknownWeight": 18,
+        "flagCount": 1,
+        "topFlag": {
+          "primitive": "P1",
+          "kind": "no_mandate",
+          "weight": 25
+        },
+        "flags": [
+          {
+            "primitive": "P1",
+            "kind": "no_mandate",
+            "severity": "high",
+            "weight": 25,
+            "label": "无依据",
+            "detail": "这项工作既没有关联的决策记录，也没有关联目标，等于没有任何\"为什么做\"的记录。",
+            "evidence": {
+              "issueKey": "MOBL-56",
+              "decisions": 0,
+              "goals": 0
+            },
+            "suggest": "把立项依据补成一份决策记录并关联；已有的评审记录直接挂上来即可。"
+          }
+        ],
+        "skipped": [
+          {
+            "primitive": "P5",
+            "kind": "rework_churn",
+            "label": "反复翻案",
+            "reason": "insufficient:issue-no-reopen-count"
+          },
+          {
+            "primitive": "P6",
+            "kind": "single_point_no_review",
+            "label": "单人且无复核",
+            "reason": "unknown:reviewTraces"
+          }
+        ],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "hit",
+            "label": "无依据",
+            "why": null
+          },
+          {
+            "p": "P2",
+            "w": 20,
+            "state": "clear",
+            "label": "变更未传导",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 15,
+            "state": "clear",
+            "label": "依据冲突",
+            "why": null
+          },
+          {
+            "p": "P4",
+            "w": 18,
+            "state": "clear",
+            "label": "目标漂移",
+            "why": null
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "unknown",
+            "label": "反复翻案",
+            "why": "issue-no-reopen-count"
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "unknown",
+            "label": "单人且无复核",
+            "why": "reviewTraces"
+          }
+        ],
+        "coverage": {
+          "known": 2,
+          "total": 3,
+          "ratio": 0.6666666666666666
+        },
+        "source": "rest",
+        "degraded": null
+      },
+      {
+        "issueKey": "MOBL-55",
+        "summary": "Implement Live call monitoring",
+        "status": "待办",
+        "profile": "software",
+        "debt": 25,
+        "authority": {
+          "state": "absent",
+          "verdict": "missing",
+          "owner": null,
+          "ownerName": null,
+          "kind": "page",
+          "title": null,
+          "url": null,
+          "updatedAt": null,
+          "lastConfirmAt": null,
+          "daysSinceUpdate": null,
+          "daysWithoutConfirm": null,
+          "contributors": null,
+          "decisionCount": 0
+        },
+        "grade": "watch",
+        "certainty": 0.81,
+        "partial": true,
+        "unknownWeight": 18,
+        "flagCount": 1,
+        "topFlag": {
+          "primitive": "P1",
+          "kind": "no_mandate",
+          "weight": 25
+        },
+        "flags": [
+          {
+            "primitive": "P1",
+            "kind": "no_mandate",
+            "severity": "high",
+            "weight": 25,
+            "label": "无依据",
+            "detail": "这项工作既没有关联的决策记录，也没有关联目标，等于没有任何\"为什么做\"的记录。",
+            "evidence": {
+              "issueKey": "MOBL-55",
+              "decisions": 0,
+              "goals": 0
+            },
+            "suggest": "把立项依据补成一份决策记录并关联；已有的评审记录直接挂上来即可。"
+          }
+        ],
+        "skipped": [
+          {
+            "primitive": "P5",
+            "kind": "rework_churn",
+            "label": "反复翻案",
+            "reason": "insufficient:issue-no-reopen-count"
+          },
+          {
+            "primitive": "P6",
+            "kind": "single_point_no_review",
+            "label": "单人且无复核",
+            "reason": "unknown:reviewTraces"
+          }
+        ],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "hit",
+            "label": "无依据",
+            "why": null
+          },
+          {
+            "p": "P2",
+            "w": 20,
+            "state": "clear",
+            "label": "变更未传导",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 15,
+            "state": "clear",
+            "label": "依据冲突",
+            "why": null
+          },
+          {
+            "p": "P4",
+            "w": 18,
+            "state": "clear",
+            "label": "目标漂移",
+            "why": null
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "unknown",
+            "label": "反复翻案",
+            "why": "issue-no-reopen-count"
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "unknown",
+            "label": "单人且无复核",
+            "why": "reviewTraces"
+          }
+        ],
+        "coverage": {
+          "known": 2,
+          "total": 3,
+          "ratio": 0.6666666666666666
+        },
+        "source": "rest",
+        "degraded": null
+      },
+      {
+        "issueKey": "MOBL-54",
+        "summary": "Legal Charter",
+        "status": "待办",
+        "profile": "software",
+        "debt": 25,
+        "authority": {
+          "state": "absent",
+          "verdict": "missing",
+          "owner": null,
+          "ownerName": null,
+          "kind": "page",
+          "title": null,
+          "url": null,
+          "updatedAt": null,
+          "lastConfirmAt": null,
+          "daysSinceUpdate": null,
+          "daysWithoutConfirm": null,
+          "contributors": null,
+          "decisionCount": 0
+        },
+        "grade": "watch",
+        "certainty": 0.81,
+        "partial": true,
+        "unknownWeight": 18,
+        "flagCount": 1,
+        "topFlag": {
+          "primitive": "P1",
+          "kind": "no_mandate",
+          "weight": 25
+        },
+        "flags": [
+          {
+            "primitive": "P1",
+            "kind": "no_mandate",
+            "severity": "high",
+            "weight": 25,
+            "label": "无依据",
+            "detail": "这项工作既没有关联的决策记录，也没有关联目标，等于没有任何\"为什么做\"的记录。",
+            "evidence": {
+              "issueKey": "MOBL-54",
+              "decisions": 0,
+              "goals": 0
+            },
+            "suggest": "把立项依据补成一份决策记录并关联；已有的评审记录直接挂上来即可。"
+          }
+        ],
+        "skipped": [
+          {
+            "primitive": "P5",
+            "kind": "rework_churn",
+            "label": "反复翻案",
+            "reason": "insufficient:issue-no-reopen-count"
+          },
+          {
+            "primitive": "P6",
+            "kind": "single_point_no_review",
+            "label": "单人且无复核",
+            "reason": "unknown:reviewTraces"
+          }
+        ],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "hit",
+            "label": "无依据",
+            "why": null
+          },
+          {
+            "p": "P2",
+            "w": 20,
+            "state": "clear",
+            "label": "变更未传导",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 15,
+            "state": "clear",
+            "label": "依据冲突",
+            "why": null
+          },
+          {
+            "p": "P4",
+            "w": 18,
+            "state": "clear",
+            "label": "目标漂移",
+            "why": null
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "unknown",
+            "label": "反复翻案",
+            "why": "issue-no-reopen-count"
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "unknown",
+            "label": "单人且无复核",
+            "why": "reviewTraces"
+          }
+        ],
+        "coverage": {
+          "known": 2,
+          "total": 3,
+          "ratio": 0.6666666666666666
+        },
+        "source": "rest",
+        "degraded": null
+      },
+      {
+        "issueKey": "MOBL-53",
+        "summary": "Marketing Campaign Launch",
+        "status": "待办",
+        "profile": "software",
+        "debt": 25,
+        "authority": {
+          "state": "absent",
+          "verdict": "missing",
+          "owner": null,
+          "ownerName": null,
+          "kind": "page",
+          "title": null,
+          "url": null,
+          "updatedAt": null,
+          "lastConfirmAt": null,
+          "daysSinceUpdate": null,
+          "daysWithoutConfirm": null,
+          "contributors": null,
+          "decisionCount": 0
+        },
+        "grade": "watch",
+        "certainty": 0.81,
+        "partial": true,
+        "unknownWeight": 18,
+        "flagCount": 1,
+        "topFlag": {
+          "primitive": "P1",
+          "kind": "no_mandate",
+          "weight": 25
+        },
+        "flags": [
+          {
+            "primitive": "P1",
+            "kind": "no_mandate",
+            "severity": "high",
+            "weight": 25,
+            "label": "无依据",
+            "detail": "这项工作既没有关联的决策记录，也没有关联目标，等于没有任何\"为什么做\"的记录。",
+            "evidence": {
+              "issueKey": "MOBL-53",
+              "decisions": 0,
+              "goals": 0
+            },
+            "suggest": "把立项依据补成一份决策记录并关联；已有的评审记录直接挂上来即可。"
+          }
+        ],
+        "skipped": [
+          {
+            "primitive": "P5",
+            "kind": "rework_churn",
+            "label": "反复翻案",
+            "reason": "insufficient:issue-no-reopen-count"
+          },
+          {
+            "primitive": "P6",
+            "kind": "single_point_no_review",
+            "label": "单人且无复核",
+            "reason": "unknown:reviewTraces"
+          }
+        ],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "hit",
+            "label": "无依据",
+            "why": null
+          },
+          {
+            "p": "P2",
+            "w": 20,
+            "state": "clear",
+            "label": "变更未传导",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 15,
+            "state": "clear",
+            "label": "依据冲突",
+            "why": null
+          },
+          {
+            "p": "P4",
+            "w": 18,
+            "state": "clear",
+            "label": "目标漂移",
+            "why": null
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "unknown",
+            "label": "反复翻案",
+            "why": "issue-no-reopen-count"
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "unknown",
+            "label": "单人且无复核",
+            "why": "reviewTraces"
+          }
+        ],
+        "coverage": {
+          "known": 2,
+          "total": 3,
+          "ratio": 0.6666666666666666
+        },
+        "source": "rest",
+        "degraded": null
+      },
+      {
+        "issueKey": "MOBL-52",
+        "summary": " Mobile Dashboard Customization",
+        "status": "待办",
+        "profile": "software",
+        "debt": 25,
+        "authority": {
+          "state": "absent",
+          "verdict": "missing",
+          "owner": null,
+          "ownerName": null,
+          "kind": "page",
+          "title": null,
+          "url": null,
+          "updatedAt": null,
+          "lastConfirmAt": null,
+          "daysSinceUpdate": null,
+          "daysWithoutConfirm": null,
+          "contributors": null,
+          "decisionCount": 0
+        },
+        "grade": "watch",
+        "certainty": 0.81,
+        "partial": true,
+        "unknownWeight": 18,
+        "flagCount": 1,
+        "topFlag": {
+          "primitive": "P1",
+          "kind": "no_mandate",
+          "weight": 25
+        },
+        "flags": [
+          {
+            "primitive": "P1",
+            "kind": "no_mandate",
+            "severity": "high",
+            "weight": 25,
+            "label": "无依据",
+            "detail": "这项工作既没有关联的决策记录，也没有关联目标，等于没有任何\"为什么做\"的记录。",
+            "evidence": {
+              "issueKey": "MOBL-52",
+              "decisions": 0,
+              "goals": 0
+            },
+            "suggest": "把立项依据补成一份决策记录并关联；已有的评审记录直接挂上来即可。"
+          }
+        ],
+        "skipped": [
+          {
+            "primitive": "P5",
+            "kind": "rework_churn",
+            "label": "反复翻案",
+            "reason": "insufficient:issue-no-reopen-count"
+          },
+          {
+            "primitive": "P6",
+            "kind": "single_point_no_review",
+            "label": "单人且无复核",
+            "reason": "unknown:reviewTraces"
+          }
+        ],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "hit",
+            "label": "无依据",
+            "why": null
+          },
+          {
+            "p": "P2",
+            "w": 20,
+            "state": "clear",
+            "label": "变更未传导",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 15,
+            "state": "clear",
+            "label": "依据冲突",
+            "why": null
+          },
+          {
+            "p": "P4",
+            "w": 18,
+            "state": "clear",
+            "label": "目标漂移",
+            "why": null
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "unknown",
+            "label": "反复翻案",
+            "why": "issue-no-reopen-count"
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "unknown",
+            "label": "单人且无复核",
+            "why": "reviewTraces"
+          }
+        ],
+        "coverage": {
+          "known": 2,
+          "total": 3,
+          "ratio": 0.6666666666666666
+        },
+        "source": "rest",
+        "degraded": null
+      },
+      {
+        "issueKey": "MOBL-51",
+        "summary": "Skull and Crossbones Icon Appears on Logistics UI Screen 12038",
+        "status": "待办",
+        "profile": "software",
+        "debt": 25,
+        "authority": {
+          "state": "absent",
+          "verdict": "missing",
+          "owner": null,
+          "ownerName": null,
+          "kind": "page",
+          "title": null,
+          "url": null,
+          "updatedAt": null,
+          "lastConfirmAt": null,
+          "daysSinceUpdate": null,
+          "daysWithoutConfirm": null,
+          "contributors": null,
+          "decisionCount": 0
+        },
+        "grade": "watch",
+        "certainty": 0.81,
+        "partial": true,
+        "unknownWeight": 18,
+        "flagCount": 1,
+        "topFlag": {
+          "primitive": "P1",
+          "kind": "no_mandate",
+          "weight": 25
+        },
+        "flags": [
+          {
+            "primitive": "P1",
+            "kind": "no_mandate",
+            "severity": "high",
+            "weight": 25,
+            "label": "无依据",
+            "detail": "这项工作既没有关联的决策记录，也没有关联目标，等于没有任何\"为什么做\"的记录。",
+            "evidence": {
+              "issueKey": "MOBL-51",
+              "decisions": 0,
+              "goals": 0
+            },
+            "suggest": "把立项依据补成一份决策记录并关联；已有的评审记录直接挂上来即可。"
+          }
+        ],
+        "skipped": [
+          {
+            "primitive": "P5",
+            "kind": "rework_churn",
+            "label": "反复翻案",
+            "reason": "insufficient:issue-no-reopen-count"
+          },
+          {
+            "primitive": "P6",
+            "kind": "single_point_no_review",
+            "label": "单人且无复核",
+            "reason": "unknown:reviewTraces"
+          }
+        ],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "hit",
+            "label": "无依据",
+            "why": null
+          },
+          {
+            "p": "P2",
+            "w": 20,
+            "state": "clear",
+            "label": "变更未传导",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 15,
+            "state": "clear",
+            "label": "依据冲突",
+            "why": null
+          },
+          {
+            "p": "P4",
+            "w": 18,
+            "state": "clear",
+            "label": "目标漂移",
+            "why": null
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "unknown",
+            "label": "反复翻案",
+            "why": "issue-no-reopen-count"
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "unknown",
+            "label": "单人且无复核",
+            "why": "reviewTraces"
+          }
+        ],
+        "coverage": {
+          "known": 2,
+          "total": 3,
+          "ratio": 0.6666666666666666
+        },
+        "source": "rest",
+        "degraded": null
+      },
+      {
+        "issueKey": "MOBL-50",
+        "summary": "Conduct testing for two-factor authentication flow",
+        "status": "待办",
+        "profile": "software",
+        "debt": 25,
+        "authority": {
+          "state": "absent",
+          "verdict": "missing",
+          "owner": null,
+          "ownerName": null,
+          "kind": "page",
+          "title": null,
+          "url": null,
+          "updatedAt": null,
+          "lastConfirmAt": null,
+          "daysSinceUpdate": null,
+          "daysWithoutConfirm": null,
+          "contributors": null,
+          "decisionCount": 0
+        },
+        "grade": "watch",
+        "certainty": 0.81,
+        "partial": true,
+        "unknownWeight": 18,
+        "flagCount": 1,
+        "topFlag": {
+          "primitive": "P1",
+          "kind": "no_mandate",
+          "weight": 25
+        },
+        "flags": [
+          {
+            "primitive": "P1",
+            "kind": "no_mandate",
+            "severity": "high",
+            "weight": 25,
+            "label": "无依据",
+            "detail": "这项工作既没有关联的决策记录，也没有关联目标，等于没有任何\"为什么做\"的记录。",
+            "evidence": {
+              "issueKey": "MOBL-50",
+              "decisions": 0,
+              "goals": 0
+            },
+            "suggest": "把立项依据补成一份决策记录并关联；已有的评审记录直接挂上来即可。"
+          }
+        ],
+        "skipped": [
+          {
+            "primitive": "P5",
+            "kind": "rework_churn",
+            "label": "反复翻案",
+            "reason": "insufficient:issue-no-reopen-count"
+          },
+          {
+            "primitive": "P6",
+            "kind": "single_point_no_review",
+            "label": "单人且无复核",
+            "reason": "unknown:reviewTraces"
+          }
+        ],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "hit",
+            "label": "无依据",
+            "why": null
+          },
+          {
+            "p": "P2",
+            "w": 20,
+            "state": "clear",
+            "label": "变更未传导",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 15,
+            "state": "clear",
+            "label": "依据冲突",
+            "why": null
+          },
+          {
+            "p": "P4",
+            "w": 18,
+            "state": "clear",
+            "label": "目标漂移",
+            "why": null
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "unknown",
+            "label": "反复翻案",
+            "why": "issue-no-reopen-count"
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "unknown",
+            "label": "单人且无复核",
+            "why": "reviewTraces"
+          }
+        ],
+        "coverage": {
+          "known": 2,
+          "total": 3,
+          "ratio": 0.6666666666666666
+        },
+        "source": "rest",
+        "degraded": null
+      },
+      {
+        "issueKey": "MOBL-57",
+        "summary": "Compliance",
+        "status": "待办",
+        "profile": "software",
+        "debt": 0,
+        "authority": {
+          "state": "present",
+          "verdict": "stale",
+          "owner": "712020:9b024745-5dbc-43d3-8abb-191fc6ea4527",
+          "ownerName": "Alana Grant",
+          "kind": "jira",
+          "title": "Product requirements — approval record",
+          "url": "https://one-atlas-ngpq.atlassian.net/browse/MDEMO-2",
+          "updatedAt": "2022-03-26T00:00:00.000Z",
+          "lastConfirmAt": null,
+          "daysSinceUpdate": 1703,
+          "daysWithoutConfirm": 1703,
+          "contributors": 1,
+          "decisionCount": 2
+        },
+        "grade": "watch",
+        "certainty": 0.66,
+        "partial": true,
+        "unknownWeight": 33,
+        "flagCount": 0,
+        "topFlag": null,
+        "flags": [],
+        "skipped": [
+          {
+            "primitive": "P3",
+            "kind": "conflicting_mandates",
+            "label": "依据冲突",
+            "reason": "insufficient:decisions-no-owner"
+          },
+          {
+            "primitive": "P5",
+            "kind": "rework_churn",
+            "label": "反复翻案",
+            "reason": "insufficient:issue-no-reopen-count"
+          },
+          {
+            "primitive": "P6",
+            "kind": "single_point_no_review",
+            "label": "单人且无复核",
+            "reason": "unknown:reviewTraces"
+          }
+        ],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "clear",
+            "label": "无依据",
+            "why": null
+          },
+          {
+            "p": "P2",
+            "w": 20,
+            "state": "clear",
+            "label": "变更未传导",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 15,
+            "state": "unknown",
+            "label": "依据冲突",
+            "why": "decisions-no-owner"
+          },
+          {
+            "p": "P4",
+            "w": 18,
+            "state": "clear",
+            "label": "目标漂移",
+            "why": null
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "unknown",
+            "label": "反复翻案",
+            "why": "issue-no-reopen-count"
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "unknown",
+            "label": "单人且无复核",
+            "why": "reviewTraces"
+          }
+        ],
+        "coverage": {
+          "known": 2,
+          "total": 3,
+          "ratio": 0.6666666666666666
+        },
+        "source": "rest",
+        "degraded": null
+      }
+    ],
+    "drivers": [
+      {
+        "p": "P1",
+        "items": 7,
+        "sum": 175,
+        "w": 25
+      }
+    ],
+    "disclosure": {
+      "counted": 8,
+      "total": 8,
+      "unknown": 0
+    },
+    "scan": null
+  },
+  "rows": [
+    {
+      "issueKey": "MOBL-57",
+      "summary": "Compliance",
+      "verdict": "stale",
+      "kind": "jira",
+      "owner": "Alana Grant",
+      "approvedAt": "2022-03-26T00:00:00.000Z",
+      "daysOld": 1703,
+      "record": "Product requirements — approval record",
+      "debt": 0,
+      "grade": "watch"
+    },
+    {
+      "issueKey": "MOBL-56",
+      "summary": "User Interface Revisions",
+      "verdict": "missing",
+      "kind": "page",
+      "owner": null,
+      "approvedAt": null,
+      "daysOld": null,
+      "record": null,
+      "debt": 25,
+      "grade": "watch"
+    },
+    {
+      "issueKey": "MOBL-55",
+      "summary": "Implement Live call monitoring",
+      "verdict": "missing",
+      "kind": "page",
+      "owner": null,
+      "approvedAt": null,
+      "daysOld": null,
+      "record": null,
+      "debt": 25,
+      "grade": "watch"
+    },
+    {
+      "issueKey": "MOBL-54",
+      "summary": "Legal Charter",
+      "verdict": "missing",
+      "kind": "page",
+      "owner": null,
+      "approvedAt": null,
+      "daysOld": null,
+      "record": null,
+      "debt": 25,
+      "grade": "watch"
+    },
+    {
+      "issueKey": "MOBL-53",
+      "summary": "Marketing Campaign Launch",
+      "verdict": "missing",
+      "kind": "page",
+      "owner": null,
+      "approvedAt": null,
+      "daysOld": null,
+      "record": null,
+      "debt": 25,
+      "grade": "watch"
+    },
+    {
+      "issueKey": "MOBL-52",
+      "summary": " Mobile Dashboard Customization",
+      "verdict": "missing",
+      "kind": "page",
+      "owner": null,
+      "approvedAt": null,
+      "daysOld": null,
+      "record": null,
+      "debt": 25,
+      "grade": "watch"
+    },
+    {
+      "issueKey": "MOBL-51",
+      "summary": "Skull and Crossbones Icon Appears on Logistics UI Screen 12038",
+      "verdict": "missing",
+      "kind": "page",
+      "owner": null,
+      "approvedAt": null,
+      "daysOld": null,
+      "record": null,
+      "debt": 25,
+      "grade": "watch"
+    },
+    {
+      "issueKey": "MOBL-50",
+      "summary": "Conduct testing for two-factor authentication flow",
+      "verdict": "missing",
+      "kind": "page",
+      "owner": null,
+      "approvedAt": null,
+      "daysOld": null,
+      "record": null,
+      "debt": 25,
+      "grade": "watch"
+    }
+  ]
+}

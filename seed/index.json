@@ -1,0 +1,22 @@
+{
+  "dataset": "mandate-seed",
+  "nature": "synthetic",
+  "source": "seed/seed-sheet.csv is a blank 21-row template filled by the operator; seed/seed-sheet-示例.csv is a 3-row worked example generated for this repo.",
+  "caveat": "These files are not site capture and not a population sample. The blank template cannot support any conclusion until every row is filled and graded; the worked example is synthetic and is only a format check.",
+  "files": [
+    {
+      "path": "seed-sheet.csv",
+      "nature": "gap",
+      "source": "blank operator template written by seed/grade.js",
+      "sha256": "3fd585a8ba2e4f41b8800b7a036476e9bf79a2bcfdfb837a49ee2c72c9e6fda2",
+      "caveat": "Blank by design: 21 empty rows are a prompt to the operator, not coverage. Do not read WAIT 0/21 as a measured result."
+    },
+    {
+      "path": "seed-sheet-示例.csv",
+      "nature": "synthetic",
+      "source": "3-row syntax example generated for this repo",
+      "sha256": "82461e4b71179c7659b49b980d8a8a7c88b195cbdbd8f6f4ece6ca579dd3a1be",
+      "caveat": "Three hand-sized rows demonstrate the CSV columns only. They are not a sample of any backlog and must not be pooled with site data."
+    }
+  ]
+}

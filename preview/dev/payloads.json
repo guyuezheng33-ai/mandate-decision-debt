@@ -1,0 +1,6302 @@
+{
+  "kan3": {
+    "en": {
+      "software": {
+        "ok": true,
+        "issueKey": "KAN-3",
+        "summary": "One-click archive for projects inactive over 90 days",
+        "status": "In Review",
+        "profile": "software",
+        "debt": 28,
+        "grade": "watch",
+        "authority": {
+          "state": "present",
+          "verdict": "stale",
+          "owner": "acc-1123",
+          "ownerName": "Alice Ng",
+          "title": "Archive policy: archive anything inactive for 90 days",
+          "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/8841",
+          "updatedAt": "2026-08-14T06:00:00.000Z",
+          "lastConfirmAt": null,
+          "daysSinceUpdate": 92,
+          "daysWithoutConfirm": 92,
+          "contributors": 1,
+          "decisionCount": 1
+        },
+        "partial": false,
+        "unknownPrims": [],
+        "certainty": 1,
+        "thin": false,
+        "flagCount": 2,
+        "flags": [
+          {
+            "p": "P2",
+            "k": "drift_not_propagated",
+            "w": 20,
+            "s": "high",
+            "label": "Change not propagated",
+            "detail": "The decision record was edited on 2026-08-14, work started on 2026-06-20, and nobody has confirmed since — 92 days apart.",
+            "action": "Ask the decision record owner to re-confirm, and append \"still valid / changed\" back to the page so the delivery side has something to point at.",
+            "evidence": {
+              "issueKey": "KAN-3",
+              "decidedAt": "2026-08-14T06:00:00.000Z",
+              "inProgressSince": "2026-06-20T02:00:00.000Z",
+              "lastConfirmAt": null,
+              "sources": [
+                {
+                  "title": "Archive policy: archive anything inactive for 90 days",
+                  "id": "page-8841",
+                  "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/8841",
+                  "updated": "2026-08-14T06:00:00.000Z"
+                }
+              ]
+            }
+          },
+          {
+            "p": "P6",
+            "k": "single_point_no_review",
+            "w": 8,
+            "s": "low",
+            "label": "Single author, no review",
+            "detail": "The decision page \"Archive policy: archive anything inactive for 90 days\" has 1 contributor, and no second person left a review trace — the reasoning lives in one person's memory.",
+            "action": "Ask a second colleague who has actually read it to review and comment, turning one person's memory into a team record.",
+            "evidence": {
+              "issueKey": "KAN-3",
+              "decision": "page-8841",
+              "contributors": [
+                "acc-1123"
+              ]
+            }
+          }
+        ],
+        "suppressed": [],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "clear",
+            "label": "No mandate",
+            "why": null
+          },
+          {
+            "p": "P2",
+            "w": 20,
+            "state": "hit",
+            "label": "Change not propagated",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 15,
+            "state": "clear",
+            "label": "Conflicting mandates",
+            "why": null
+          },
+          {
+            "p": "P4",
+            "w": 18,
+            "state": "clear",
+            "label": "Goal drift",
+            "why": null
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "clear",
+            "label": "Re-litigation",
+            "why": null
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "hit",
+            "label": "Single author, no review",
+            "why": null
+          }
+        ],
+        "coverage": {
+          "known": 3,
+          "total": 3,
+          "ratio": 1
+        },
+        "source": "fixture",
+        "degraded": null
+      },
+      "launch": {
+        "ok": true,
+        "issueKey": "KAN-3",
+        "summary": "One-click archive for projects inactive over 90 days",
+        "status": "In Review",
+        "profile": "launch",
+        "debt": 28,
+        "grade": "watch",
+        "authority": {
+          "state": "present",
+          "verdict": "stale",
+          "owner": "acc-1123",
+          "ownerName": "Alice Ng",
+          "title": "Archive policy: archive anything inactive for 90 days",
+          "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/8841",
+          "updatedAt": "2026-08-14T06:00:00.000Z",
+          "lastConfirmAt": null,
+          "daysSinceUpdate": 92,
+          "daysWithoutConfirm": 92,
+          "contributors": 1,
+          "decisionCount": 1
+        },
+        "partial": false,
+        "unknownPrims": [],
+        "certainty": 1,
+        "thin": false,
+        "flagCount": 2,
+        "flags": [
+          {
+            "p": "P2",
+            "k": "drift_not_propagated",
+            "w": 20,
+            "s": "high",
+            "label": "Change not propagated",
+            "detail": "The positioning brief was edited on 2026-08-14, work started on 2026-06-20, and nobody has confirmed since — 92 days apart.",
+            "action": "Ask the positioning brief owner to re-confirm, and append \"still valid / changed\" back to the page so the delivery side has something to point at.",
+            "evidence": {
+              "issueKey": "KAN-3",
+              "decidedAt": "2026-08-14T06:00:00.000Z",
+              "inProgressSince": "2026-06-20T02:00:00.000Z",
+              "lastConfirmAt": null,
+              "sources": [
+                {
+                  "title": "Archive policy: archive anything inactive for 90 days",
+                  "id": "page-8841",
+                  "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/8841",
+                  "updated": "2026-08-14T06:00:00.000Z"
+                }
+              ]
+            }
+          },
+          {
+            "p": "P6",
+            "k": "single_point_no_review",
+            "w": 8,
+            "s": "low",
+            "label": "Single author, no review",
+            "detail": "The decision page \"Archive policy: archive anything inactive for 90 days\" has 1 contributor, and no second person left a review trace — the reasoning lives in one person's memory.",
+            "action": "Ask a second colleague who has actually read it to review and comment, turning one person's memory into a team record.",
+            "evidence": {
+              "issueKey": "KAN-3",
+              "decision": "page-8841",
+              "contributors": [
+                "acc-1123"
+              ]
+            }
+          }
+        ],
+        "suppressed": [],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "clear",
+            "label": "No mandate",
+            "why": null
+          },
+          {
+            "p": "P2",
+            "w": 20,
+            "state": "hit",
+            "label": "Change not propagated",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 22,
+            "state": "clear",
+            "label": "Conflicting mandates",
+            "why": null
+          },
+          {
+            "p": "P4",
+            "w": 12,
+            "state": "clear",
+            "label": "Goal drift",
+            "why": null
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "clear",
+            "label": "Re-litigation",
+            "why": null
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "hit",
+            "label": "Single author, no review",
+            "why": null
+          }
+        ],
+        "coverage": {
+          "known": 3,
+          "total": 3,
+          "ratio": 1
+        },
+        "source": "fixture",
+        "degraded": null
+      },
+      "portfolio": {
+        "ok": true,
+        "issueKey": "KAN-3",
+        "summary": "One-click archive for projects inactive over 90 days",
+        "status": "In Review",
+        "profile": "portfolio",
+        "debt": 22,
+        "grade": "watch",
+        "authority": {
+          "state": "present",
+          "verdict": "stale",
+          "owner": "acc-1123",
+          "ownerName": "Alice Ng",
+          "title": "Archive policy: archive anything inactive for 90 days",
+          "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/8841",
+          "updatedAt": "2026-08-14T06:00:00.000Z",
+          "lastConfirmAt": null,
+          "daysSinceUpdate": 92,
+          "daysWithoutConfirm": 92,
+          "contributors": 1,
+          "decisionCount": 1
+        },
+        "partial": false,
+        "unknownPrims": [],
+        "certainty": 1,
+        "thin": false,
+        "flagCount": 2,
+        "flags": [
+          {
+            "p": "P2",
+            "k": "drift_not_propagated",
+            "w": 14,
+            "s": "high",
+            "label": "Change not propagated",
+            "detail": "The mandate page was edited on 2026-08-14, work started on 2026-06-20, and nobody has confirmed since — 92 days apart.",
+            "action": "Ask the mandate page owner to re-confirm, and append \"still valid / changed\" back to the page so the delivery side has something to point at.",
+            "evidence": {
+              "issueKey": "KAN-3",
+              "decidedAt": "2026-08-14T06:00:00.000Z",
+              "inProgressSince": "2026-06-20T02:00:00.000Z",
+              "lastConfirmAt": null,
+              "sources": [
+                {
+                  "title": "Archive policy: archive anything inactive for 90 days",
+                  "id": "page-8841",
+                  "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/8841",
+                  "updated": "2026-08-14T06:00:00.000Z"
+                }
+              ]
+            }
+          },
+          {
+            "p": "P6",
+            "k": "single_point_no_review",
+            "w": 8,
+            "s": "low",
+            "label": "Single author, no review",
+            "detail": "The decision page \"Archive policy: archive anything inactive for 90 days\" has 1 contributor, and no second person left a review trace — the reasoning lives in one person's memory.",
+            "action": "Ask a second colleague who has actually read it to review and comment, turning one person's memory into a team record.",
+            "evidence": {
+              "issueKey": "KAN-3",
+              "decision": "page-8841",
+              "contributors": [
+                "acc-1123"
+              ]
+            }
+          }
+        ],
+        "suppressed": [],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "clear",
+            "label": "No mandate",
+            "why": null
+          },
+          {
+            "p": "P2",
+            "w": 14,
+            "state": "hit",
+            "label": "Change not propagated",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 15,
+            "state": "clear",
+            "label": "Conflicting mandates",
+            "why": null
+          },
+          {
+            "p": "P4",
+            "w": 26,
+            "state": "clear",
+            "label": "Goal drift",
+            "why": null
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "clear",
+            "label": "Re-litigation",
+            "why": null
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "hit",
+            "label": "Single author, no review",
+            "why": null
+          }
+        ],
+        "coverage": {
+          "known": 3,
+          "total": 3,
+          "ratio": 1
+        },
+        "source": "fixture",
+        "degraded": null
+      }
+    },
+    "zh": {
+      "software": {
+        "ok": true,
+        "issueKey": "KAN-3",
+        "summary": "One-click archive for projects inactive over 90 days",
+        "status": "In Review",
+        "profile": "software",
+        "debt": 28,
+        "grade": "watch",
+        "authority": {
+          "state": "present",
+          "verdict": "stale",
+          "owner": "acc-1123",
+          "ownerName": "Alice Ng",
+          "title": "Archive policy: archive anything inactive for 90 days",
+          "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/8841",
+          "updatedAt": "2026-08-14T06:00:00.000Z",
+          "lastConfirmAt": null,
+          "daysSinceUpdate": 92,
+          "daysWithoutConfirm": 92,
+          "contributors": 1,
+          "decisionCount": 1
+        },
+        "partial": false,
+        "unknownPrims": [],
+        "certainty": 1,
+        "thin": false,
+        "flagCount": 2,
+        "flags": [
+          {
+            "p": "P2",
+            "k": "drift_not_propagated",
+            "w": 20,
+            "s": "high",
+            "label": "变更未传导",
+            "detail": "决策记录在 2026-08-14 被更新过，执行从 2026-06-20 起就没有再确认，已相隔 92 天。",
+            "action": "请决策记录的 owner 复核一次，并把\"仍然有效 / 已变更\"追加回原文，让执行的这一端有据可依。",
+            "evidence": {
+              "issueKey": "KAN-3",
+              "decidedAt": "2026-08-14T06:00:00.000Z",
+              "inProgressSince": "2026-06-20T02:00:00.000Z",
+              "lastConfirmAt": null,
+              "sources": [
+                {
+                  "title": "Archive policy: archive anything inactive for 90 days",
+                  "id": "page-8841",
+                  "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/8841",
+                  "updated": "2026-08-14T06:00:00.000Z"
+                }
+              ]
+            }
+          },
+          {
+            "p": "P6",
+            "k": "single_point_no_review",
+            "w": 8,
+            "s": "low",
+            "label": "单人且无复核",
+            "detail": "依据页「Archive policy: archive anything inactive for 90 days」只有 1 位贡献者，页面上也没有第二个人留下的复核痕迹——判断全在一个人的记忆里。",
+            "action": "请第二位相关同事复核并留下评论，把\"一个人的记忆\"变成\"团队的记录\"。",
+            "evidence": {
+              "issueKey": "KAN-3",
+              "decision": "page-8841",
+              "contributors": [
+                "acc-1123"
+              ]
+            }
+          }
+        ],
+        "suppressed": [],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "clear",
+            "label": "无依据",
+            "why": null
+          },
+          {
+            "p": "P2",
+            "w": 20,
+            "state": "hit",
+            "label": "变更未传导",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 15,
+            "state": "clear",
+            "label": "依据冲突",
+            "why": null
+          },
+          {
+            "p": "P4",
+            "w": 18,
+            "state": "clear",
+            "label": "目标漂移",
+            "why": null
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "clear",
+            "label": "反复翻案",
+            "why": null
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "hit",
+            "label": "单人且无复核",
+            "why": null
+          }
+        ],
+        "coverage": {
+          "known": 3,
+          "total": 3,
+          "ratio": 1
+        },
+        "source": "fixture",
+        "degraded": null
+      },
+      "launch": {
+        "ok": true,
+        "issueKey": "KAN-3",
+        "summary": "One-click archive for projects inactive over 90 days",
+        "status": "In Review",
+        "profile": "launch",
+        "debt": 28,
+        "grade": "watch",
+        "authority": {
+          "state": "present",
+          "verdict": "stale",
+          "owner": "acc-1123",
+          "ownerName": "Alice Ng",
+          "title": "Archive policy: archive anything inactive for 90 days",
+          "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/8841",
+          "updatedAt": "2026-08-14T06:00:00.000Z",
+          "lastConfirmAt": null,
+          "daysSinceUpdate": 92,
+          "daysWithoutConfirm": 92,
+          "contributors": 1,
+          "decisionCount": 1
+        },
+        "partial": false,
+        "unknownPrims": [],
+        "certainty": 1,
+        "thin": false,
+        "flagCount": 2,
+        "flags": [
+          {
+            "p": "P2",
+            "k": "drift_not_propagated",
+            "w": 20,
+            "s": "high",
+            "label": "变更未传导",
+            "detail": "brief / positioning在 2026-08-14 被更新过，执行从 2026-06-20 起就没有再确认，已相隔 92 天。",
+            "action": "请brief / positioning的 owner 复核一次，并把\"仍然有效 / 已变更\"追加回原文，让执行的这一端有据可依。",
+            "evidence": {
+              "issueKey": "KAN-3",
+              "decidedAt": "2026-08-14T06:00:00.000Z",
+              "inProgressSince": "2026-06-20T02:00:00.000Z",
+              "lastConfirmAt": null,
+              "sources": [
+                {
+                  "title": "Archive policy: archive anything inactive for 90 days",
+                  "id": "page-8841",
+                  "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/8841",
+                  "updated": "2026-08-14T06:00:00.000Z"
+                }
+              ]
+            }
+          },
+          {
+            "p": "P6",
+            "k": "single_point_no_review",
+            "w": 8,
+            "s": "low",
+            "label": "单人且无复核",
+            "detail": "依据页「Archive policy: archive anything inactive for 90 days」只有 1 位贡献者，页面上也没有第二个人留下的复核痕迹——判断全在一个人的记忆里。",
+            "action": "请第二位相关同事复核并留下评论，把\"一个人的记忆\"变成\"团队的记录\"。",
+            "evidence": {
+              "issueKey": "KAN-3",
+              "decision": "page-8841",
+              "contributors": [
+                "acc-1123"
+              ]
+            }
+          }
+        ],
+        "suppressed": [],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "clear",
+            "label": "无依据",
+            "why": null
+          },
+          {
+            "p": "P2",
+            "w": 20,
+            "state": "hit",
+            "label": "变更未传导",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 22,
+            "state": "clear",
+            "label": "依据冲突",
+            "why": null
+          },
+          {
+            "p": "P4",
+            "w": 12,
+            "state": "clear",
+            "label": "目标漂移",
+            "why": null
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "clear",
+            "label": "反复翻案",
+            "why": null
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "hit",
+            "label": "单人且无复核",
+            "why": null
+          }
+        ],
+        "coverage": {
+          "known": 3,
+          "total": 3,
+          "ratio": 1
+        },
+        "source": "fixture",
+        "degraded": null
+      },
+      "portfolio": {
+        "ok": true,
+        "issueKey": "KAN-3",
+        "summary": "One-click archive for projects inactive over 90 days",
+        "status": "In Review",
+        "profile": "portfolio",
+        "debt": 22,
+        "grade": "watch",
+        "authority": {
+          "state": "present",
+          "verdict": "stale",
+          "owner": "acc-1123",
+          "ownerName": "Alice Ng",
+          "title": "Archive policy: archive anything inactive for 90 days",
+          "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/8841",
+          "updatedAt": "2026-08-14T06:00:00.000Z",
+          "lastConfirmAt": null,
+          "daysSinceUpdate": 92,
+          "daysWithoutConfirm": 92,
+          "contributors": 1,
+          "decisionCount": 1
+        },
+        "partial": false,
+        "unknownPrims": [],
+        "certainty": 1,
+        "thin": false,
+        "flagCount": 2,
+        "flags": [
+          {
+            "p": "P2",
+            "k": "drift_not_propagated",
+            "w": 14,
+            "s": "high",
+            "label": "变更未传导",
+            "detail": "立项页在 2026-08-14 被更新过，执行从 2026-06-20 起就没有再确认，已相隔 92 天。",
+            "action": "请立项页的 owner 复核一次，并把\"仍然有效 / 已变更\"追加回原文，让执行的这一端有据可依。",
+            "evidence": {
+              "issueKey": "KAN-3",
+              "decidedAt": "2026-08-14T06:00:00.000Z",
+              "inProgressSince": "2026-06-20T02:00:00.000Z",
+              "lastConfirmAt": null,
+              "sources": [
+                {
+                  "title": "Archive policy: archive anything inactive for 90 days",
+                  "id": "page-8841",
+                  "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/8841",
+                  "updated": "2026-08-14T06:00:00.000Z"
+                }
+              ]
+            }
+          },
+          {
+            "p": "P6",
+            "k": "single_point_no_review",
+            "w": 8,
+            "s": "low",
+            "label": "单人且无复核",
+            "detail": "依据页「Archive policy: archive anything inactive for 90 days」只有 1 位贡献者，页面上也没有第二个人留下的复核痕迹——判断全在一个人的记忆里。",
+            "action": "请第二位相关同事复核并留下评论，把\"一个人的记忆\"变成\"团队的记录\"。",
+            "evidence": {
+              "issueKey": "KAN-3",
+              "decision": "page-8841",
+              "contributors": [
+                "acc-1123"
+              ]
+            }
+          }
+        ],
+        "suppressed": [],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "clear",
+            "label": "无依据",
+            "why": null
+          },
+          {
+            "p": "P2",
+            "w": 14,
+            "state": "hit",
+            "label": "变更未传导",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 15,
+            "state": "clear",
+            "label": "依据冲突",
+            "why": null
+          },
+          {
+            "p": "P4",
+            "w": 26,
+            "state": "clear",
+            "label": "目标漂移",
+            "why": null
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "clear",
+            "label": "反复翻案",
+            "why": null
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "hit",
+            "label": "单人且无复核",
+            "why": null
+          }
+        ],
+        "coverage": {
+          "known": 3,
+          "total": 3,
+          "ratio": 1
+        },
+        "source": "fixture",
+        "degraded": null
+      }
+    }
+  },
+  "kan7": {
+    "en": {
+      "software": {
+        "ok": true,
+        "issueKey": "KAN-7",
+        "summary": "Auto-close dormant customer portals",
+        "status": "In Progress",
+        "profile": "software",
+        "debt": 43,
+        "grade": "at_risk",
+        "authority": {
+          "state": "present",
+          "verdict": "contested",
+          "owner": "acc-1123",
+          "ownerName": null,
+          "title": "Portal lifecycle policy — close after 60 days idle",
+          "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/9102",
+          "updatedAt": "2026-11-02T05:00:00.000Z",
+          "lastConfirmAt": "2026-11-05T02:00:00.000Z",
+          "daysSinceUpdate": 15,
+          "daysWithoutConfirm": null,
+          "contributors": 2,
+          "decisionCount": 2
+        },
+        "partial": false,
+        "unknownPrims": [],
+        "certainty": 1,
+        "thin": false,
+        "flagCount": 3,
+        "flags": [
+          {
+            "p": "P4",
+            "k": "goal_drift",
+            "w": 18,
+            "s": "high",
+            "label": "Goal drift",
+            "detail": "The linked goal (Cut idle infrastructure cost) has ended, but this work is still \"In Progress\".",
+            "action": "Decide whether this work should continue: attach it to a live goal, or close it.",
+            "evidence": {
+              "issueKey": "KAN-7",
+              "status": "In Progress",
+              "goals": [
+                {
+                  "id": "goal-310",
+                  "status": "completed"
+                }
+              ]
+            }
+          },
+          {
+            "p": "P3",
+            "k": "conflicting_mandates",
+            "w": 15,
+            "s": "medium",
+            "label": "Conflicting mandates",
+            "detail": "Two decision records cover the same topic with different owners (\"Portal lifecycle policy — close after 60 days idle\", \"Portal lifecycle policy — close after 180 days idle\") — each team may be executing a different reading.",
+            "action": "Name one owner, mark the other page as superseded, and link them both ways so nobody executes a stale reading.",
+            "evidence": {
+              "issueKey": "KAN-7",
+              "sources": [
+                {
+                  "id": "page-9102",
+                  "title": "Portal lifecycle policy — close after 60 days idle",
+                  "owner": "acc-1123",
+                  "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/9102"
+                },
+                {
+                  "id": "page-9310",
+                  "title": "Portal lifecycle policy — close after 180 days idle",
+                  "owner": "acc-4401",
+                  "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/9310"
+                }
+              ]
+            }
+          },
+          {
+            "p": "P5",
+            "k": "rework_churn",
+            "w": 10,
+            "s": "medium",
+            "label": "Re-litigation",
+            "detail": "This work has been reopened 3 times, with no new evidence recorded to explain any of the reversals.",
+            "action": "Record a reason for each reopen and write the conclusion back to the decision page — otherwise the same argument returns next quarter.",
+            "evidence": {
+              "issueKey": "KAN-7",
+              "reopenedCount": 3,
+              "lastReopenedAt": "2026-11-16T03:00:00.000Z"
+            }
+          }
+        ],
+        "suppressed": [],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "clear",
+            "label": "No mandate",
+            "why": null
+          },
+          {
+            "p": "P2",
+            "w": 20,
+            "state": "clear",
+            "label": "Change not propagated",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 15,
+            "state": "hit",
+            "label": "Conflicting mandates",
+            "why": null
+          },
+          {
+            "p": "P4",
+            "w": 18,
+            "state": "hit",
+            "label": "Goal drift",
+            "why": null
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "hit",
+            "label": "Re-litigation",
+            "why": null
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "clear",
+            "label": "Single author, no review",
+            "why": null
+          }
+        ],
+        "coverage": {
+          "known": 3,
+          "total": 3,
+          "ratio": 1
+        },
+        "source": "fixture",
+        "degraded": null
+      },
+      "launch": {
+        "ok": true,
+        "issueKey": "KAN-7",
+        "summary": "Auto-close dormant customer portals",
+        "status": "In Progress",
+        "profile": "launch",
+        "debt": 44,
+        "grade": "at_risk",
+        "authority": {
+          "state": "present",
+          "verdict": "contested",
+          "owner": "acc-1123",
+          "ownerName": null,
+          "title": "Portal lifecycle policy — close after 60 days idle",
+          "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/9102",
+          "updatedAt": "2026-11-02T05:00:00.000Z",
+          "lastConfirmAt": "2026-11-05T02:00:00.000Z",
+          "daysSinceUpdate": 15,
+          "daysWithoutConfirm": null,
+          "contributors": 2,
+          "decisionCount": 2
+        },
+        "partial": false,
+        "unknownPrims": [],
+        "certainty": 1,
+        "thin": false,
+        "flagCount": 3,
+        "flags": [
+          {
+            "p": "P3",
+            "k": "conflicting_mandates",
+            "w": 22,
+            "s": "medium",
+            "label": "Conflicting mandates",
+            "detail": "Two positioning briefs cover the same topic with different owners (\"Portal lifecycle policy — close after 60 days idle\", \"Portal lifecycle policy — close after 180 days idle\") — each team may be executing a different reading.",
+            "action": "Name one owner, mark the other page as superseded, and link them both ways so nobody executes a stale reading.",
+            "evidence": {
+              "issueKey": "KAN-7",
+              "sources": [
+                {
+                  "id": "page-9102",
+                  "title": "Portal lifecycle policy — close after 60 days idle",
+                  "owner": "acc-1123",
+                  "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/9102"
+                },
+                {
+                  "id": "page-9310",
+                  "title": "Portal lifecycle policy — close after 180 days idle",
+                  "owner": "acc-4401",
+                  "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/9310"
+                }
+              ]
+            }
+          },
+          {
+            "p": "P4",
+            "k": "goal_drift",
+            "w": 12,
+            "s": "high",
+            "label": "Goal drift",
+            "detail": "The linked goal (Cut idle infrastructure cost) has ended, but this work is still \"In Progress\".",
+            "action": "Decide whether this work should continue: attach it to a live goal, or close it.",
+            "evidence": {
+              "issueKey": "KAN-7",
+              "status": "In Progress",
+              "goals": [
+                {
+                  "id": "goal-310",
+                  "status": "completed"
+                }
+              ]
+            }
+          },
+          {
+            "p": "P5",
+            "k": "rework_churn",
+            "w": 10,
+            "s": "medium",
+            "label": "Re-litigation",
+            "detail": "This work has been reopened 3 times, with no new evidence recorded to explain any of the reversals.",
+            "action": "Record a reason for each reopen and write the conclusion back to the decision page — otherwise the same argument returns next quarter.",
+            "evidence": {
+              "issueKey": "KAN-7",
+              "reopenedCount": 3,
+              "lastReopenedAt": "2026-11-16T03:00:00.000Z"
+            }
+          }
+        ],
+        "suppressed": [],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "clear",
+            "label": "No mandate",
+            "why": null
+          },
+          {
+            "p": "P2",
+            "w": 20,
+            "state": "clear",
+            "label": "Change not propagated",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 22,
+            "state": "hit",
+            "label": "Conflicting mandates",
+            "why": null
+          },
+          {
+            "p": "P4",
+            "w": 12,
+            "state": "hit",
+            "label": "Goal drift",
+            "why": null
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "hit",
+            "label": "Re-litigation",
+            "why": null
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "clear",
+            "label": "Single author, no review",
+            "why": null
+          }
+        ],
+        "coverage": {
+          "known": 3,
+          "total": 3,
+          "ratio": 1
+        },
+        "source": "fixture",
+        "degraded": null
+      },
+      "portfolio": {
+        "ok": true,
+        "issueKey": "KAN-7",
+        "summary": "Auto-close dormant customer portals",
+        "status": "In Progress",
+        "profile": "portfolio",
+        "debt": 51,
+        "grade": "at_risk",
+        "authority": {
+          "state": "present",
+          "verdict": "contested",
+          "owner": "acc-1123",
+          "ownerName": null,
+          "title": "Portal lifecycle policy — close after 60 days idle",
+          "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/9102",
+          "updatedAt": "2026-11-02T05:00:00.000Z",
+          "lastConfirmAt": "2026-11-05T02:00:00.000Z",
+          "daysSinceUpdate": 15,
+          "daysWithoutConfirm": null,
+          "contributors": 2,
+          "decisionCount": 2
+        },
+        "partial": false,
+        "unknownPrims": [],
+        "certainty": 1,
+        "thin": false,
+        "flagCount": 3,
+        "flags": [
+          {
+            "p": "P4",
+            "k": "goal_drift",
+            "w": 26,
+            "s": "high",
+            "label": "Goal drift",
+            "detail": "The linked goal (Cut idle infrastructure cost) has ended, but this work is still \"In Progress\".",
+            "action": "Decide whether this work should continue: attach it to a live goal, or close it.",
+            "evidence": {
+              "issueKey": "KAN-7",
+              "status": "In Progress",
+              "goals": [
+                {
+                  "id": "goal-310",
+                  "status": "completed"
+                }
+              ]
+            }
+          },
+          {
+            "p": "P3",
+            "k": "conflicting_mandates",
+            "w": 15,
+            "s": "medium",
+            "label": "Conflicting mandates",
+            "detail": "Two mandate pages cover the same topic with different owners (\"Portal lifecycle policy — close after 60 days idle\", \"Portal lifecycle policy — close after 180 days idle\") — each team may be executing a different reading.",
+            "action": "Name one owner, mark the other page as superseded, and link them both ways so nobody executes a stale reading.",
+            "evidence": {
+              "issueKey": "KAN-7",
+              "sources": [
+                {
+                  "id": "page-9102",
+                  "title": "Portal lifecycle policy — close after 60 days idle",
+                  "owner": "acc-1123",
+                  "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/9102"
+                },
+                {
+                  "id": "page-9310",
+                  "title": "Portal lifecycle policy — close after 180 days idle",
+                  "owner": "acc-4401",
+                  "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/9310"
+                }
+              ]
+            }
+          },
+          {
+            "p": "P5",
+            "k": "rework_churn",
+            "w": 10,
+            "s": "medium",
+            "label": "Re-litigation",
+            "detail": "This work has been reopened 3 times, with no new evidence recorded to explain any of the reversals.",
+            "action": "Record a reason for each reopen and write the conclusion back to the decision page — otherwise the same argument returns next quarter.",
+            "evidence": {
+              "issueKey": "KAN-7",
+              "reopenedCount": 3,
+              "lastReopenedAt": "2026-11-16T03:00:00.000Z"
+            }
+          }
+        ],
+        "suppressed": [],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "clear",
+            "label": "No mandate",
+            "why": null
+          },
+          {
+            "p": "P2",
+            "w": 14,
+            "state": "clear",
+            "label": "Change not propagated",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 15,
+            "state": "hit",
+            "label": "Conflicting mandates",
+            "why": null
+          },
+          {
+            "p": "P4",
+            "w": 26,
+            "state": "hit",
+            "label": "Goal drift",
+            "why": null
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "hit",
+            "label": "Re-litigation",
+            "why": null
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "clear",
+            "label": "Single author, no review",
+            "why": null
+          }
+        ],
+        "coverage": {
+          "known": 3,
+          "total": 3,
+          "ratio": 1
+        },
+        "source": "fixture",
+        "degraded": null
+      }
+    },
+    "zh": {
+      "software": {
+        "ok": true,
+        "issueKey": "KAN-7",
+        "summary": "Auto-close dormant customer portals",
+        "status": "In Progress",
+        "profile": "software",
+        "debt": 43,
+        "grade": "at_risk",
+        "authority": {
+          "state": "present",
+          "verdict": "contested",
+          "owner": "acc-1123",
+          "ownerName": null,
+          "title": "Portal lifecycle policy — close after 60 days idle",
+          "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/9102",
+          "updatedAt": "2026-11-02T05:00:00.000Z",
+          "lastConfirmAt": "2026-11-05T02:00:00.000Z",
+          "daysSinceUpdate": 15,
+          "daysWithoutConfirm": null,
+          "contributors": 2,
+          "decisionCount": 2
+        },
+        "partial": false,
+        "unknownPrims": [],
+        "certainty": 1,
+        "thin": false,
+        "flagCount": 3,
+        "flags": [
+          {
+            "p": "P4",
+            "k": "goal_drift",
+            "w": 18,
+            "s": "high",
+            "label": "目标漂移",
+            "detail": "关联目标（Cut idle infrastructure cost）已经结束，工作项仍处于「In Progress」。",
+            "action": "确认这项工作是否还有必要继续：需要就挂到新的目标下，不需要就关掉。",
+            "evidence": {
+              "issueKey": "KAN-7",
+              "status": "In Progress",
+              "goals": [
+                {
+                  "id": "goal-310",
+                  "status": "completed"
+                }
+              ]
+            }
+          },
+          {
+            "p": "P3",
+            "k": "conflicting_mandates",
+            "w": 15,
+            "s": "medium",
+            "label": "依据冲突",
+            "detail": "同一主题下存在 2 份 决策记录（「Portal lifecycle policy — close after 60 days idle」、「Portal lifecycle policy — close after 180 days idle」），负责人不同，各自执行的人可能各按各的理解走。",
+            "action": "指定唯一 owner，把另一份标注为\"已被取代\"并互链，避免后人各按各的理解执行。",
+            "evidence": {
+              "issueKey": "KAN-7",
+              "sources": [
+                {
+                  "id": "page-9102",
+                  "title": "Portal lifecycle policy — close after 60 days idle",
+                  "owner": "acc-1123",
+                  "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/9102"
+                },
+                {
+                  "id": "page-9310",
+                  "title": "Portal lifecycle policy — close after 180 days idle",
+                  "owner": "acc-4401",
+                  "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/9310"
+                }
+              ]
+            }
+          },
+          {
+            "p": "P5",
+            "k": "rework_churn",
+            "w": 10,
+            "s": "medium",
+            "label": "反复翻案",
+            "detail": "这项工作被重新打开 3 次，期间没有新增依据记录来解释每一次转向。",
+            "action": "为每次重开补一条原因，并把结论回写到依据页——否则下一次还会再吵一遍。",
+            "evidence": {
+              "issueKey": "KAN-7",
+              "reopenedCount": 3,
+              "lastReopenedAt": "2026-11-16T03:00:00.000Z"
+            }
+          }
+        ],
+        "suppressed": [],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "clear",
+            "label": "无依据",
+            "why": null
+          },
+          {
+            "p": "P2",
+            "w": 20,
+            "state": "clear",
+            "label": "变更未传导",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 15,
+            "state": "hit",
+            "label": "依据冲突",
+            "why": null
+          },
+          {
+            "p": "P4",
+            "w": 18,
+            "state": "hit",
+            "label": "目标漂移",
+            "why": null
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "hit",
+            "label": "反复翻案",
+            "why": null
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "clear",
+            "label": "单人且无复核",
+            "why": null
+          }
+        ],
+        "coverage": {
+          "known": 3,
+          "total": 3,
+          "ratio": 1
+        },
+        "source": "fixture",
+        "degraded": null
+      },
+      "launch": {
+        "ok": true,
+        "issueKey": "KAN-7",
+        "summary": "Auto-close dormant customer portals",
+        "status": "In Progress",
+        "profile": "launch",
+        "debt": 44,
+        "grade": "at_risk",
+        "authority": {
+          "state": "present",
+          "verdict": "contested",
+          "owner": "acc-1123",
+          "ownerName": null,
+          "title": "Portal lifecycle policy — close after 60 days idle",
+          "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/9102",
+          "updatedAt": "2026-11-02T05:00:00.000Z",
+          "lastConfirmAt": "2026-11-05T02:00:00.000Z",
+          "daysSinceUpdate": 15,
+          "daysWithoutConfirm": null,
+          "contributors": 2,
+          "decisionCount": 2
+        },
+        "partial": false,
+        "unknownPrims": [],
+        "certainty": 1,
+        "thin": false,
+        "flagCount": 3,
+        "flags": [
+          {
+            "p": "P3",
+            "k": "conflicting_mandates",
+            "w": 22,
+            "s": "medium",
+            "label": "依据冲突",
+            "detail": "同一主题下存在 2 份 brief / positioning（「Portal lifecycle policy — close after 60 days idle」、「Portal lifecycle policy — close after 180 days idle」），负责人不同，各自执行的人可能各按各的理解走。",
+            "action": "指定唯一 owner，把另一份标注为\"已被取代\"并互链，避免后人各按各的理解执行。",
+            "evidence": {
+              "issueKey": "KAN-7",
+              "sources": [
+                {
+                  "id": "page-9102",
+                  "title": "Portal lifecycle policy — close after 60 days idle",
+                  "owner": "acc-1123",
+                  "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/9102"
+                },
+                {
+                  "id": "page-9310",
+                  "title": "Portal lifecycle policy — close after 180 days idle",
+                  "owner": "acc-4401",
+                  "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/9310"
+                }
+              ]
+            }
+          },
+          {
+            "p": "P4",
+            "k": "goal_drift",
+            "w": 12,
+            "s": "high",
+            "label": "目标漂移",
+            "detail": "关联目标（Cut idle infrastructure cost）已经结束，工作项仍处于「In Progress」。",
+            "action": "确认这项工作是否还有必要继续：需要就挂到新的目标下，不需要就关掉。",
+            "evidence": {
+              "issueKey": "KAN-7",
+              "status": "In Progress",
+              "goals": [
+                {
+                  "id": "goal-310",
+                  "status": "completed"
+                }
+              ]
+            }
+          },
+          {
+            "p": "P5",
+            "k": "rework_churn",
+            "w": 10,
+            "s": "medium",
+            "label": "反复翻案",
+            "detail": "这项工作被重新打开 3 次，期间没有新增依据记录来解释每一次转向。",
+            "action": "为每次重开补一条原因，并把结论回写到依据页——否则下一次还会再吵一遍。",
+            "evidence": {
+              "issueKey": "KAN-7",
+              "reopenedCount": 3,
+              "lastReopenedAt": "2026-11-16T03:00:00.000Z"
+            }
+          }
+        ],
+        "suppressed": [],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "clear",
+            "label": "无依据",
+            "why": null
+          },
+          {
+            "p": "P2",
+            "w": 20,
+            "state": "clear",
+            "label": "变更未传导",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 22,
+            "state": "hit",
+            "label": "依据冲突",
+            "why": null
+          },
+          {
+            "p": "P4",
+            "w": 12,
+            "state": "hit",
+            "label": "目标漂移",
+            "why": null
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "hit",
+            "label": "反复翻案",
+            "why": null
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "clear",
+            "label": "单人且无复核",
+            "why": null
+          }
+        ],
+        "coverage": {
+          "known": 3,
+          "total": 3,
+          "ratio": 1
+        },
+        "source": "fixture",
+        "degraded": null
+      },
+      "portfolio": {
+        "ok": true,
+        "issueKey": "KAN-7",
+        "summary": "Auto-close dormant customer portals",
+        "status": "In Progress",
+        "profile": "portfolio",
+        "debt": 51,
+        "grade": "at_risk",
+        "authority": {
+          "state": "present",
+          "verdict": "contested",
+          "owner": "acc-1123",
+          "ownerName": null,
+          "title": "Portal lifecycle policy — close after 60 days idle",
+          "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/9102",
+          "updatedAt": "2026-11-02T05:00:00.000Z",
+          "lastConfirmAt": "2026-11-05T02:00:00.000Z",
+          "daysSinceUpdate": 15,
+          "daysWithoutConfirm": null,
+          "contributors": 2,
+          "decisionCount": 2
+        },
+        "partial": false,
+        "unknownPrims": [],
+        "certainty": 1,
+        "thin": false,
+        "flagCount": 3,
+        "flags": [
+          {
+            "p": "P4",
+            "k": "goal_drift",
+            "w": 26,
+            "s": "high",
+            "label": "目标漂移",
+            "detail": "关联目标（Cut idle infrastructure cost）已经结束，工作项仍处于「In Progress」。",
+            "action": "确认这项工作是否还有必要继续：需要就挂到新的目标下，不需要就关掉。",
+            "evidence": {
+              "issueKey": "KAN-7",
+              "status": "In Progress",
+              "goals": [
+                {
+                  "id": "goal-310",
+                  "status": "completed"
+                }
+              ]
+            }
+          },
+          {
+            "p": "P3",
+            "k": "conflicting_mandates",
+            "w": 15,
+            "s": "medium",
+            "label": "依据冲突",
+            "detail": "同一主题下存在 2 份 立项页（「Portal lifecycle policy — close after 60 days idle」、「Portal lifecycle policy — close after 180 days idle」），负责人不同，各自执行的人可能各按各的理解走。",
+            "action": "指定唯一 owner，把另一份标注为\"已被取代\"并互链，避免后人各按各的理解执行。",
+            "evidence": {
+              "issueKey": "KAN-7",
+              "sources": [
+                {
+                  "id": "page-9102",
+                  "title": "Portal lifecycle policy — close after 60 days idle",
+                  "owner": "acc-1123",
+                  "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/9102"
+                },
+                {
+                  "id": "page-9310",
+                  "title": "Portal lifecycle policy — close after 180 days idle",
+                  "owner": "acc-4401",
+                  "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/9310"
+                }
+              ]
+            }
+          },
+          {
+            "p": "P5",
+            "k": "rework_churn",
+            "w": 10,
+            "s": "medium",
+            "label": "反复翻案",
+            "detail": "这项工作被重新打开 3 次，期间没有新增依据记录来解释每一次转向。",
+            "action": "为每次重开补一条原因，并把结论回写到依据页——否则下一次还会再吵一遍。",
+            "evidence": {
+              "issueKey": "KAN-7",
+              "reopenedCount": 3,
+              "lastReopenedAt": "2026-11-16T03:00:00.000Z"
+            }
+          }
+        ],
+        "suppressed": [],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "clear",
+            "label": "无依据",
+            "why": null
+          },
+          {
+            "p": "P2",
+            "w": 14,
+            "state": "clear",
+            "label": "变更未传导",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 15,
+            "state": "hit",
+            "label": "依据冲突",
+            "why": null
+          },
+          {
+            "p": "P4",
+            "w": 26,
+            "state": "hit",
+            "label": "目标漂移",
+            "why": null
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "hit",
+            "label": "反复翻案",
+            "why": null
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "clear",
+            "label": "单人且无复核",
+            "why": null
+          }
+        ],
+        "coverage": {
+          "known": 3,
+          "total": 3,
+          "ratio": 1
+        },
+        "source": "fixture",
+        "degraded": null
+      }
+    }
+  },
+  "kan9": {
+    "en": {
+      "software": {
+        "ok": true,
+        "issueKey": "KAN-9",
+        "summary": "Rebuild the audit log export (requested by one account manager)",
+        "status": "In Progress",
+        "profile": "software",
+        "debt": 25,
+        "grade": "watch",
+        "authority": {
+          "state": "absent",
+          "verdict": "missing",
+          "owner": null,
+          "ownerName": null,
+          "title": null,
+          "url": null,
+          "updatedAt": null,
+          "lastConfirmAt": null,
+          "daysSinceUpdate": null,
+          "daysWithoutConfirm": null,
+          "contributors": null,
+          "decisionCount": 0
+        },
+        "partial": false,
+        "unknownPrims": [],
+        "certainty": 1,
+        "thin": false,
+        "flagCount": 1,
+        "flags": [
+          {
+            "p": "P1",
+            "k": "no_mandate",
+            "w": 25,
+            "s": "high",
+            "label": "No mandate",
+            "detail": "No linked decision record and no linked goal — nothing records why this work exists.",
+            "action": "Link the authorising decision record, or attach the review notes that already exist.",
+            "evidence": {
+              "issueKey": "KAN-9",
+              "decisions": 0,
+              "goals": 0
+            }
+          }
+        ],
+        "suppressed": [],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "hit",
+            "label": "No mandate",
+            "why": null
+          },
+          {
+            "p": "P2",
+            "w": 20,
+            "state": "clear",
+            "label": "Change not propagated",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 15,
+            "state": "clear",
+            "label": "Conflicting mandates",
+            "why": null
+          },
+          {
+            "p": "P4",
+            "w": 18,
+            "state": "clear",
+            "label": "Goal drift",
+            "why": null
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "clear",
+            "label": "Re-litigation",
+            "why": null
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "clear",
+            "label": "Single author, no review",
+            "why": null
+          }
+        ],
+        "coverage": {
+          "known": 3,
+          "total": 3,
+          "ratio": 1
+        },
+        "source": "fixture",
+        "degraded": null
+      },
+      "launch": {
+        "ok": true,
+        "issueKey": "KAN-9",
+        "summary": "Rebuild the audit log export (requested by one account manager)",
+        "status": "In Progress",
+        "profile": "launch",
+        "debt": 25,
+        "grade": "watch",
+        "authority": {
+          "state": "absent",
+          "verdict": "missing",
+          "owner": null,
+          "ownerName": null,
+          "title": null,
+          "url": null,
+          "updatedAt": null,
+          "lastConfirmAt": null,
+          "daysSinceUpdate": null,
+          "daysWithoutConfirm": null,
+          "contributors": null,
+          "decisionCount": 0
+        },
+        "partial": false,
+        "unknownPrims": [],
+        "certainty": 1,
+        "thin": false,
+        "flagCount": 1,
+        "flags": [
+          {
+            "p": "P1",
+            "k": "no_mandate",
+            "w": 25,
+            "s": "high",
+            "label": "No mandate",
+            "detail": "No linked positioning brief and no linked goal — nothing records why this work exists.",
+            "action": "Link the authorising positioning brief, or attach the review notes that already exist.",
+            "evidence": {
+              "issueKey": "KAN-9",
+              "decisions": 0,
+              "goals": 0
+            }
+          }
+        ],
+        "suppressed": [],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "hit",
+            "label": "No mandate",
+            "why": null
+          },
+          {
+            "p": "P2",
+            "w": 20,
+            "state": "clear",
+            "label": "Change not propagated",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 22,
+            "state": "clear",
+            "label": "Conflicting mandates",
+            "why": null
+          },
+          {
+            "p": "P4",
+            "w": 12,
+            "state": "clear",
+            "label": "Goal drift",
+            "why": null
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "clear",
+            "label": "Re-litigation",
+            "why": null
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "clear",
+            "label": "Single author, no review",
+            "why": null
+          }
+        ],
+        "coverage": {
+          "known": 3,
+          "total": 3,
+          "ratio": 1
+        },
+        "source": "fixture",
+        "degraded": null
+      },
+      "portfolio": {
+        "ok": true,
+        "issueKey": "KAN-9",
+        "summary": "Rebuild the audit log export (requested by one account manager)",
+        "status": "In Progress",
+        "profile": "portfolio",
+        "debt": 25,
+        "grade": "watch",
+        "authority": {
+          "state": "absent",
+          "verdict": "missing",
+          "owner": null,
+          "ownerName": null,
+          "title": null,
+          "url": null,
+          "updatedAt": null,
+          "lastConfirmAt": null,
+          "daysSinceUpdate": null,
+          "daysWithoutConfirm": null,
+          "contributors": null,
+          "decisionCount": 0
+        },
+        "partial": false,
+        "unknownPrims": [],
+        "certainty": 1,
+        "thin": false,
+        "flagCount": 1,
+        "flags": [
+          {
+            "p": "P1",
+            "k": "no_mandate",
+            "w": 25,
+            "s": "high",
+            "label": "No mandate",
+            "detail": "No linked mandate page and no linked goal — nothing records why this work exists.",
+            "action": "Link the authorising mandate page, or attach the review notes that already exist.",
+            "evidence": {
+              "issueKey": "KAN-9",
+              "decisions": 0,
+              "goals": 0
+            }
+          }
+        ],
+        "suppressed": [],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "hit",
+            "label": "No mandate",
+            "why": null
+          },
+          {
+            "p": "P2",
+            "w": 14,
+            "state": "clear",
+            "label": "Change not propagated",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 15,
+            "state": "clear",
+            "label": "Conflicting mandates",
+            "why": null
+          },
+          {
+            "p": "P4",
+            "w": 26,
+            "state": "clear",
+            "label": "Goal drift",
+            "why": null
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "clear",
+            "label": "Re-litigation",
+            "why": null
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "clear",
+            "label": "Single author, no review",
+            "why": null
+          }
+        ],
+        "coverage": {
+          "known": 3,
+          "total": 3,
+          "ratio": 1
+        },
+        "source": "fixture",
+        "degraded": null
+      }
+    },
+    "zh": {
+      "software": {
+        "ok": true,
+        "issueKey": "KAN-9",
+        "summary": "Rebuild the audit log export (requested by one account manager)",
+        "status": "In Progress",
+        "profile": "software",
+        "debt": 25,
+        "grade": "watch",
+        "authority": {
+          "state": "absent",
+          "verdict": "missing",
+          "owner": null,
+          "ownerName": null,
+          "title": null,
+          "url": null,
+          "updatedAt": null,
+          "lastConfirmAt": null,
+          "daysSinceUpdate": null,
+          "daysWithoutConfirm": null,
+          "contributors": null,
+          "decisionCount": 0
+        },
+        "partial": false,
+        "unknownPrims": [],
+        "certainty": 1,
+        "thin": false,
+        "flagCount": 1,
+        "flags": [
+          {
+            "p": "P1",
+            "k": "no_mandate",
+            "w": 25,
+            "s": "high",
+            "label": "无依据",
+            "detail": "这项工作既没有关联的决策记录，也没有关联目标，等于没有任何\"为什么做\"的记录。",
+            "action": "把立项依据补成一份决策记录并关联；已有的评审记录直接挂上来即可。",
+            "evidence": {
+              "issueKey": "KAN-9",
+              "decisions": 0,
+              "goals": 0
+            }
+          }
+        ],
+        "suppressed": [],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "hit",
+            "label": "无依据",
+            "why": null
+          },
+          {
+            "p": "P2",
+            "w": 20,
+            "state": "clear",
+            "label": "变更未传导",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 15,
+            "state": "clear",
+            "label": "依据冲突",
+            "why": null
+          },
+          {
+            "p": "P4",
+            "w": 18,
+            "state": "clear",
+            "label": "目标漂移",
+            "why": null
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "clear",
+            "label": "反复翻案",
+            "why": null
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "clear",
+            "label": "单人且无复核",
+            "why": null
+          }
+        ],
+        "coverage": {
+          "known": 3,
+          "total": 3,
+          "ratio": 1
+        },
+        "source": "fixture",
+        "degraded": null
+      },
+      "launch": {
+        "ok": true,
+        "issueKey": "KAN-9",
+        "summary": "Rebuild the audit log export (requested by one account manager)",
+        "status": "In Progress",
+        "profile": "launch",
+        "debt": 25,
+        "grade": "watch",
+        "authority": {
+          "state": "absent",
+          "verdict": "missing",
+          "owner": null,
+          "ownerName": null,
+          "title": null,
+          "url": null,
+          "updatedAt": null,
+          "lastConfirmAt": null,
+          "daysSinceUpdate": null,
+          "daysWithoutConfirm": null,
+          "contributors": null,
+          "decisionCount": 0
+        },
+        "partial": false,
+        "unknownPrims": [],
+        "certainty": 1,
+        "thin": false,
+        "flagCount": 1,
+        "flags": [
+          {
+            "p": "P1",
+            "k": "no_mandate",
+            "w": 25,
+            "s": "high",
+            "label": "无依据",
+            "detail": "这项工作既没有关联的brief / positioning，也没有关联目标，等于没有任何\"为什么做\"的记录。",
+            "action": "把立项依据补成一份brief / positioning并关联；已有的评审记录直接挂上来即可。",
+            "evidence": {
+              "issueKey": "KAN-9",
+              "decisions": 0,
+              "goals": 0
+            }
+          }
+        ],
+        "suppressed": [],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "hit",
+            "label": "无依据",
+            "why": null
+          },
+          {
+            "p": "P2",
+            "w": 20,
+            "state": "clear",
+            "label": "变更未传导",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 22,
+            "state": "clear",
+            "label": "依据冲突",
+            "why": null
+          },
+          {
+            "p": "P4",
+            "w": 12,
+            "state": "clear",
+            "label": "目标漂移",
+            "why": null
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "clear",
+            "label": "反复翻案",
+            "why": null
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "clear",
+            "label": "单人且无复核",
+            "why": null
+          }
+        ],
+        "coverage": {
+          "known": 3,
+          "total": 3,
+          "ratio": 1
+        },
+        "source": "fixture",
+        "degraded": null
+      },
+      "portfolio": {
+        "ok": true,
+        "issueKey": "KAN-9",
+        "summary": "Rebuild the audit log export (requested by one account manager)",
+        "status": "In Progress",
+        "profile": "portfolio",
+        "debt": 25,
+        "grade": "watch",
+        "authority": {
+          "state": "absent",
+          "verdict": "missing",
+          "owner": null,
+          "ownerName": null,
+          "title": null,
+          "url": null,
+          "updatedAt": null,
+          "lastConfirmAt": null,
+          "daysSinceUpdate": null,
+          "daysWithoutConfirm": null,
+          "contributors": null,
+          "decisionCount": 0
+        },
+        "partial": false,
+        "unknownPrims": [],
+        "certainty": 1,
+        "thin": false,
+        "flagCount": 1,
+        "flags": [
+          {
+            "p": "P1",
+            "k": "no_mandate",
+            "w": 25,
+            "s": "high",
+            "label": "无依据",
+            "detail": "这项工作既没有关联的立项页，也没有关联目标，等于没有任何\"为什么做\"的记录。",
+            "action": "把立项依据补成一份立项页并关联；已有的评审记录直接挂上来即可。",
+            "evidence": {
+              "issueKey": "KAN-9",
+              "decisions": 0,
+              "goals": 0
+            }
+          }
+        ],
+        "suppressed": [],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "hit",
+            "label": "无依据",
+            "why": null
+          },
+          {
+            "p": "P2",
+            "w": 14,
+            "state": "clear",
+            "label": "变更未传导",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 15,
+            "state": "clear",
+            "label": "依据冲突",
+            "why": null
+          },
+          {
+            "p": "P4",
+            "w": 26,
+            "state": "clear",
+            "label": "目标漂移",
+            "why": null
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "clear",
+            "label": "反复翻案",
+            "why": null
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "clear",
+            "label": "单人且无复核",
+            "why": null
+          }
+        ],
+        "coverage": {
+          "known": 3,
+          "total": 3,
+          "ratio": 1
+        },
+        "source": "fixture",
+        "degraded": null
+      }
+    }
+  },
+  "kan20": {
+    "en": {
+      "software": {
+        "ok": true,
+        "issueKey": "KAN-20",
+        "summary": "Spring release announcement page",
+        "status": "In Progress",
+        "profile": "software",
+        "debt": 0,
+        "grade": "healthy",
+        "authority": {
+          "state": "present",
+          "verdict": "current",
+          "owner": "acc-4401",
+          "ownerName": null,
+          "title": "Spring launch message tier",
+          "url": "https://example.atlassian.net/wiki/spaces/MKT/pages/7002",
+          "updatedAt": "2026-09-22T02:00:00.000Z",
+          "lastConfirmAt": "2026-10-02T02:00:00.000Z",
+          "daysSinceUpdate": 51,
+          "daysWithoutConfirm": null,
+          "contributors": 2,
+          "decisionCount": 2
+        },
+        "partial": false,
+        "unknownPrims": [],
+        "certainty": 1,
+        "thin": false,
+        "flagCount": 0,
+        "flags": [],
+        "suppressed": [],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "clear",
+            "label": "No mandate",
+            "why": null
+          },
+          {
+            "p": "P2",
+            "w": 20,
+            "state": "clear",
+            "label": "Change not propagated",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 15,
+            "state": "clear",
+            "label": "Conflicting mandates",
+            "why": null
+          },
+          {
+            "p": "P4",
+            "w": 18,
+            "state": "clear",
+            "label": "Goal drift",
+            "why": null
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "clear",
+            "label": "Re-litigation",
+            "why": null
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "clear",
+            "label": "Single author, no review",
+            "why": null
+          }
+        ],
+        "coverage": {
+          "known": 3,
+          "total": 3,
+          "ratio": 1
+        },
+        "source": "fixture",
+        "degraded": null
+      },
+      "launch": {
+        "ok": true,
+        "issueKey": "KAN-20",
+        "summary": "Spring release announcement page",
+        "status": "In Progress",
+        "profile": "launch",
+        "debt": 22,
+        "grade": "watch",
+        "authority": {
+          "state": "present",
+          "verdict": "contested",
+          "owner": "acc-4401",
+          "ownerName": null,
+          "title": "Spring launch message tier",
+          "url": "https://example.atlassian.net/wiki/spaces/MKT/pages/7002",
+          "updatedAt": "2026-09-22T02:00:00.000Z",
+          "lastConfirmAt": "2026-10-02T02:00:00.000Z",
+          "daysSinceUpdate": 51,
+          "daysWithoutConfirm": null,
+          "contributors": 2,
+          "decisionCount": 2
+        },
+        "partial": false,
+        "unknownPrims": [],
+        "certainty": 1,
+        "thin": false,
+        "flagCount": 1,
+        "flags": [
+          {
+            "p": "P3",
+            "k": "conflicting_mandates",
+            "w": 22,
+            "s": "medium",
+            "label": "Conflicting mandates",
+            "detail": "Two positioning briefs cover the same topic with different owners (\"Spring launch positioning\", \"Spring launch message tier\") — each team may be executing a different reading.",
+            "action": "Name one owner, mark the other page as superseded, and link them both ways so nobody executes a stale reading.",
+            "evidence": {
+              "issueKey": "KAN-20",
+              "sources": [
+                {
+                  "id": "page-7001",
+                  "title": "Spring launch positioning",
+                  "owner": "acc-1123",
+                  "url": "https://example.atlassian.net/wiki/spaces/MKT/pages/7001"
+                },
+                {
+                  "id": "page-7002",
+                  "title": "Spring launch message tier",
+                  "owner": "acc-4401",
+                  "url": "https://example.atlassian.net/wiki/spaces/MKT/pages/7002"
+                }
+              ]
+            }
+          }
+        ],
+        "suppressed": [],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "clear",
+            "label": "No mandate",
+            "why": null
+          },
+          {
+            "p": "P2",
+            "w": 20,
+            "state": "clear",
+            "label": "Change not propagated",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 22,
+            "state": "hit",
+            "label": "Conflicting mandates",
+            "why": null
+          },
+          {
+            "p": "P4",
+            "w": 12,
+            "state": "clear",
+            "label": "Goal drift",
+            "why": null
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "clear",
+            "label": "Re-litigation",
+            "why": null
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "clear",
+            "label": "Single author, no review",
+            "why": null
+          }
+        ],
+        "coverage": {
+          "known": 3,
+          "total": 3,
+          "ratio": 1
+        },
+        "source": "fixture",
+        "degraded": null
+      },
+      "portfolio": {
+        "ok": true,
+        "issueKey": "KAN-20",
+        "summary": "Spring release announcement page",
+        "status": "In Progress",
+        "profile": "portfolio",
+        "debt": 0,
+        "grade": "healthy",
+        "authority": {
+          "state": "present",
+          "verdict": "current",
+          "owner": "acc-4401",
+          "ownerName": null,
+          "title": "Spring launch message tier",
+          "url": "https://example.atlassian.net/wiki/spaces/MKT/pages/7002",
+          "updatedAt": "2026-09-22T02:00:00.000Z",
+          "lastConfirmAt": "2026-10-02T02:00:00.000Z",
+          "daysSinceUpdate": 51,
+          "daysWithoutConfirm": null,
+          "contributors": 2,
+          "decisionCount": 2
+        },
+        "partial": false,
+        "unknownPrims": [],
+        "certainty": 1,
+        "thin": false,
+        "flagCount": 0,
+        "flags": [],
+        "suppressed": [],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "clear",
+            "label": "No mandate",
+            "why": null
+          },
+          {
+            "p": "P2",
+            "w": 14,
+            "state": "clear",
+            "label": "Change not propagated",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 15,
+            "state": "clear",
+            "label": "Conflicting mandates",
+            "why": null
+          },
+          {
+            "p": "P4",
+            "w": 26,
+            "state": "clear",
+            "label": "Goal drift",
+            "why": null
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "clear",
+            "label": "Re-litigation",
+            "why": null
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "clear",
+            "label": "Single author, no review",
+            "why": null
+          }
+        ],
+        "coverage": {
+          "known": 3,
+          "total": 3,
+          "ratio": 1
+        },
+        "source": "fixture",
+        "degraded": null
+      }
+    },
+    "zh": {
+      "software": {
+        "ok": true,
+        "issueKey": "KAN-20",
+        "summary": "Spring release announcement page",
+        "status": "In Progress",
+        "profile": "software",
+        "debt": 0,
+        "grade": "healthy",
+        "authority": {
+          "state": "present",
+          "verdict": "current",
+          "owner": "acc-4401",
+          "ownerName": null,
+          "title": "Spring launch message tier",
+          "url": "https://example.atlassian.net/wiki/spaces/MKT/pages/7002",
+          "updatedAt": "2026-09-22T02:00:00.000Z",
+          "lastConfirmAt": "2026-10-02T02:00:00.000Z",
+          "daysSinceUpdate": 51,
+          "daysWithoutConfirm": null,
+          "contributors": 2,
+          "decisionCount": 2
+        },
+        "partial": false,
+        "unknownPrims": [],
+        "certainty": 1,
+        "thin": false,
+        "flagCount": 0,
+        "flags": [],
+        "suppressed": [],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "clear",
+            "label": "无依据",
+            "why": null
+          },
+          {
+            "p": "P2",
+            "w": 20,
+            "state": "clear",
+            "label": "变更未传导",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 15,
+            "state": "clear",
+            "label": "依据冲突",
+            "why": null
+          },
+          {
+            "p": "P4",
+            "w": 18,
+            "state": "clear",
+            "label": "目标漂移",
+            "why": null
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "clear",
+            "label": "反复翻案",
+            "why": null
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "clear",
+            "label": "单人且无复核",
+            "why": null
+          }
+        ],
+        "coverage": {
+          "known": 3,
+          "total": 3,
+          "ratio": 1
+        },
+        "source": "fixture",
+        "degraded": null
+      },
+      "launch": {
+        "ok": true,
+        "issueKey": "KAN-20",
+        "summary": "Spring release announcement page",
+        "status": "In Progress",
+        "profile": "launch",
+        "debt": 22,
+        "grade": "watch",
+        "authority": {
+          "state": "present",
+          "verdict": "contested",
+          "owner": "acc-4401",
+          "ownerName": null,
+          "title": "Spring launch message tier",
+          "url": "https://example.atlassian.net/wiki/spaces/MKT/pages/7002",
+          "updatedAt": "2026-09-22T02:00:00.000Z",
+          "lastConfirmAt": "2026-10-02T02:00:00.000Z",
+          "daysSinceUpdate": 51,
+          "daysWithoutConfirm": null,
+          "contributors": 2,
+          "decisionCount": 2
+        },
+        "partial": false,
+        "unknownPrims": [],
+        "certainty": 1,
+        "thin": false,
+        "flagCount": 1,
+        "flags": [
+          {
+            "p": "P3",
+            "k": "conflicting_mandates",
+            "w": 22,
+            "s": "medium",
+            "label": "依据冲突",
+            "detail": "同一主题下存在 2 份 brief / positioning（「Spring launch positioning」、「Spring launch message tier」），负责人不同，各自执行的人可能各按各的理解走。",
+            "action": "指定唯一 owner，把另一份标注为\"已被取代\"并互链，避免后人各按各的理解执行。",
+            "evidence": {
+              "issueKey": "KAN-20",
+              "sources": [
+                {
+                  "id": "page-7001",
+                  "title": "Spring launch positioning",
+                  "owner": "acc-1123",
+                  "url": "https://example.atlassian.net/wiki/spaces/MKT/pages/7001"
+                },
+                {
+                  "id": "page-7002",
+                  "title": "Spring launch message tier",
+                  "owner": "acc-4401",
+                  "url": "https://example.atlassian.net/wiki/spaces/MKT/pages/7002"
+                }
+              ]
+            }
+          }
+        ],
+        "suppressed": [],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "clear",
+            "label": "无依据",
+            "why": null
+          },
+          {
+            "p": "P2",
+            "w": 20,
+            "state": "clear",
+            "label": "变更未传导",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 22,
+            "state": "hit",
+            "label": "依据冲突",
+            "why": null
+          },
+          {
+            "p": "P4",
+            "w": 12,
+            "state": "clear",
+            "label": "目标漂移",
+            "why": null
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "clear",
+            "label": "反复翻案",
+            "why": null
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "clear",
+            "label": "单人且无复核",
+            "why": null
+          }
+        ],
+        "coverage": {
+          "known": 3,
+          "total": 3,
+          "ratio": 1
+        },
+        "source": "fixture",
+        "degraded": null
+      },
+      "portfolio": {
+        "ok": true,
+        "issueKey": "KAN-20",
+        "summary": "Spring release announcement page",
+        "status": "In Progress",
+        "profile": "portfolio",
+        "debt": 0,
+        "grade": "healthy",
+        "authority": {
+          "state": "present",
+          "verdict": "current",
+          "owner": "acc-4401",
+          "ownerName": null,
+          "title": "Spring launch message tier",
+          "url": "https://example.atlassian.net/wiki/spaces/MKT/pages/7002",
+          "updatedAt": "2026-09-22T02:00:00.000Z",
+          "lastConfirmAt": "2026-10-02T02:00:00.000Z",
+          "daysSinceUpdate": 51,
+          "daysWithoutConfirm": null,
+          "contributors": 2,
+          "decisionCount": 2
+        },
+        "partial": false,
+        "unknownPrims": [],
+        "certainty": 1,
+        "thin": false,
+        "flagCount": 0,
+        "flags": [],
+        "suppressed": [],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "clear",
+            "label": "无依据",
+            "why": null
+          },
+          {
+            "p": "P2",
+            "w": 14,
+            "state": "clear",
+            "label": "变更未传导",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 15,
+            "state": "clear",
+            "label": "依据冲突",
+            "why": null
+          },
+          {
+            "p": "P4",
+            "w": 26,
+            "state": "clear",
+            "label": "目标漂移",
+            "why": null
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "clear",
+            "label": "反复翻案",
+            "why": null
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "clear",
+            "label": "单人且无复核",
+            "why": null
+          }
+        ],
+        "coverage": {
+          "known": 3,
+          "total": 3,
+          "ratio": 1
+        },
+        "source": "fixture",
+        "degraded": null
+      }
+    }
+  },
+  "kan11": {
+    "en": {
+      "software": {
+        "ok": true,
+        "issueKey": "KAN-11",
+        "summary": "Bulk reindex of search attachments",
+        "status": "In Progress",
+        "profile": "software",
+        "debt": 0,
+        "grade": "unknown",
+        "authority": {
+          "state": "unknown",
+          "verdict": "unknown",
+          "owner": null,
+          "ownerName": null,
+          "title": null,
+          "url": null,
+          "updatedAt": null,
+          "lastConfirmAt": null,
+          "daysSinceUpdate": null,
+          "daysWithoutConfirm": null,
+          "contributors": null,
+          "decisionCount": 0
+        },
+        "partial": false,
+        "unknownPrims": [],
+        "certainty": 0,
+        "thin": false,
+        "flagCount": 0,
+        "flags": [],
+        "suppressed": [
+          {
+            "p": "P1",
+            "why": "unknown:decisions,goals"
+          },
+          {
+            "p": "P2",
+            "why": "unknown:decisions"
+          },
+          {
+            "p": "P3",
+            "why": "unknown:decisions"
+          },
+          {
+            "p": "P4",
+            "why": "unknown:goals"
+          },
+          {
+            "p": "P5",
+            "why": "unknown:decisions"
+          },
+          {
+            "p": "P6",
+            "why": "unknown:decisions,reviewTraces"
+          }
+        ],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "unknown",
+            "label": "No mandate",
+            "why": "decisions,goals"
+          },
+          {
+            "p": "P2",
+            "w": 20,
+            "state": "unknown",
+            "label": "Change not propagated",
+            "why": "decisions"
+          },
+          {
+            "p": "P3",
+            "w": 15,
+            "state": "unknown",
+            "label": "Conflicting mandates",
+            "why": "decisions"
+          },
+          {
+            "p": "P4",
+            "w": 18,
+            "state": "unknown",
+            "label": "Goal drift",
+            "why": "goals"
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "unknown",
+            "label": "Re-litigation",
+            "why": "decisions"
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "unknown",
+            "label": "Single author, no review",
+            "why": "decisions,reviewTraces"
+          }
+        ],
+        "coverage": {
+          "known": 0,
+          "total": 3,
+          "ratio": 0
+        },
+        "source": "twg",
+        "degraded": null
+      },
+      "launch": {
+        "ok": true,
+        "issueKey": "KAN-11",
+        "summary": "Bulk reindex of search attachments",
+        "status": "In Progress",
+        "profile": "launch",
+        "debt": 0,
+        "grade": "unknown",
+        "authority": {
+          "state": "unknown",
+          "verdict": "unknown",
+          "owner": null,
+          "ownerName": null,
+          "title": null,
+          "url": null,
+          "updatedAt": null,
+          "lastConfirmAt": null,
+          "daysSinceUpdate": null,
+          "daysWithoutConfirm": null,
+          "contributors": null,
+          "decisionCount": 0
+        },
+        "partial": false,
+        "unknownPrims": [],
+        "certainty": 0,
+        "thin": false,
+        "flagCount": 0,
+        "flags": [],
+        "suppressed": [
+          {
+            "p": "P1",
+            "why": "unknown:decisions,goals"
+          },
+          {
+            "p": "P2",
+            "why": "unknown:decisions"
+          },
+          {
+            "p": "P3",
+            "why": "unknown:decisions"
+          },
+          {
+            "p": "P4",
+            "why": "unknown:goals"
+          },
+          {
+            "p": "P5",
+            "why": "unknown:decisions"
+          },
+          {
+            "p": "P6",
+            "why": "unknown:decisions,reviewTraces"
+          }
+        ],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "unknown",
+            "label": "No mandate",
+            "why": "decisions,goals"
+          },
+          {
+            "p": "P2",
+            "w": 20,
+            "state": "unknown",
+            "label": "Change not propagated",
+            "why": "decisions"
+          },
+          {
+            "p": "P3",
+            "w": 22,
+            "state": "unknown",
+            "label": "Conflicting mandates",
+            "why": "decisions"
+          },
+          {
+            "p": "P4",
+            "w": 12,
+            "state": "unknown",
+            "label": "Goal drift",
+            "why": "goals"
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "unknown",
+            "label": "Re-litigation",
+            "why": "decisions"
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "unknown",
+            "label": "Single author, no review",
+            "why": "decisions,reviewTraces"
+          }
+        ],
+        "coverage": {
+          "known": 0,
+          "total": 3,
+          "ratio": 0
+        },
+        "source": "twg",
+        "degraded": null
+      },
+      "portfolio": {
+        "ok": true,
+        "issueKey": "KAN-11",
+        "summary": "Bulk reindex of search attachments",
+        "status": "In Progress",
+        "profile": "portfolio",
+        "debt": 0,
+        "grade": "unknown",
+        "authority": {
+          "state": "unknown",
+          "verdict": "unknown",
+          "owner": null,
+          "ownerName": null,
+          "title": null,
+          "url": null,
+          "updatedAt": null,
+          "lastConfirmAt": null,
+          "daysSinceUpdate": null,
+          "daysWithoutConfirm": null,
+          "contributors": null,
+          "decisionCount": 0
+        },
+        "partial": false,
+        "unknownPrims": [],
+        "certainty": 0,
+        "thin": false,
+        "flagCount": 0,
+        "flags": [],
+        "suppressed": [
+          {
+            "p": "P1",
+            "why": "unknown:decisions,goals"
+          },
+          {
+            "p": "P2",
+            "why": "unknown:decisions"
+          },
+          {
+            "p": "P3",
+            "why": "unknown:decisions"
+          },
+          {
+            "p": "P4",
+            "why": "unknown:goals"
+          },
+          {
+            "p": "P5",
+            "why": "unknown:decisions"
+          },
+          {
+            "p": "P6",
+            "why": "unknown:decisions,reviewTraces"
+          }
+        ],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "unknown",
+            "label": "No mandate",
+            "why": "decisions,goals"
+          },
+          {
+            "p": "P2",
+            "w": 14,
+            "state": "unknown",
+            "label": "Change not propagated",
+            "why": "decisions"
+          },
+          {
+            "p": "P3",
+            "w": 15,
+            "state": "unknown",
+            "label": "Conflicting mandates",
+            "why": "decisions"
+          },
+          {
+            "p": "P4",
+            "w": 26,
+            "state": "unknown",
+            "label": "Goal drift",
+            "why": "goals"
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "unknown",
+            "label": "Re-litigation",
+            "why": "decisions"
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "unknown",
+            "label": "Single author, no review",
+            "why": "decisions,reviewTraces"
+          }
+        ],
+        "coverage": {
+          "known": 0,
+          "total": 3,
+          "ratio": 0
+        },
+        "source": "twg",
+        "degraded": null
+      }
+    },
+    "zh": {
+      "software": {
+        "ok": true,
+        "issueKey": "KAN-11",
+        "summary": "Bulk reindex of search attachments",
+        "status": "In Progress",
+        "profile": "software",
+        "debt": 0,
+        "grade": "unknown",
+        "authority": {
+          "state": "unknown",
+          "verdict": "unknown",
+          "owner": null,
+          "ownerName": null,
+          "title": null,
+          "url": null,
+          "updatedAt": null,
+          "lastConfirmAt": null,
+          "daysSinceUpdate": null,
+          "daysWithoutConfirm": null,
+          "contributors": null,
+          "decisionCount": 0
+        },
+        "partial": false,
+        "unknownPrims": [],
+        "certainty": 0,
+        "thin": false,
+        "flagCount": 0,
+        "flags": [],
+        "suppressed": [
+          {
+            "p": "P1",
+            "why": "unknown:decisions,goals"
+          },
+          {
+            "p": "P2",
+            "why": "unknown:decisions"
+          },
+          {
+            "p": "P3",
+            "why": "unknown:decisions"
+          },
+          {
+            "p": "P4",
+            "why": "unknown:goals"
+          },
+          {
+            "p": "P5",
+            "why": "unknown:decisions"
+          },
+          {
+            "p": "P6",
+            "why": "unknown:decisions,reviewTraces"
+          }
+        ],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "unknown",
+            "label": "无依据",
+            "why": "decisions,goals"
+          },
+          {
+            "p": "P2",
+            "w": 20,
+            "state": "unknown",
+            "label": "变更未传导",
+            "why": "decisions"
+          },
+          {
+            "p": "P3",
+            "w": 15,
+            "state": "unknown",
+            "label": "依据冲突",
+            "why": "decisions"
+          },
+          {
+            "p": "P4",
+            "w": 18,
+            "state": "unknown",
+            "label": "目标漂移",
+            "why": "goals"
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "unknown",
+            "label": "反复翻案",
+            "why": "decisions"
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "unknown",
+            "label": "单人且无复核",
+            "why": "decisions,reviewTraces"
+          }
+        ],
+        "coverage": {
+          "known": 0,
+          "total": 3,
+          "ratio": 0
+        },
+        "source": "twg",
+        "degraded": null
+      },
+      "launch": {
+        "ok": true,
+        "issueKey": "KAN-11",
+        "summary": "Bulk reindex of search attachments",
+        "status": "In Progress",
+        "profile": "launch",
+        "debt": 0,
+        "grade": "unknown",
+        "authority": {
+          "state": "unknown",
+          "verdict": "unknown",
+          "owner": null,
+          "ownerName": null,
+          "title": null,
+          "url": null,
+          "updatedAt": null,
+          "lastConfirmAt": null,
+          "daysSinceUpdate": null,
+          "daysWithoutConfirm": null,
+          "contributors": null,
+          "decisionCount": 0
+        },
+        "partial": false,
+        "unknownPrims": [],
+        "certainty": 0,
+        "thin": false,
+        "flagCount": 0,
+        "flags": [],
+        "suppressed": [
+          {
+            "p": "P1",
+            "why": "unknown:decisions,goals"
+          },
+          {
+            "p": "P2",
+            "why": "unknown:decisions"
+          },
+          {
+            "p": "P3",
+            "why": "unknown:decisions"
+          },
+          {
+            "p": "P4",
+            "why": "unknown:goals"
+          },
+          {
+            "p": "P5",
+            "why": "unknown:decisions"
+          },
+          {
+            "p": "P6",
+            "why": "unknown:decisions,reviewTraces"
+          }
+        ],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "unknown",
+            "label": "无依据",
+            "why": "decisions,goals"
+          },
+          {
+            "p": "P2",
+            "w": 20,
+            "state": "unknown",
+            "label": "变更未传导",
+            "why": "decisions"
+          },
+          {
+            "p": "P3",
+            "w": 22,
+            "state": "unknown",
+            "label": "依据冲突",
+            "why": "decisions"
+          },
+          {
+            "p": "P4",
+            "w": 12,
+            "state": "unknown",
+            "label": "目标漂移",
+            "why": "goals"
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "unknown",
+            "label": "反复翻案",
+            "why": "decisions"
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "unknown",
+            "label": "单人且无复核",
+            "why": "decisions,reviewTraces"
+          }
+        ],
+        "coverage": {
+          "known": 0,
+          "total": 3,
+          "ratio": 0
+        },
+        "source": "twg",
+        "degraded": null
+      },
+      "portfolio": {
+        "ok": true,
+        "issueKey": "KAN-11",
+        "summary": "Bulk reindex of search attachments",
+        "status": "In Progress",
+        "profile": "portfolio",
+        "debt": 0,
+        "grade": "unknown",
+        "authority": {
+          "state": "unknown",
+          "verdict": "unknown",
+          "owner": null,
+          "ownerName": null,
+          "title": null,
+          "url": null,
+          "updatedAt": null,
+          "lastConfirmAt": null,
+          "daysSinceUpdate": null,
+          "daysWithoutConfirm": null,
+          "contributors": null,
+          "decisionCount": 0
+        },
+        "partial": false,
+        "unknownPrims": [],
+        "certainty": 0,
+        "thin": false,
+        "flagCount": 0,
+        "flags": [],
+        "suppressed": [
+          {
+            "p": "P1",
+            "why": "unknown:decisions,goals"
+          },
+          {
+            "p": "P2",
+            "why": "unknown:decisions"
+          },
+          {
+            "p": "P3",
+            "why": "unknown:decisions"
+          },
+          {
+            "p": "P4",
+            "why": "unknown:goals"
+          },
+          {
+            "p": "P5",
+            "why": "unknown:decisions"
+          },
+          {
+            "p": "P6",
+            "why": "unknown:decisions,reviewTraces"
+          }
+        ],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "unknown",
+            "label": "无依据",
+            "why": "decisions,goals"
+          },
+          {
+            "p": "P2",
+            "w": 14,
+            "state": "unknown",
+            "label": "变更未传导",
+            "why": "decisions"
+          },
+          {
+            "p": "P3",
+            "w": 15,
+            "state": "unknown",
+            "label": "依据冲突",
+            "why": "decisions"
+          },
+          {
+            "p": "P4",
+            "w": 26,
+            "state": "unknown",
+            "label": "目标漂移",
+            "why": "goals"
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "unknown",
+            "label": "反复翻案",
+            "why": "decisions"
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "unknown",
+            "label": "单人且无复核",
+            "why": "decisions,reviewTraces"
+          }
+        ],
+        "coverage": {
+          "known": 0,
+          "total": 3,
+          "ratio": 0
+        },
+        "source": "twg",
+        "degraded": null
+      }
+    }
+  },
+  "degraded": {
+    "en": {
+      "software": {
+        "ok": true,
+        "issueKey": "KAN-3",
+        "summary": "One-click archive for projects inactive over 90 days",
+        "status": "In Review",
+        "profile": "software",
+        "debt": 20,
+        "grade": "watch",
+        "authority": {
+          "state": "present",
+          "verdict": "stale",
+          "owner": "acc-1123",
+          "ownerName": "Alice Ng",
+          "title": "Archive policy: archive anything inactive for 90 days",
+          "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/8841",
+          "updatedAt": "2026-08-14T06:00:00.000Z",
+          "lastConfirmAt": null,
+          "daysSinceUpdate": 92,
+          "daysWithoutConfirm": 92,
+          "contributors": 1,
+          "decisionCount": 1
+        },
+        "partial": true,
+        "unknownPrims": [
+          "P1",
+          "P4",
+          "P6"
+        ],
+        "certainty": 0.47,
+        "thin": true,
+        "flagCount": 1,
+        "flags": [
+          {
+            "p": "P2",
+            "k": "drift_not_propagated",
+            "w": 20,
+            "s": "high",
+            "label": "Change not propagated",
+            "detail": "The decision record was edited on 2026-08-14, work started on 2026-06-20, and nobody has confirmed since — 92 days apart.",
+            "action": "Ask the decision record owner to re-confirm, and append \"still valid / changed\" back to the page so the delivery side has something to point at.",
+            "evidence": {
+              "issueKey": "KAN-3",
+              "decidedAt": "2026-08-14T06:00:00.000Z",
+              "inProgressSince": "2026-06-20T02:00:00.000Z",
+              "lastConfirmAt": null,
+              "sources": [
+                {
+                  "title": "Archive policy: archive anything inactive for 90 days",
+                  "id": "page-8841",
+                  "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/8841",
+                  "updated": "2026-08-14T06:00:00.000Z"
+                }
+              ]
+            }
+          }
+        ],
+        "suppressed": [
+          {
+            "p": "P1",
+            "why": "unknown:goals"
+          },
+          {
+            "p": "P4",
+            "why": "unknown:goals"
+          },
+          {
+            "p": "P6",
+            "why": "unknown:reviewTraces"
+          }
+        ],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "unknown",
+            "label": "No mandate",
+            "why": "goals"
+          },
+          {
+            "p": "P2",
+            "w": 20,
+            "state": "hit",
+            "label": "Change not propagated",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 15,
+            "state": "clear",
+            "label": "Conflicting mandates",
+            "why": null
+          },
+          {
+            "p": "P4",
+            "w": 18,
+            "state": "unknown",
+            "label": "Goal drift",
+            "why": "goals"
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "clear",
+            "label": "Re-litigation",
+            "why": null
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "unknown",
+            "label": "Single author, no review",
+            "why": "reviewTraces"
+          }
+        ],
+        "coverage": {
+          "known": 1,
+          "total": 3,
+          "ratio": 0.3333333333333333
+        },
+        "source": "rest",
+        "degraded": {
+          "from": "twg",
+          "to": "rest",
+          "reason": "E_SCOPE"
+        }
+      }
+    },
+    "zh": {
+      "software": {
+        "ok": true,
+        "issueKey": "KAN-3",
+        "summary": "One-click archive for projects inactive over 90 days",
+        "status": "In Review",
+        "profile": "software",
+        "debt": 20,
+        "grade": "watch",
+        "authority": {
+          "state": "present",
+          "verdict": "stale",
+          "owner": "acc-1123",
+          "ownerName": "Alice Ng",
+          "title": "Archive policy: archive anything inactive for 90 days",
+          "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/8841",
+          "updatedAt": "2026-08-14T06:00:00.000Z",
+          "lastConfirmAt": null,
+          "daysSinceUpdate": 92,
+          "daysWithoutConfirm": 92,
+          "contributors": 1,
+          "decisionCount": 1
+        },
+        "partial": true,
+        "unknownPrims": [
+          "P1",
+          "P4",
+          "P6"
+        ],
+        "certainty": 0.47,
+        "thin": true,
+        "flagCount": 1,
+        "flags": [
+          {
+            "p": "P2",
+            "k": "drift_not_propagated",
+            "w": 20,
+            "s": "high",
+            "label": "变更未传导",
+            "detail": "决策记录在 2026-08-14 被更新过，执行从 2026-06-20 起就没有再确认，已相隔 92 天。",
+            "action": "请决策记录的 owner 复核一次，并把\"仍然有效 / 已变更\"追加回原文，让执行的这一端有据可依。",
+            "evidence": {
+              "issueKey": "KAN-3",
+              "decidedAt": "2026-08-14T06:00:00.000Z",
+              "inProgressSince": "2026-06-20T02:00:00.000Z",
+              "lastConfirmAt": null,
+              "sources": [
+                {
+                  "title": "Archive policy: archive anything inactive for 90 days",
+                  "id": "page-8841",
+                  "url": "https://example.atlassian.net/wiki/spaces/KAN/pages/8841",
+                  "updated": "2026-08-14T06:00:00.000Z"
+                }
+              ]
+            }
+          }
+        ],
+        "suppressed": [
+          {
+            "p": "P1",
+            "why": "unknown:goals"
+          },
+          {
+            "p": "P4",
+            "why": "unknown:goals"
+          },
+          {
+            "p": "P6",
+            "why": "unknown:reviewTraces"
+          }
+        ],
+        "criteria": [
+          {
+            "p": "P1",
+            "w": 25,
+            "state": "unknown",
+            "label": "无依据",
+            "why": "goals"
+          },
+          {
+            "p": "P2",
+            "w": 20,
+            "state": "hit",
+            "label": "变更未传导",
+            "why": null
+          },
+          {
+            "p": "P3",
+            "w": 15,
+            "state": "clear",
+            "label": "依据冲突",
+            "why": null
+          },
+          {
+            "p": "P4",
+            "w": 18,
+            "state": "unknown",
+            "label": "目标漂移",
+            "why": "goals"
+          },
+          {
+            "p": "P5",
+            "w": 10,
+            "state": "clear",
+            "label": "反复翻案",
+            "why": null
+          },
+          {
+            "p": "P6",
+            "w": 8,
+            "state": "unknown",
+            "label": "单人且无复核",
+            "why": "reviewTraces"
+          }
+        ],
+        "coverage": {
+          "known": 1,
+          "total": 3,
+          "ratio": 0.3333333333333333
+        },
+        "source": "rest",
+        "degraded": {
+          "from": "twg",
+          "to": "rest",
+          "reason": "E_SCOPE"
+        }
+      }
+    }
+  },
+  "project": {
+    "en": {
+      "software": {
+        "ok": true,
+        "projectKey": "KAN",
+        "profile": "software",
+        "debt": 24,
+        "grade": "watch",
+        "itemCount": 5,
+        "countedCount": 4,
+        "unknownCount": 1,
+        "coverageRatio": 0.8,
+        "certainty": 1,
+        "partialCount": 0,
+        "flaggedCount": 3,
+        "flaggedShare": 0.75,
+        "severeCount": 3,
+        "disclosure": {
+          "counted": 4,
+          "total": 5,
+          "unknown": 1
+        },
+        "scan": {
+          "source": "rest",
+          "requested": 5,
+          "fetched": 5,
+          "cap": 8,
+          "capped": false,
+          "hasMore": false,
+          "degraded": false,
+          "confirmLookup": "not-read"
+        },
+        "critical": 0,
+        "atRisk": 1,
+        "drivers": [
+          {
+            "p": "P1",
+            "items": 1,
+            "sum": 25,
+            "w": 25
+          },
+          {
+            "p": "P2",
+            "items": 1,
+            "sum": 20,
+            "w": 20
+          },
+          {
+            "p": "P4",
+            "items": 1,
+            "sum": 18,
+            "w": 18
+          },
+          {
+            "p": "P3",
+            "items": 1,
+            "sum": 15,
+            "w": 15
+          },
+          {
+            "p": "P5",
+            "items": 1,
+            "sum": 10,
+            "w": 10
+          },
+          {
+            "p": "P6",
+            "items": 1,
+            "sum": 8,
+            "w": 8
+          }
+        ],
+        "items": [
+          {
+            "issueKey": "KAN-7",
+            "debt": 43,
+            "grade": "at_risk",
+            "authorityVerdict": "contested",
+            "authorityTitle": "Portal lifecycle policy — close after 60 days idle",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P4",
+            "label": "Goal drift",
+            "missing": []
+          },
+          {
+            "issueKey": "KAN-3",
+            "debt": 28,
+            "grade": "watch",
+            "authorityVerdict": "stale",
+            "authorityTitle": "Archive policy: archive anything inactive for 90 days",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P2",
+            "label": "Change not propagated",
+            "missing": []
+          },
+          {
+            "issueKey": "KAN-9",
+            "debt": 25,
+            "grade": "watch",
+            "authorityVerdict": "missing",
+            "authorityTitle": null,
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P1",
+            "label": "No mandate",
+            "missing": []
+          },
+          {
+            "issueKey": "KAN-11",
+            "debt": null,
+            "grade": "unknown",
+            "authorityVerdict": "unknown",
+            "authorityTitle": null,
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 0,
+            "top": null,
+            "label": null,
+            "missing": [
+              "decisions",
+              "goals",
+              "reviewTraces"
+            ]
+          },
+          {
+            "issueKey": "KAN-20",
+            "debt": 0,
+            "grade": "healthy",
+            "authorityVerdict": "current",
+            "authorityTitle": "Spring launch message tier",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": null,
+            "label": null,
+            "missing": []
+          }
+        ]
+      },
+      "launch": {
+        "ok": true,
+        "projectKey": "KAN",
+        "profile": "launch",
+        "debt": 30,
+        "grade": "at_risk",
+        "itemCount": 5,
+        "countedCount": 4,
+        "unknownCount": 1,
+        "coverageRatio": 0.8,
+        "certainty": 1,
+        "partialCount": 0,
+        "flaggedCount": 4,
+        "flaggedShare": 1,
+        "severeCount": 4,
+        "disclosure": {
+          "counted": 4,
+          "total": 5,
+          "unknown": 1
+        },
+        "scan": {
+          "source": "rest",
+          "requested": 5,
+          "fetched": 5,
+          "cap": 8,
+          "capped": false,
+          "hasMore": false,
+          "degraded": false,
+          "confirmLookup": "not-read"
+        },
+        "critical": 0,
+        "atRisk": 1,
+        "drivers": [
+          {
+            "p": "P3",
+            "items": 2,
+            "sum": 44,
+            "w": 22
+          },
+          {
+            "p": "P1",
+            "items": 1,
+            "sum": 25,
+            "w": 25
+          },
+          {
+            "p": "P2",
+            "items": 1,
+            "sum": 20,
+            "w": 20
+          },
+          {
+            "p": "P4",
+            "items": 1,
+            "sum": 12,
+            "w": 12
+          },
+          {
+            "p": "P5",
+            "items": 1,
+            "sum": 10,
+            "w": 10
+          },
+          {
+            "p": "P6",
+            "items": 1,
+            "sum": 8,
+            "w": 8
+          }
+        ],
+        "items": [
+          {
+            "issueKey": "KAN-7",
+            "debt": 44,
+            "grade": "at_risk",
+            "authorityVerdict": "contested",
+            "authorityTitle": "Portal lifecycle policy — close after 60 days idle",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P3",
+            "label": "Conflicting mandates",
+            "missing": []
+          },
+          {
+            "issueKey": "KAN-3",
+            "debt": 28,
+            "grade": "watch",
+            "authorityVerdict": "stale",
+            "authorityTitle": "Archive policy: archive anything inactive for 90 days",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P2",
+            "label": "Change not propagated",
+            "missing": []
+          },
+          {
+            "issueKey": "KAN-9",
+            "debt": 25,
+            "grade": "watch",
+            "authorityVerdict": "missing",
+            "authorityTitle": null,
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P1",
+            "label": "No mandate",
+            "missing": []
+          },
+          {
+            "issueKey": "KAN-20",
+            "debt": 22,
+            "grade": "watch",
+            "authorityVerdict": "contested",
+            "authorityTitle": "Spring launch message tier",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P3",
+            "label": "Conflicting mandates",
+            "missing": []
+          },
+          {
+            "issueKey": "KAN-11",
+            "debt": null,
+            "grade": "unknown",
+            "authorityVerdict": "unknown",
+            "authorityTitle": null,
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 0,
+            "top": null,
+            "label": null,
+            "missing": [
+              "decisions",
+              "goals",
+              "reviewTraces"
+            ]
+          }
+        ]
+      },
+      "portfolio": {
+        "ok": true,
+        "projectKey": "KAN",
+        "profile": "portfolio",
+        "debt": 25,
+        "grade": "at_risk",
+        "itemCount": 5,
+        "countedCount": 4,
+        "unknownCount": 1,
+        "coverageRatio": 0.8,
+        "certainty": 1,
+        "partialCount": 0,
+        "flaggedCount": 3,
+        "flaggedShare": 0.75,
+        "severeCount": 3,
+        "disclosure": {
+          "counted": 4,
+          "total": 5,
+          "unknown": 1
+        },
+        "scan": {
+          "source": "rest",
+          "requested": 5,
+          "fetched": 5,
+          "cap": 8,
+          "capped": false,
+          "hasMore": false,
+          "degraded": false,
+          "confirmLookup": "not-read"
+        },
+        "critical": 0,
+        "atRisk": 1,
+        "drivers": [
+          {
+            "p": "P4",
+            "items": 1,
+            "sum": 26,
+            "w": 26
+          },
+          {
+            "p": "P1",
+            "items": 1,
+            "sum": 25,
+            "w": 25
+          },
+          {
+            "p": "P3",
+            "items": 1,
+            "sum": 15,
+            "w": 15
+          },
+          {
+            "p": "P2",
+            "items": 1,
+            "sum": 14,
+            "w": 14
+          },
+          {
+            "p": "P5",
+            "items": 1,
+            "sum": 10,
+            "w": 10
+          },
+          {
+            "p": "P6",
+            "items": 1,
+            "sum": 8,
+            "w": 8
+          }
+        ],
+        "items": [
+          {
+            "issueKey": "KAN-7",
+            "debt": 51,
+            "grade": "at_risk",
+            "authorityVerdict": "contested",
+            "authorityTitle": "Portal lifecycle policy — close after 60 days idle",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P4",
+            "label": "Goal drift",
+            "missing": []
+          },
+          {
+            "issueKey": "KAN-9",
+            "debt": 25,
+            "grade": "watch",
+            "authorityVerdict": "missing",
+            "authorityTitle": null,
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P1",
+            "label": "No mandate",
+            "missing": []
+          },
+          {
+            "issueKey": "KAN-3",
+            "debt": 22,
+            "grade": "watch",
+            "authorityVerdict": "stale",
+            "authorityTitle": "Archive policy: archive anything inactive for 90 days",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P2",
+            "label": "Change not propagated",
+            "missing": []
+          },
+          {
+            "issueKey": "KAN-11",
+            "debt": null,
+            "grade": "unknown",
+            "authorityVerdict": "unknown",
+            "authorityTitle": null,
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 0,
+            "top": null,
+            "label": null,
+            "missing": [
+              "decisions",
+              "goals",
+              "reviewTraces"
+            ]
+          },
+          {
+            "issueKey": "KAN-20",
+            "debt": 0,
+            "grade": "healthy",
+            "authorityVerdict": "current",
+            "authorityTitle": "Spring launch message tier",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": null,
+            "label": null,
+            "missing": []
+          }
+        ]
+      }
+    },
+    "zh": {
+      "software": {
+        "ok": true,
+        "projectKey": "KAN",
+        "profile": "software",
+        "debt": 24,
+        "grade": "watch",
+        "itemCount": 5,
+        "countedCount": 4,
+        "unknownCount": 1,
+        "coverageRatio": 0.8,
+        "certainty": 1,
+        "partialCount": 0,
+        "flaggedCount": 3,
+        "flaggedShare": 0.75,
+        "severeCount": 3,
+        "disclosure": {
+          "counted": 4,
+          "total": 5,
+          "unknown": 1
+        },
+        "scan": {
+          "source": "rest",
+          "requested": 5,
+          "fetched": 5,
+          "cap": 8,
+          "capped": false,
+          "hasMore": false,
+          "degraded": false,
+          "confirmLookup": "not-read"
+        },
+        "critical": 0,
+        "atRisk": 1,
+        "drivers": [
+          {
+            "p": "P1",
+            "items": 1,
+            "sum": 25,
+            "w": 25
+          },
+          {
+            "p": "P2",
+            "items": 1,
+            "sum": 20,
+            "w": 20
+          },
+          {
+            "p": "P4",
+            "items": 1,
+            "sum": 18,
+            "w": 18
+          },
+          {
+            "p": "P3",
+            "items": 1,
+            "sum": 15,
+            "w": 15
+          },
+          {
+            "p": "P5",
+            "items": 1,
+            "sum": 10,
+            "w": 10
+          },
+          {
+            "p": "P6",
+            "items": 1,
+            "sum": 8,
+            "w": 8
+          }
+        ],
+        "items": [
+          {
+            "issueKey": "KAN-7",
+            "debt": 43,
+            "grade": "at_risk",
+            "authorityVerdict": "contested",
+            "authorityTitle": "Portal lifecycle policy — close after 60 days idle",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P4",
+            "label": "目标漂移",
+            "missing": []
+          },
+          {
+            "issueKey": "KAN-3",
+            "debt": 28,
+            "grade": "watch",
+            "authorityVerdict": "stale",
+            "authorityTitle": "Archive policy: archive anything inactive for 90 days",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P2",
+            "label": "变更未传导",
+            "missing": []
+          },
+          {
+            "issueKey": "KAN-9",
+            "debt": 25,
+            "grade": "watch",
+            "authorityVerdict": "missing",
+            "authorityTitle": null,
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P1",
+            "label": "无依据",
+            "missing": []
+          },
+          {
+            "issueKey": "KAN-11",
+            "debt": null,
+            "grade": "unknown",
+            "authorityVerdict": "unknown",
+            "authorityTitle": null,
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 0,
+            "top": null,
+            "label": null,
+            "missing": [
+              "decisions",
+              "goals",
+              "reviewTraces"
+            ]
+          },
+          {
+            "issueKey": "KAN-20",
+            "debt": 0,
+            "grade": "healthy",
+            "authorityVerdict": "current",
+            "authorityTitle": "Spring launch message tier",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": null,
+            "label": null,
+            "missing": []
+          }
+        ]
+      },
+      "launch": {
+        "ok": true,
+        "projectKey": "KAN",
+        "profile": "launch",
+        "debt": 30,
+        "grade": "at_risk",
+        "itemCount": 5,
+        "countedCount": 4,
+        "unknownCount": 1,
+        "coverageRatio": 0.8,
+        "certainty": 1,
+        "partialCount": 0,
+        "flaggedCount": 4,
+        "flaggedShare": 1,
+        "severeCount": 4,
+        "disclosure": {
+          "counted": 4,
+          "total": 5,
+          "unknown": 1
+        },
+        "scan": {
+          "source": "rest",
+          "requested": 5,
+          "fetched": 5,
+          "cap": 8,
+          "capped": false,
+          "hasMore": false,
+          "degraded": false,
+          "confirmLookup": "not-read"
+        },
+        "critical": 0,
+        "atRisk": 1,
+        "drivers": [
+          {
+            "p": "P3",
+            "items": 2,
+            "sum": 44,
+            "w": 22
+          },
+          {
+            "p": "P1",
+            "items": 1,
+            "sum": 25,
+            "w": 25
+          },
+          {
+            "p": "P2",
+            "items": 1,
+            "sum": 20,
+            "w": 20
+          },
+          {
+            "p": "P4",
+            "items": 1,
+            "sum": 12,
+            "w": 12
+          },
+          {
+            "p": "P5",
+            "items": 1,
+            "sum": 10,
+            "w": 10
+          },
+          {
+            "p": "P6",
+            "items": 1,
+            "sum": 8,
+            "w": 8
+          }
+        ],
+        "items": [
+          {
+            "issueKey": "KAN-7",
+            "debt": 44,
+            "grade": "at_risk",
+            "authorityVerdict": "contested",
+            "authorityTitle": "Portal lifecycle policy — close after 60 days idle",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P3",
+            "label": "依据冲突",
+            "missing": []
+          },
+          {
+            "issueKey": "KAN-3",
+            "debt": 28,
+            "grade": "watch",
+            "authorityVerdict": "stale",
+            "authorityTitle": "Archive policy: archive anything inactive for 90 days",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P2",
+            "label": "变更未传导",
+            "missing": []
+          },
+          {
+            "issueKey": "KAN-9",
+            "debt": 25,
+            "grade": "watch",
+            "authorityVerdict": "missing",
+            "authorityTitle": null,
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P1",
+            "label": "无依据",
+            "missing": []
+          },
+          {
+            "issueKey": "KAN-20",
+            "debt": 22,
+            "grade": "watch",
+            "authorityVerdict": "contested",
+            "authorityTitle": "Spring launch message tier",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P3",
+            "label": "依据冲突",
+            "missing": []
+          },
+          {
+            "issueKey": "KAN-11",
+            "debt": null,
+            "grade": "unknown",
+            "authorityVerdict": "unknown",
+            "authorityTitle": null,
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 0,
+            "top": null,
+            "label": null,
+            "missing": [
+              "decisions",
+              "goals",
+              "reviewTraces"
+            ]
+          }
+        ]
+      },
+      "portfolio": {
+        "ok": true,
+        "projectKey": "KAN",
+        "profile": "portfolio",
+        "debt": 25,
+        "grade": "at_risk",
+        "itemCount": 5,
+        "countedCount": 4,
+        "unknownCount": 1,
+        "coverageRatio": 0.8,
+        "certainty": 1,
+        "partialCount": 0,
+        "flaggedCount": 3,
+        "flaggedShare": 0.75,
+        "severeCount": 3,
+        "disclosure": {
+          "counted": 4,
+          "total": 5,
+          "unknown": 1
+        },
+        "scan": {
+          "source": "rest",
+          "requested": 5,
+          "fetched": 5,
+          "cap": 8,
+          "capped": false,
+          "hasMore": false,
+          "degraded": false,
+          "confirmLookup": "not-read"
+        },
+        "critical": 0,
+        "atRisk": 1,
+        "drivers": [
+          {
+            "p": "P4",
+            "items": 1,
+            "sum": 26,
+            "w": 26
+          },
+          {
+            "p": "P1",
+            "items": 1,
+            "sum": 25,
+            "w": 25
+          },
+          {
+            "p": "P3",
+            "items": 1,
+            "sum": 15,
+            "w": 15
+          },
+          {
+            "p": "P2",
+            "items": 1,
+            "sum": 14,
+            "w": 14
+          },
+          {
+            "p": "P5",
+            "items": 1,
+            "sum": 10,
+            "w": 10
+          },
+          {
+            "p": "P6",
+            "items": 1,
+            "sum": 8,
+            "w": 8
+          }
+        ],
+        "items": [
+          {
+            "issueKey": "KAN-7",
+            "debt": 51,
+            "grade": "at_risk",
+            "authorityVerdict": "contested",
+            "authorityTitle": "Portal lifecycle policy — close after 60 days idle",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P4",
+            "label": "目标漂移",
+            "missing": []
+          },
+          {
+            "issueKey": "KAN-9",
+            "debt": 25,
+            "grade": "watch",
+            "authorityVerdict": "missing",
+            "authorityTitle": null,
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P1",
+            "label": "无依据",
+            "missing": []
+          },
+          {
+            "issueKey": "KAN-3",
+            "debt": 22,
+            "grade": "watch",
+            "authorityVerdict": "stale",
+            "authorityTitle": "Archive policy: archive anything inactive for 90 days",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P2",
+            "label": "变更未传导",
+            "missing": []
+          },
+          {
+            "issueKey": "KAN-11",
+            "debt": null,
+            "grade": "unknown",
+            "authorityVerdict": "unknown",
+            "authorityTitle": null,
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 0,
+            "top": null,
+            "label": null,
+            "missing": [
+              "decisions",
+              "goals",
+              "reviewTraces"
+            ]
+          },
+          {
+            "issueKey": "KAN-20",
+            "debt": 0,
+            "grade": "healthy",
+            "authorityVerdict": "current",
+            "authorityTitle": "Spring launch message tier",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": null,
+            "label": null,
+            "missing": []
+          }
+        ]
+      }
+    }
+  },
+  "projectrest": {
+    "en": {
+      "software": {
+        "ok": true,
+        "projectKey": "KAN",
+        "profile": "software",
+        "debt": 11,
+        "grade": "watch",
+        "itemCount": 5,
+        "countedCount": 4,
+        "unknownCount": 1,
+        "coverageRatio": 0.8,
+        "certainty": 0.47,
+        "partialCount": 4,
+        "flaggedCount": 2,
+        "flaggedShare": 0.5,
+        "severeCount": 2,
+        "disclosure": {
+          "counted": 4,
+          "total": 5,
+          "unknown": 1
+        },
+        "scan": {
+          "source": "rest",
+          "requested": 25,
+          "fetched": 5,
+          "cap": 8,
+          "capped": false,
+          "hasMore": true,
+          "degraded": true,
+          "confirmLookup": "not-read"
+        },
+        "critical": 0,
+        "atRisk": 0,
+        "drivers": [
+          {
+            "p": "P2",
+            "items": 1,
+            "sum": 20,
+            "w": 20
+          },
+          {
+            "p": "P3",
+            "items": 1,
+            "sum": 15,
+            "w": 15
+          },
+          {
+            "p": "P5",
+            "items": 1,
+            "sum": 10,
+            "w": 10
+          }
+        ],
+        "items": [
+          {
+            "issueKey": "KAN-7",
+            "debt": 25,
+            "grade": "watch",
+            "authorityVerdict": "contested",
+            "authorityTitle": "Portal lifecycle policy — close after 60 days idle",
+            "partial": true,
+            "unknownPrims": [
+              "P1",
+              "P4",
+              "P6"
+            ],
+            "certainty": 0.47,
+            "top": "P3",
+            "label": "Conflicting mandates",
+            "missing": [
+              "goals",
+              "reviewTraces"
+            ]
+          },
+          {
+            "issueKey": "KAN-3",
+            "debt": 20,
+            "grade": "watch",
+            "authorityVerdict": "stale",
+            "authorityTitle": "Archive policy: archive anything inactive for 90 days",
+            "partial": true,
+            "unknownPrims": [
+              "P1",
+              "P4",
+              "P6"
+            ],
+            "certainty": 0.47,
+            "top": "P2",
+            "label": "Change not propagated",
+            "missing": [
+              "goals",
+              "reviewTraces"
+            ]
+          },
+          {
+            "issueKey": "KAN-11",
+            "debt": null,
+            "grade": "unknown",
+            "authorityVerdict": "unknown",
+            "authorityTitle": null,
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 0,
+            "top": null,
+            "label": null,
+            "missing": [
+              "decisions",
+              "goals",
+              "reviewTraces"
+            ]
+          },
+          {
+            "issueKey": "KAN-20",
+            "debt": 0,
+            "grade": "healthy",
+            "authorityVerdict": "current",
+            "authorityTitle": "Spring launch message tier",
+            "partial": true,
+            "unknownPrims": [
+              "P1",
+              "P4",
+              "P6"
+            ],
+            "certainty": 0.47,
+            "top": null,
+            "label": null,
+            "missing": [
+              "goals",
+              "reviewTraces"
+            ]
+          },
+          {
+            "issueKey": "KAN-9",
+            "debt": 0,
+            "grade": "watch",
+            "authorityVerdict": "missing",
+            "authorityTitle": null,
+            "partial": true,
+            "unknownPrims": [
+              "P1",
+              "P4",
+              "P6"
+            ],
+            "certainty": 0.47,
+            "top": null,
+            "label": null,
+            "missing": [
+              "goals",
+              "reviewTraces"
+            ]
+          }
+        ]
+      },
+      "launch": {
+        "ok": true,
+        "projectKey": "KAN",
+        "profile": "launch",
+        "debt": 19,
+        "grade": "watch",
+        "itemCount": 5,
+        "countedCount": 4,
+        "unknownCount": 1,
+        "coverageRatio": 0.8,
+        "certainty": 0.54,
+        "partialCount": 4,
+        "flaggedCount": 3,
+        "flaggedShare": 0.75,
+        "severeCount": 3,
+        "disclosure": {
+          "counted": 4,
+          "total": 5,
+          "unknown": 1
+        },
+        "scan": {
+          "source": "rest",
+          "requested": 25,
+          "fetched": 5,
+          "cap": 8,
+          "capped": false,
+          "hasMore": true,
+          "degraded": true,
+          "confirmLookup": "not-read"
+        },
+        "critical": 0,
+        "atRisk": 0,
+        "drivers": [
+          {
+            "p": "P3",
+            "items": 2,
+            "sum": 44,
+            "w": 22
+          },
+          {
+            "p": "P2",
+            "items": 1,
+            "sum": 20,
+            "w": 20
+          },
+          {
+            "p": "P5",
+            "items": 1,
+            "sum": 10,
+            "w": 10
+          }
+        ],
+        "items": [
+          {
+            "issueKey": "KAN-7",
+            "debt": 32,
+            "grade": "watch",
+            "authorityVerdict": "contested",
+            "authorityTitle": "Portal lifecycle policy — close after 60 days idle",
+            "partial": true,
+            "unknownPrims": [
+              "P1",
+              "P4",
+              "P6"
+            ],
+            "certainty": 0.54,
+            "top": "P3",
+            "label": "Conflicting mandates",
+            "missing": [
+              "goals",
+              "reviewTraces"
+            ]
+          },
+          {
+            "issueKey": "KAN-20",
+            "debt": 22,
+            "grade": "watch",
+            "authorityVerdict": "contested",
+            "authorityTitle": "Spring launch message tier",
+            "partial": true,
+            "unknownPrims": [
+              "P1",
+              "P4",
+              "P6"
+            ],
+            "certainty": 0.54,
+            "top": "P3",
+            "label": "Conflicting mandates",
+            "missing": [
+              "goals",
+              "reviewTraces"
+            ]
+          },
+          {
+            "issueKey": "KAN-3",
+            "debt": 20,
+            "grade": "watch",
+            "authorityVerdict": "stale",
+            "authorityTitle": "Archive policy: archive anything inactive for 90 days",
+            "partial": true,
+            "unknownPrims": [
+              "P1",
+              "P4",
+              "P6"
+            ],
+            "certainty": 0.54,
+            "top": "P2",
+            "label": "Change not propagated",
+            "missing": [
+              "goals",
+              "reviewTraces"
+            ]
+          },
+          {
+            "issueKey": "KAN-11",
+            "debt": null,
+            "grade": "unknown",
+            "authorityVerdict": "unknown",
+            "authorityTitle": null,
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 0,
+            "top": null,
+            "label": null,
+            "missing": [
+              "decisions",
+              "goals",
+              "reviewTraces"
+            ]
+          },
+          {
+            "issueKey": "KAN-9",
+            "debt": 0,
+            "grade": "watch",
+            "authorityVerdict": "missing",
+            "authorityTitle": null,
+            "partial": true,
+            "unknownPrims": [
+              "P1",
+              "P4",
+              "P6"
+            ],
+            "certainty": 0.54,
+            "top": null,
+            "label": null,
+            "missing": [
+              "goals",
+              "reviewTraces"
+            ]
+          }
+        ]
+      },
+      "portfolio": {
+        "ok": true,
+        "projectKey": "KAN",
+        "profile": "portfolio",
+        "debt": 10,
+        "grade": "watch",
+        "itemCount": 5,
+        "countedCount": 4,
+        "unknownCount": 1,
+        "coverageRatio": 0.8,
+        "certainty": 0.4,
+        "partialCount": 4,
+        "flaggedCount": 2,
+        "flaggedShare": 0.5,
+        "severeCount": 2,
+        "disclosure": {
+          "counted": 4,
+          "total": 5,
+          "unknown": 1
+        },
+        "scan": {
+          "source": "rest",
+          "requested": 25,
+          "fetched": 5,
+          "cap": 8,
+          "capped": false,
+          "hasMore": true,
+          "degraded": true,
+          "confirmLookup": "not-read"
+        },
+        "critical": 0,
+        "atRisk": 0,
+        "drivers": [
+          {
+            "p": "P3",
+            "items": 1,
+            "sum": 15,
+            "w": 15
+          },
+          {
+            "p": "P2",
+            "items": 1,
+            "sum": 14,
+            "w": 14
+          },
+          {
+            "p": "P5",
+            "items": 1,
+            "sum": 10,
+            "w": 10
+          }
+        ],
+        "items": [
+          {
+            "issueKey": "KAN-7",
+            "debt": 25,
+            "grade": "watch",
+            "authorityVerdict": "contested",
+            "authorityTitle": "Portal lifecycle policy — close after 60 days idle",
+            "partial": true,
+            "unknownPrims": [
+              "P1",
+              "P4",
+              "P6"
+            ],
+            "certainty": 0.4,
+            "top": "P3",
+            "label": "Conflicting mandates",
+            "missing": [
+              "goals",
+              "reviewTraces"
+            ]
+          },
+          {
+            "issueKey": "KAN-3",
+            "debt": 14,
+            "grade": "watch",
+            "authorityVerdict": "stale",
+            "authorityTitle": "Archive policy: archive anything inactive for 90 days",
+            "partial": true,
+            "unknownPrims": [
+              "P1",
+              "P4",
+              "P6"
+            ],
+            "certainty": 0.4,
+            "top": "P2",
+            "label": "Change not propagated",
+            "missing": [
+              "goals",
+              "reviewTraces"
+            ]
+          },
+          {
+            "issueKey": "KAN-11",
+            "debt": null,
+            "grade": "unknown",
+            "authorityVerdict": "unknown",
+            "authorityTitle": null,
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 0,
+            "top": null,
+            "label": null,
+            "missing": [
+              "decisions",
+              "goals",
+              "reviewTraces"
+            ]
+          },
+          {
+            "issueKey": "KAN-20",
+            "debt": 0,
+            "grade": "healthy",
+            "authorityVerdict": "current",
+            "authorityTitle": "Spring launch message tier",
+            "partial": true,
+            "unknownPrims": [
+              "P1",
+              "P4",
+              "P6"
+            ],
+            "certainty": 0.4,
+            "top": null,
+            "label": null,
+            "missing": [
+              "goals",
+              "reviewTraces"
+            ]
+          },
+          {
+            "issueKey": "KAN-9",
+            "debt": 0,
+            "grade": "watch",
+            "authorityVerdict": "missing",
+            "authorityTitle": null,
+            "partial": true,
+            "unknownPrims": [
+              "P1",
+              "P4",
+              "P6"
+            ],
+            "certainty": 0.4,
+            "top": null,
+            "label": null,
+            "missing": [
+              "goals",
+              "reviewTraces"
+            ]
+          }
+        ]
+      }
+    },
+    "zh": {
+      "software": {
+        "ok": true,
+        "projectKey": "KAN",
+        "profile": "software",
+        "debt": 11,
+        "grade": "watch",
+        "itemCount": 5,
+        "countedCount": 4,
+        "unknownCount": 1,
+        "coverageRatio": 0.8,
+        "certainty": 0.47,
+        "partialCount": 4,
+        "flaggedCount": 2,
+        "flaggedShare": 0.5,
+        "severeCount": 2,
+        "disclosure": {
+          "counted": 4,
+          "total": 5,
+          "unknown": 1
+        },
+        "scan": {
+          "source": "rest",
+          "requested": 25,
+          "fetched": 5,
+          "cap": 8,
+          "capped": false,
+          "hasMore": true,
+          "degraded": true,
+          "confirmLookup": "not-read"
+        },
+        "critical": 0,
+        "atRisk": 0,
+        "drivers": [
+          {
+            "p": "P2",
+            "items": 1,
+            "sum": 20,
+            "w": 20
+          },
+          {
+            "p": "P3",
+            "items": 1,
+            "sum": 15,
+            "w": 15
+          },
+          {
+            "p": "P5",
+            "items": 1,
+            "sum": 10,
+            "w": 10
+          }
+        ],
+        "items": [
+          {
+            "issueKey": "KAN-7",
+            "debt": 25,
+            "grade": "watch",
+            "authorityVerdict": "contested",
+            "authorityTitle": "Portal lifecycle policy — close after 60 days idle",
+            "partial": true,
+            "unknownPrims": [
+              "P1",
+              "P4",
+              "P6"
+            ],
+            "certainty": 0.47,
+            "top": "P3",
+            "label": "依据冲突",
+            "missing": [
+              "goals",
+              "reviewTraces"
+            ]
+          },
+          {
+            "issueKey": "KAN-3",
+            "debt": 20,
+            "grade": "watch",
+            "authorityVerdict": "stale",
+            "authorityTitle": "Archive policy: archive anything inactive for 90 days",
+            "partial": true,
+            "unknownPrims": [
+              "P1",
+              "P4",
+              "P6"
+            ],
+            "certainty": 0.47,
+            "top": "P2",
+            "label": "变更未传导",
+            "missing": [
+              "goals",
+              "reviewTraces"
+            ]
+          },
+          {
+            "issueKey": "KAN-11",
+            "debt": null,
+            "grade": "unknown",
+            "authorityVerdict": "unknown",
+            "authorityTitle": null,
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 0,
+            "top": null,
+            "label": null,
+            "missing": [
+              "decisions",
+              "goals",
+              "reviewTraces"
+            ]
+          },
+          {
+            "issueKey": "KAN-20",
+            "debt": 0,
+            "grade": "healthy",
+            "authorityVerdict": "current",
+            "authorityTitle": "Spring launch message tier",
+            "partial": true,
+            "unknownPrims": [
+              "P1",
+              "P4",
+              "P6"
+            ],
+            "certainty": 0.47,
+            "top": null,
+            "label": null,
+            "missing": [
+              "goals",
+              "reviewTraces"
+            ]
+          },
+          {
+            "issueKey": "KAN-9",
+            "debt": 0,
+            "grade": "watch",
+            "authorityVerdict": "missing",
+            "authorityTitle": null,
+            "partial": true,
+            "unknownPrims": [
+              "P1",
+              "P4",
+              "P6"
+            ],
+            "certainty": 0.47,
+            "top": null,
+            "label": null,
+            "missing": [
+              "goals",
+              "reviewTraces"
+            ]
+          }
+        ]
+      },
+      "launch": {
+        "ok": true,
+        "projectKey": "KAN",
+        "profile": "launch",
+        "debt": 19,
+        "grade": "watch",
+        "itemCount": 5,
+        "countedCount": 4,
+        "unknownCount": 1,
+        "coverageRatio": 0.8,
+        "certainty": 0.54,
+        "partialCount": 4,
+        "flaggedCount": 3,
+        "flaggedShare": 0.75,
+        "severeCount": 3,
+        "disclosure": {
+          "counted": 4,
+          "total": 5,
+          "unknown": 1
+        },
+        "scan": {
+          "source": "rest",
+          "requested": 25,
+          "fetched": 5,
+          "cap": 8,
+          "capped": false,
+          "hasMore": true,
+          "degraded": true,
+          "confirmLookup": "not-read"
+        },
+        "critical": 0,
+        "atRisk": 0,
+        "drivers": [
+          {
+            "p": "P3",
+            "items": 2,
+            "sum": 44,
+            "w": 22
+          },
+          {
+            "p": "P2",
+            "items": 1,
+            "sum": 20,
+            "w": 20
+          },
+          {
+            "p": "P5",
+            "items": 1,
+            "sum": 10,
+            "w": 10
+          }
+        ],
+        "items": [
+          {
+            "issueKey": "KAN-7",
+            "debt": 32,
+            "grade": "watch",
+            "authorityVerdict": "contested",
+            "authorityTitle": "Portal lifecycle policy — close after 60 days idle",
+            "partial": true,
+            "unknownPrims": [
+              "P1",
+              "P4",
+              "P6"
+            ],
+            "certainty": 0.54,
+            "top": "P3",
+            "label": "依据冲突",
+            "missing": [
+              "goals",
+              "reviewTraces"
+            ]
+          },
+          {
+            "issueKey": "KAN-20",
+            "debt": 22,
+            "grade": "watch",
+            "authorityVerdict": "contested",
+            "authorityTitle": "Spring launch message tier",
+            "partial": true,
+            "unknownPrims": [
+              "P1",
+              "P4",
+              "P6"
+            ],
+            "certainty": 0.54,
+            "top": "P3",
+            "label": "依据冲突",
+            "missing": [
+              "goals",
+              "reviewTraces"
+            ]
+          },
+          {
+            "issueKey": "KAN-3",
+            "debt": 20,
+            "grade": "watch",
+            "authorityVerdict": "stale",
+            "authorityTitle": "Archive policy: archive anything inactive for 90 days",
+            "partial": true,
+            "unknownPrims": [
+              "P1",
+              "P4",
+              "P6"
+            ],
+            "certainty": 0.54,
+            "top": "P2",
+            "label": "变更未传导",
+            "missing": [
+              "goals",
+              "reviewTraces"
+            ]
+          },
+          {
+            "issueKey": "KAN-11",
+            "debt": null,
+            "grade": "unknown",
+            "authorityVerdict": "unknown",
+            "authorityTitle": null,
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 0,
+            "top": null,
+            "label": null,
+            "missing": [
+              "decisions",
+              "goals",
+              "reviewTraces"
+            ]
+          },
+          {
+            "issueKey": "KAN-9",
+            "debt": 0,
+            "grade": "watch",
+            "authorityVerdict": "missing",
+            "authorityTitle": null,
+            "partial": true,
+            "unknownPrims": [
+              "P1",
+              "P4",
+              "P6"
+            ],
+            "certainty": 0.54,
+            "top": null,
+            "label": null,
+            "missing": [
+              "goals",
+              "reviewTraces"
+            ]
+          }
+        ]
+      },
+      "portfolio": {
+        "ok": true,
+        "projectKey": "KAN",
+        "profile": "portfolio",
+        "debt": 10,
+        "grade": "watch",
+        "itemCount": 5,
+        "countedCount": 4,
+        "unknownCount": 1,
+        "coverageRatio": 0.8,
+        "certainty": 0.4,
+        "partialCount": 4,
+        "flaggedCount": 2,
+        "flaggedShare": 0.5,
+        "severeCount": 2,
+        "disclosure": {
+          "counted": 4,
+          "total": 5,
+          "unknown": 1
+        },
+        "scan": {
+          "source": "rest",
+          "requested": 25,
+          "fetched": 5,
+          "cap": 8,
+          "capped": false,
+          "hasMore": true,
+          "degraded": true,
+          "confirmLookup": "not-read"
+        },
+        "critical": 0,
+        "atRisk": 0,
+        "drivers": [
+          {
+            "p": "P3",
+            "items": 1,
+            "sum": 15,
+            "w": 15
+          },
+          {
+            "p": "P2",
+            "items": 1,
+            "sum": 14,
+            "w": 14
+          },
+          {
+            "p": "P5",
+            "items": 1,
+            "sum": 10,
+            "w": 10
+          }
+        ],
+        "items": [
+          {
+            "issueKey": "KAN-7",
+            "debt": 25,
+            "grade": "watch",
+            "authorityVerdict": "contested",
+            "authorityTitle": "Portal lifecycle policy — close after 60 days idle",
+            "partial": true,
+            "unknownPrims": [
+              "P1",
+              "P4",
+              "P6"
+            ],
+            "certainty": 0.4,
+            "top": "P3",
+            "label": "依据冲突",
+            "missing": [
+              "goals",
+              "reviewTraces"
+            ]
+          },
+          {
+            "issueKey": "KAN-3",
+            "debt": 14,
+            "grade": "watch",
+            "authorityVerdict": "stale",
+            "authorityTitle": "Archive policy: archive anything inactive for 90 days",
+            "partial": true,
+            "unknownPrims": [
+              "P1",
+              "P4",
+              "P6"
+            ],
+            "certainty": 0.4,
+            "top": "P2",
+            "label": "变更未传导",
+            "missing": [
+              "goals",
+              "reviewTraces"
+            ]
+          },
+          {
+            "issueKey": "KAN-11",
+            "debt": null,
+            "grade": "unknown",
+            "authorityVerdict": "unknown",
+            "authorityTitle": null,
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 0,
+            "top": null,
+            "label": null,
+            "missing": [
+              "decisions",
+              "goals",
+              "reviewTraces"
+            ]
+          },
+          {
+            "issueKey": "KAN-20",
+            "debt": 0,
+            "grade": "healthy",
+            "authorityVerdict": "current",
+            "authorityTitle": "Spring launch message tier",
+            "partial": true,
+            "unknownPrims": [
+              "P1",
+              "P4",
+              "P6"
+            ],
+            "certainty": 0.4,
+            "top": null,
+            "label": null,
+            "missing": [
+              "goals",
+              "reviewTraces"
+            ]
+          },
+          {
+            "issueKey": "KAN-9",
+            "debt": 0,
+            "grade": "watch",
+            "authorityVerdict": "missing",
+            "authorityTitle": null,
+            "partial": true,
+            "unknownPrims": [
+              "P1",
+              "P4",
+              "P6"
+            ],
+            "certainty": 0.4,
+            "top": null,
+            "label": null,
+            "missing": [
+              "goals",
+              "reviewTraces"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "seed": {
+    "en": {
+      "software": {
+        "ok": true,
+        "projectKey": "DEL",
+        "profile": "software",
+        "debt": 14,
+        "grade": "watch",
+        "itemCount": 21,
+        "countedCount": 21,
+        "unknownCount": 0,
+        "coverageRatio": 1,
+        "certainty": 1,
+        "partialCount": 0,
+        "flaggedCount": 17,
+        "flaggedShare": 0.81,
+        "severeCount": 14,
+        "disclosure": {
+          "counted": 21,
+          "total": 21,
+          "unknown": 0
+        },
+        "scan": {
+          "source": "seed",
+          "requested": 21,
+          "fetched": 21,
+          "cap": 50,
+          "capped": false,
+          "hasMore": false,
+          "degraded": false,
+          "confirmLookup": "not-read"
+        },
+        "critical": 0,
+        "atRisk": 0,
+        "drivers": [
+          {
+            "p": "P2",
+            "items": 6,
+            "sum": 120,
+            "w": 20
+          },
+          {
+            "p": "P1",
+            "items": 2,
+            "sum": 50,
+            "w": 25
+          },
+          {
+            "p": "P3",
+            "items": 3,
+            "sum": 45,
+            "w": 15
+          },
+          {
+            "p": "P4",
+            "items": 2,
+            "sum": 36,
+            "w": 18
+          },
+          {
+            "p": "P6",
+            "items": 3,
+            "sum": 24,
+            "w": 8
+          },
+          {
+            "p": "P5",
+            "items": 1,
+            "sum": 10,
+            "w": 10
+          }
+        ],
+        "items": [
+          {
+            "issueKey": "DEL-106",
+            "debt": 25,
+            "grade": "watch",
+            "authorityVerdict": "missing",
+            "authorityTitle": null,
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P1",
+            "label": "No mandate",
+            "missing": []
+          },
+          {
+            "issueKey": "OPS-307",
+            "debt": 25,
+            "grade": "watch",
+            "authorityVerdict": "missing",
+            "authorityTitle": null,
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P1",
+            "label": "No mandate",
+            "missing": []
+          },
+          {
+            "issueKey": "DEL-101",
+            "debt": 20,
+            "grade": "watch",
+            "authorityVerdict": "stale",
+            "authorityTitle": "checkout split tax service cutover decision",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P2",
+            "label": "Change not propagated",
+            "missing": []
+          },
+          {
+            "issueKey": "DEL-102",
+            "debt": 20,
+            "grade": "watch",
+            "authorityVerdict": "stale",
+            "authorityTitle": "refund retry policy",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P2",
+            "label": "Change not propagated",
+            "missing": []
+          },
+          {
+            "issueKey": "DEL-103",
+            "debt": 20,
+            "grade": "watch",
+            "authorityVerdict": "stale",
+            "authorityTitle": "ledger backfill v3",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P2",
+            "label": "Change not propagated",
+            "missing": []
+          },
+          {
+            "issueKey": "PAY-201",
+            "debt": 20,
+            "grade": "watch",
+            "authorityVerdict": "stale",
+            "authorityTitle": "sca exemption rules",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P2",
+            "label": "Change not propagated",
+            "missing": []
+          }
+        ]
+      },
+      "launch": {
+        "ok": true,
+        "projectKey": "DEL",
+        "profile": "launch",
+        "debt": 14,
+        "grade": "watch",
+        "itemCount": 21,
+        "countedCount": 21,
+        "unknownCount": 0,
+        "coverageRatio": 1,
+        "certainty": 1,
+        "partialCount": 0,
+        "flaggedCount": 17,
+        "flaggedShare": 0.81,
+        "severeCount": 14,
+        "disclosure": {
+          "counted": 21,
+          "total": 21,
+          "unknown": 0
+        },
+        "scan": {
+          "source": "seed",
+          "requested": 21,
+          "fetched": 21,
+          "cap": 50,
+          "capped": false,
+          "hasMore": false,
+          "degraded": false,
+          "confirmLookup": "not-read"
+        },
+        "critical": 0,
+        "atRisk": 0,
+        "drivers": [
+          {
+            "p": "P2",
+            "items": 6,
+            "sum": 120,
+            "w": 20
+          },
+          {
+            "p": "P3",
+            "items": 3,
+            "sum": 66,
+            "w": 22
+          },
+          {
+            "p": "P1",
+            "items": 2,
+            "sum": 50,
+            "w": 25
+          },
+          {
+            "p": "P6",
+            "items": 3,
+            "sum": 24,
+            "w": 8
+          },
+          {
+            "p": "P4",
+            "items": 2,
+            "sum": 24,
+            "w": 12
+          },
+          {
+            "p": "P5",
+            "items": 1,
+            "sum": 10,
+            "w": 10
+          }
+        ],
+        "items": [
+          {
+            "issueKey": "DEL-106",
+            "debt": 25,
+            "grade": "watch",
+            "authorityVerdict": "missing",
+            "authorityTitle": null,
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P1",
+            "label": "No mandate",
+            "missing": []
+          },
+          {
+            "issueKey": "OPS-307",
+            "debt": 25,
+            "grade": "watch",
+            "authorityVerdict": "missing",
+            "authorityTitle": null,
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P1",
+            "label": "No mandate",
+            "missing": []
+          },
+          {
+            "issueKey": "DEL-104",
+            "debt": 22,
+            "grade": "watch",
+            "authorityVerdict": "contested",
+            "authorityTitle": "pricing experiment guardrails round 2",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P3",
+            "label": "Conflicting mandates",
+            "missing": []
+          },
+          {
+            "issueKey": "PAY-203",
+            "debt": 22,
+            "grade": "watch",
+            "authorityVerdict": "contested",
+            "authorityTitle": "psd2 sca fallback v2",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P3",
+            "label": "Conflicting mandates",
+            "missing": []
+          },
+          {
+            "issueKey": "OPS-302",
+            "debt": 22,
+            "grade": "watch",
+            "authorityVerdict": "contested",
+            "authorityTitle": "runbook incident severity ladder 2026 edition",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P3",
+            "label": "Conflicting mandates",
+            "missing": []
+          },
+          {
+            "issueKey": "DEL-101",
+            "debt": 20,
+            "grade": "watch",
+            "authorityVerdict": "stale",
+            "authorityTitle": "checkout split tax service cutover decision",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P2",
+            "label": "Change not propagated",
+            "missing": []
+          }
+        ]
+      },
+      "portfolio": {
+        "ok": true,
+        "projectKey": "DEL",
+        "profile": "portfolio",
+        "debt": 13,
+        "grade": "watch",
+        "itemCount": 21,
+        "countedCount": 21,
+        "unknownCount": 0,
+        "coverageRatio": 1,
+        "certainty": 1,
+        "partialCount": 0,
+        "flaggedCount": 17,
+        "flaggedShare": 0.81,
+        "severeCount": 14,
+        "disclosure": {
+          "counted": 21,
+          "total": 21,
+          "unknown": 0
+        },
+        "scan": {
+          "source": "seed",
+          "requested": 21,
+          "fetched": 21,
+          "cap": 50,
+          "capped": false,
+          "hasMore": false,
+          "degraded": false,
+          "confirmLookup": "not-read"
+        },
+        "critical": 0,
+        "atRisk": 0,
+        "drivers": [
+          {
+            "p": "P2",
+            "items": 6,
+            "sum": 84,
+            "w": 14
+          },
+          {
+            "p": "P4",
+            "items": 2,
+            "sum": 52,
+            "w": 26
+          },
+          {
+            "p": "P1",
+            "items": 2,
+            "sum": 50,
+            "w": 25
+          },
+          {
+            "p": "P3",
+            "items": 3,
+            "sum": 45,
+            "w": 15
+          },
+          {
+            "p": "P6",
+            "items": 3,
+            "sum": 24,
+            "w": 8
+          },
+          {
+            "p": "P5",
+            "items": 1,
+            "sum": 10,
+            "w": 10
+          }
+        ],
+        "items": [
+          {
+            "issueKey": "PAY-207",
+            "debt": 26,
+            "grade": "watch",
+            "authorityVerdict": "stale",
+            "authorityTitle": "card vault migration decision",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P4",
+            "label": "Goal drift",
+            "missing": []
+          },
+          {
+            "issueKey": "OPS-306",
+            "debt": 26,
+            "grade": "watch",
+            "authorityVerdict": "stale",
+            "authorityTitle": "dashboard cost reduction decision",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P4",
+            "label": "Goal drift",
+            "missing": []
+          },
+          {
+            "issueKey": "DEL-106",
+            "debt": 25,
+            "grade": "watch",
+            "authorityVerdict": "missing",
+            "authorityTitle": null,
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P1",
+            "label": "No mandate",
+            "missing": []
+          },
+          {
+            "issueKey": "OPS-307",
+            "debt": 25,
+            "grade": "watch",
+            "authorityVerdict": "missing",
+            "authorityTitle": null,
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P1",
+            "label": "No mandate",
+            "missing": []
+          },
+          {
+            "issueKey": "DEL-104",
+            "debt": 15,
+            "grade": "watch",
+            "authorityVerdict": "contested",
+            "authorityTitle": "pricing experiment guardrails round 2",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P3",
+            "label": "Conflicting mandates",
+            "missing": []
+          },
+          {
+            "issueKey": "PAY-203",
+            "debt": 15,
+            "grade": "watch",
+            "authorityVerdict": "contested",
+            "authorityTitle": "psd2 sca fallback v2",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P3",
+            "label": "Conflicting mandates",
+            "missing": []
+          }
+        ]
+      }
+    },
+    "zh": {
+      "software": {
+        "ok": true,
+        "projectKey": "DEL",
+        "profile": "software",
+        "debt": 14,
+        "grade": "watch",
+        "itemCount": 21,
+        "countedCount": 21,
+        "unknownCount": 0,
+        "coverageRatio": 1,
+        "certainty": 1,
+        "partialCount": 0,
+        "flaggedCount": 17,
+        "flaggedShare": 0.81,
+        "severeCount": 14,
+        "disclosure": {
+          "counted": 21,
+          "total": 21,
+          "unknown": 0
+        },
+        "scan": {
+          "source": "seed",
+          "requested": 21,
+          "fetched": 21,
+          "cap": 50,
+          "capped": false,
+          "hasMore": false,
+          "degraded": false,
+          "confirmLookup": "not-read"
+        },
+        "critical": 0,
+        "atRisk": 0,
+        "drivers": [
+          {
+            "p": "P2",
+            "items": 6,
+            "sum": 120,
+            "w": 20
+          },
+          {
+            "p": "P1",
+            "items": 2,
+            "sum": 50,
+            "w": 25
+          },
+          {
+            "p": "P3",
+            "items": 3,
+            "sum": 45,
+            "w": 15
+          },
+          {
+            "p": "P4",
+            "items": 2,
+            "sum": 36,
+            "w": 18
+          },
+          {
+            "p": "P6",
+            "items": 3,
+            "sum": 24,
+            "w": 8
+          },
+          {
+            "p": "P5",
+            "items": 1,
+            "sum": 10,
+            "w": 10
+          }
+        ],
+        "items": [
+          {
+            "issueKey": "DEL-106",
+            "debt": 25,
+            "grade": "watch",
+            "authorityVerdict": "missing",
+            "authorityTitle": null,
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P1",
+            "label": "无依据",
+            "missing": []
+          },
+          {
+            "issueKey": "OPS-307",
+            "debt": 25,
+            "grade": "watch",
+            "authorityVerdict": "missing",
+            "authorityTitle": null,
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P1",
+            "label": "无依据",
+            "missing": []
+          },
+          {
+            "issueKey": "DEL-101",
+            "debt": 20,
+            "grade": "watch",
+            "authorityVerdict": "stale",
+            "authorityTitle": "checkout split tax service cutover decision",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P2",
+            "label": "变更未传导",
+            "missing": []
+          },
+          {
+            "issueKey": "DEL-102",
+            "debt": 20,
+            "grade": "watch",
+            "authorityVerdict": "stale",
+            "authorityTitle": "refund retry policy",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P2",
+            "label": "变更未传导",
+            "missing": []
+          },
+          {
+            "issueKey": "DEL-103",
+            "debt": 20,
+            "grade": "watch",
+            "authorityVerdict": "stale",
+            "authorityTitle": "ledger backfill v3",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P2",
+            "label": "变更未传导",
+            "missing": []
+          },
+          {
+            "issueKey": "PAY-201",
+            "debt": 20,
+            "grade": "watch",
+            "authorityVerdict": "stale",
+            "authorityTitle": "sca exemption rules",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P2",
+            "label": "变更未传导",
+            "missing": []
+          }
+        ]
+      },
+      "launch": {
+        "ok": true,
+        "projectKey": "DEL",
+        "profile": "launch",
+        "debt": 14,
+        "grade": "watch",
+        "itemCount": 21,
+        "countedCount": 21,
+        "unknownCount": 0,
+        "coverageRatio": 1,
+        "certainty": 1,
+        "partialCount": 0,
+        "flaggedCount": 17,
+        "flaggedShare": 0.81,
+        "severeCount": 14,
+        "disclosure": {
+          "counted": 21,
+          "total": 21,
+          "unknown": 0
+        },
+        "scan": {
+          "source": "seed",
+          "requested": 21,
+          "fetched": 21,
+          "cap": 50,
+          "capped": false,
+          "hasMore": false,
+          "degraded": false,
+          "confirmLookup": "not-read"
+        },
+        "critical": 0,
+        "atRisk": 0,
+        "drivers": [
+          {
+            "p": "P2",
+            "items": 6,
+            "sum": 120,
+            "w": 20
+          },
+          {
+            "p": "P3",
+            "items": 3,
+            "sum": 66,
+            "w": 22
+          },
+          {
+            "p": "P1",
+            "items": 2,
+            "sum": 50,
+            "w": 25
+          },
+          {
+            "p": "P6",
+            "items": 3,
+            "sum": 24,
+            "w": 8
+          },
+          {
+            "p": "P4",
+            "items": 2,
+            "sum": 24,
+            "w": 12
+          },
+          {
+            "p": "P5",
+            "items": 1,
+            "sum": 10,
+            "w": 10
+          }
+        ],
+        "items": [
+          {
+            "issueKey": "DEL-106",
+            "debt": 25,
+            "grade": "watch",
+            "authorityVerdict": "missing",
+            "authorityTitle": null,
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P1",
+            "label": "无依据",
+            "missing": []
+          },
+          {
+            "issueKey": "OPS-307",
+            "debt": 25,
+            "grade": "watch",
+            "authorityVerdict": "missing",
+            "authorityTitle": null,
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P1",
+            "label": "无依据",
+            "missing": []
+          },
+          {
+            "issueKey": "DEL-104",
+            "debt": 22,
+            "grade": "watch",
+            "authorityVerdict": "contested",
+            "authorityTitle": "pricing experiment guardrails round 2",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P3",
+            "label": "依据冲突",
+            "missing": []
+          },
+          {
+            "issueKey": "PAY-203",
+            "debt": 22,
+            "grade": "watch",
+            "authorityVerdict": "contested",
+            "authorityTitle": "psd2 sca fallback v2",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P3",
+            "label": "依据冲突",
+            "missing": []
+          },
+          {
+            "issueKey": "OPS-302",
+            "debt": 22,
+            "grade": "watch",
+            "authorityVerdict": "contested",
+            "authorityTitle": "runbook incident severity ladder 2026 edition",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P3",
+            "label": "依据冲突",
+            "missing": []
+          },
+          {
+            "issueKey": "DEL-101",
+            "debt": 20,
+            "grade": "watch",
+            "authorityVerdict": "stale",
+            "authorityTitle": "checkout split tax service cutover decision",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P2",
+            "label": "变更未传导",
+            "missing": []
+          }
+        ]
+      },
+      "portfolio": {
+        "ok": true,
+        "projectKey": "DEL",
+        "profile": "portfolio",
+        "debt": 13,
+        "grade": "watch",
+        "itemCount": 21,
+        "countedCount": 21,
+        "unknownCount": 0,
+        "coverageRatio": 1,
+        "certainty": 1,
+        "partialCount": 0,
+        "flaggedCount": 17,
+        "flaggedShare": 0.81,
+        "severeCount": 14,
+        "disclosure": {
+          "counted": 21,
+          "total": 21,
+          "unknown": 0
+        },
+        "scan": {
+          "source": "seed",
+          "requested": 21,
+          "fetched": 21,
+          "cap": 50,
+          "capped": false,
+          "hasMore": false,
+          "degraded": false,
+          "confirmLookup": "not-read"
+        },
+        "critical": 0,
+        "atRisk": 0,
+        "drivers": [
+          {
+            "p": "P2",
+            "items": 6,
+            "sum": 84,
+            "w": 14
+          },
+          {
+            "p": "P4",
+            "items": 2,
+            "sum": 52,
+            "w": 26
+          },
+          {
+            "p": "P1",
+            "items": 2,
+            "sum": 50,
+            "w": 25
+          },
+          {
+            "p": "P3",
+            "items": 3,
+            "sum": 45,
+            "w": 15
+          },
+          {
+            "p": "P6",
+            "items": 3,
+            "sum": 24,
+            "w": 8
+          },
+          {
+            "p": "P5",
+            "items": 1,
+            "sum": 10,
+            "w": 10
+          }
+        ],
+        "items": [
+          {
+            "issueKey": "PAY-207",
+            "debt": 26,
+            "grade": "watch",
+            "authorityVerdict": "stale",
+            "authorityTitle": "card vault migration decision",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P4",
+            "label": "目标漂移",
+            "missing": []
+          },
+          {
+            "issueKey": "OPS-306",
+            "debt": 26,
+            "grade": "watch",
+            "authorityVerdict": "stale",
+            "authorityTitle": "dashboard cost reduction decision",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P4",
+            "label": "目标漂移",
+            "missing": []
+          },
+          {
+            "issueKey": "DEL-106",
+            "debt": 25,
+            "grade": "watch",
+            "authorityVerdict": "missing",
+            "authorityTitle": null,
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P1",
+            "label": "无依据",
+            "missing": []
+          },
+          {
+            "issueKey": "OPS-307",
+            "debt": 25,
+            "grade": "watch",
+            "authorityVerdict": "missing",
+            "authorityTitle": null,
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P1",
+            "label": "无依据",
+            "missing": []
+          },
+          {
+            "issueKey": "DEL-104",
+            "debt": 15,
+            "grade": "watch",
+            "authorityVerdict": "contested",
+            "authorityTitle": "pricing experiment guardrails round 2",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P3",
+            "label": "依据冲突",
+            "missing": []
+          },
+          {
+            "issueKey": "PAY-203",
+            "debt": 15,
+            "grade": "watch",
+            "authorityVerdict": "contested",
+            "authorityTitle": "psd2 sca fallback v2",
+            "partial": false,
+            "unknownPrims": [],
+            "certainty": 1,
+            "top": "P3",
+            "label": "依据冲突",
+            "missing": []
+          }
+        ]
+      }
+    }
+  }
+}

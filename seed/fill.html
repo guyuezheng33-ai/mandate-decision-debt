@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>seed 填写页 · Mandate</title>
+<style>
+  :root{
+    --ink:#172b4d; --sub:#5e6c84; --line:#dfe1e6; --bg:#f4f5f7;
+    --high:#de350b; --med:#ff991f; --low:#6b778c; --ok:#00875a; --accent:#0052cc;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;padding:16px 18px 60px;background:var(--bg);color:var(--ink);
+    font:13px/1.45 -apple-system,"Segoe UI",system-ui,"PingFang SC","Microsoft YaHei",sans-serif}
+  header{position:sticky;top:0;background:var(--bg);padding:4px 0 10px;z-index:5}
+  h1{font-size:15px;margin:0 0 4px}
+  .hint{color:var(--sub);font-size:11.5px;line-height:1.5}
+  .bar{display:flex;align-items:center;gap:10px;margin-top:8px;flex-wrap:wrap}
+  .prog{font-size:12px;color:var(--sub)}
+  .prog b{color:var(--ink);font-size:13px}
+  button{border:1px solid var(--line);background:#fff;padding:5px 11px;border-radius:3px;
+    cursor:pointer;font-size:12px;color:var(--ink)}
+  button.primary{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600}
+  .live{font-size:11.5px;margin-top:6px;color:var(--sub)}
+  .live .k{font-family:ui-monospace,Menlo,Consolas,monospace;color:var(--ink)}
+  .card{background:#fff;border:1px solid var(--line);border-left:3px solid var(--line);
+    border-radius:4px;padding:10px 12px;margin-bottom:10px}
+  .card.done{border-left-color:var(--ok)}
+  .head{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .idx{font-size:11px;color:#a5adba;width:16px}
+  .key{width:120px;border:1px solid var(--line);border-radius:3px;padding:3px 6px;font-size:12px}
+  .chips{display:flex;gap:3px;margin-left:auto;min-height:16px}
+  .chip{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:10px;color:#fff;
+    background:var(--low);border-radius:2px;padding:1px 4px}
+  .chip.h{background:var(--high)} .chip.m{background:var(--med)}
+  .clean{font-size:11px;color:var(--ok)}
+  .pending{font-size:11px;color:#a5adba}
+  .fields{display:grid;grid-template-columns:repeat(auto-fill,minmax(152px,1fr));gap:6px 10px;margin-top:8px}
+  .f{display:flex;align-items:center;gap:6px}
+  .f span{font-size:11.5px;color:var(--sub);flex:1}
+  .f .tg{display:flex;gap:2px}
+  .t{border:1px solid var(--line);background:#fff;color:#a5adba;font-size:11px;
+    padding:1px 6px;border-radius:2px;cursor:pointer;line-height:1.5}
+  .t.on{background:#deebff;border-color:var(--accent);color:var(--accent);font-weight:600}
+  .cnt{width:46px;border:1px solid var(--line);border-radius:3px;padding:2px 4px;font-size:11.5px;text-align:center}
+  .note{width:100%;border:1px solid var(--line);border-radius:3px;padding:3px 6px;font-size:11.5px;margin-top:7px}
+  footer{margin-top:10px;font-size:11px;color:var(--sub);line-height:1.6}
+  .how{margin-top:6px;font-size:11.5px;color:var(--sub)}
+  .how summary{cursor:pointer;color:var(--accent);font-size:11.5px}
+  .how ul{margin:6px 0 4px;padding-left:16px;line-height:1.65}
+  .how li{margin-bottom:1px}
+  .how .warn{color:var(--ink);background:#fff7d6;border-left:3px solid #ffab00;padding:5px 8px;margin:6px 0 0;line-height:1.55}
+</style>
+</head>
+<body>
+<header>
+  <h1>seed 填写页 · 21 条工作项</h1>
+  <div class="hint">
+    一条一张卡。事实为真点「是」，为假点「否」，再点一次取消。拿不准就留空——判定器会把那条排除在统计外，不会算成没问题。<br />
+    填完点「导出 CSV」，下载的 <code>seed-sheet.csv</code> 放进 <code>decision-debt/seed/</code> 覆盖同名文件，然后跑 <code>npm run seed</code>。
+  </div>
+  <div class="bar">
+    <span class="prog">已填完整 <b id="doneCount">0</b> / 21</span>
+    <span class="prog">预计命中 <b id="hitCount">0</b> 条</span>
+    <button id="btnExport" class="primary">导出 CSV</button>
+    <button id="btnClear">清空</button>
+  </div>
+  <div class="live" id="live"></div>
+  <details class="how">
+    <summary>每一格去哪儿看（点开）</summary>
+    <ul>
+      <li><b>有依据页</b>：工作项右侧 Links / Web links，或描述里的 Confluence 链接。有任一即「是」。</li>
+      <li><b>有目标</b>：Parent / Epic / Goal 字段有没有挂东西。</li>
+      <li><b>目标已结束</b>：点开目标看状态是否 Done / Closed / Cancelled。没有目标填「否」。</li>
+      <li><b>依据页晚于开工</b>：比两个时间——依据页右上角 Updated，vs 工作项 Activity 里第一次进 In Progress。页面更晚即「是」。</li>
+      <li><b>改后有人确认</b>：在页面更新之后，工作项评论 / 新链接 / 子任务里有没有人补过一句确认。</li>
+      <li><b>同主题第二份</b>：在该 space 搜同一主题词，有没有第二份结论或负责人不同的页面。</li>
+      <li><b>重开后更新过</b>：Activity 里最后一次 Reopened 之后，依据页有没有再被改过。</li>
+      <li><b>只有一位作者</b>：依据页右上角 Contributors，只有一个人即「是」。</li>
+      <li><b>有第二人复核</b>：页面评论区或页面信息里，除作者外有没有第二个人。</li>
+      <li><b>工作已完成</b>：状态是否 Done / Closed。</li>
+      <li><b>重开次数</b>：Activity 里 Reopened 的条数，没有填 0。</li>
+    </ul>
+    <p class="warn">查不到、或要花很久才查得到的，就留空。留空的行不参与统计，不会被当成“没问题”——但要记住：留空的行也推不出结论，所以尽量把能一眼看到的先填了。</p>
+  </details>
+</header>
+<div id="cards"></div>
+<footer>
+  P1 无依据 = 无依据页且无目标 · P2 变更未传导 = 有依据页 + 依据页晚于开工 + 改后没人确认 ·
+  P3 依据冲突 = 同主题存在第二份 · P4 目标漂移 = 有目标 + 目标已结束 + 工作未完成 ·
+  P5 反复翻案 = 重开≥2 且重开后没更新依据 · P6 单人无复核 = 只有一位作者且无第二人复核
+</footer>
+
+<script>
+const FIELDS = [
+  ["hasEvidence", "有依据页", "看工作项右侧 Links / Web links，或描述里有没有 Confluence 链接。有任一即「是」。"],
+  ["hasGoal", "有目标", "看 Parent / Epic / Goal 字段有没有挂东西。挂了即「是」。"],
+  ["goalEnded", "目标已结束", "点开那个目标或 Epic，看状态是不是 Done / Closed / Cancelled。没有目标填「否」。"],
+  ["changeAfterStart", "依据页晚于开工", "两个时间对比：依据页右上角「Updated」，工作项 Activity 里第一次进 In Progress 的时间。页面更新更晚即「是」。"],
+  ["confirmedAfterChange", "改后有人确认", "在依据页更新之后，看工作项评论/链接/子任务里有没有人补过一句确认。有即「是」。"],
+  ["conflictSameTopic", "同主题第二份", "在这个 space 里搜同一主题词，看有没有第二份结论或负责人不同的页面。有即「是」。"],
+  ["evidenceAfterLastReopen", "重开后更新过", "看 Activity 里最后一次「Reopened」之后的记录，依据页那之后有没有再被改过。"],
+  ["singleContributor", "只有一位作者", "依据页右上角头像 / 页面信息里的 Contributors，只有一个人即「是」。"],
+  ["secondReviewer", "有第二人复核", "页面评论区或页面信息里，除作者外有没有第二个人的痕迹。有即「是」。"],
+  ["issueDone", "工作已完成", "看状态是不是 Done / Closed。"],
+];
+const COLS = ["issueKey", "hasEvidence", "hasGoal", "goalEnded", "changeAfterStart",
+  "confirmedAfterChange", "conflictSameTopic", "reopenedCount", "evidenceAfterLastReopen",
+  "singleContributor", "secondReviewer", "issueDone", "note"];
+const REQUIRED = COLS.filter((c) => c !== "note");
+const ROWS = 21;
+
+const cards = document.getElementById("cards");
+const state = [];
+
+for (let i = 0; i < ROWS; i += 1) {
+  const card = document.createElement("div");
+  card.className = "card";
+
+  const head = document.createElement("div");
+  head.className = "head";
+
+  const idx = document.createElement("span");
+  idx.className = "idx";
+  idx.textContent = String(i + 1);
+
+  const key = document.createElement("input");
+  key.type = "text";
+  key.className = "key";
+  key.placeholder = "编号，如 KAN-3";
+  key.addEventListener("input", refresh);
+
+  const chips = document.createElement("div");
+  chips.className = "chips";
+
+  head.append(idx, key, chips);
+
+  const fields = document.createElement("div");
+  fields.className = "fields";
+
+  const row = { key, chips, card, toggles: {}, cnt: null, note: null };
+
+  FIELDS.forEach(([k, label, help]) => {
+    const f = document.createElement("div");
+    f.className = "f";
+    f.title = help || "";
+    const s = document.createElement("span");
+    s.textContent = label;
+    s.style.cursor = "help";
+    const tg = document.createElement("div");
+    tg.className = "tg";
+
+    const yes = document.createElement("button");
+    yes.className = "t";
+    yes.textContent = "是";
+    const no = document.createElement("button");
+    no.className = "t";
+    no.textContent = "否";
+
+    const setVal = (v) => {
+      row.toggles[k] = v;
+      yes.classList.toggle("on", v === true);
+      no.classList.toggle("on", v === false);
+      refresh();
+    };
+    yes.onclick = () => setVal(row.toggles[k] === true ? null : true);
+    no.onclick = () => setVal(row.toggles[k] === false ? null : false);
+
+    row.toggles[k] = null;
+    tg.append(yes, no);
+    f.append(s, tg);
+    fields.appendChild(f);
+  });
+
+  const fCnt = document.createElement("div");
+  fCnt.className = "f";
+  const sCnt = document.createElement("span");
+  sCnt.textContent = "重开次数";
+  const cnt = document.createElement("input");
+  cnt.type = "text";
+  cnt.className = "cnt";
+  cnt.placeholder = "0";
+  cnt.addEventListener("input", refresh);
+  fCnt.append(sCnt, cnt);
+  fields.appendChild(fCnt);
+  row.cnt = cnt;
+
+  const note = document.createElement("input");
+  note.type = "text";
+  note.className = "note";
+  note.placeholder = "备注（可空）";
+  row.note = note;
+
+  card.append(head, fields, note);
+  cards.appendChild(card);
+  state.push(row);
+}
+
+function readRow(r) {
+  const o = { issueKey: r.key.value.trim(), reopenedCount: null };
+  FIELDS.forEach(([k]) => { o[k] = r.toggles[k]; });
+  const t = r.cnt.value.trim();
+  o.reopenedCount = t === "" ? null : (Number.isFinite(Number(t)) ? Number(t) : null);
+  o.note = r.note.value.trim();
+  return o;
+}
+
+function isComplete(o) {
+  return REQUIRED.every((k) => o[k] !== null && o[k] !== "");
+}
+
+function predict(o) {
+  const h = [];
+  if (o.hasEvidence === false && o.hasGoal === false) h.push(["P1", "h"]);
+  if (o.hasEvidence === true && o.changeAfterStart === true && o.confirmedAfterChange === false) h.push(["P2", "h"]);
+  if (o.hasEvidence === true && o.conflictSameTopic === true) h.push(["P3", "m"]);
+  if (o.hasGoal === true && o.goalEnded === true && o.issueDone === false) h.push(["P4", "m"]);
+  if (typeof o.reopenedCount === "number" && o.reopenedCount >= 2 && o.evidenceAfterLastReopen === false) h.push(["P5", ""]);
+  if (o.hasEvidence === true && o.singleContributor === true && o.secondReviewer === false) h.push(["P6", ""]);
+  return h;
+}
+
+function refresh() {
+  let done = 0;
+  let hits = 0;
+  const per = { P1: 0, P2: 0, P3: 0, P4: 0, P5: 0, P6: 0 };
+
+  state.forEach((r) => {
+    const o = readRow(r);
+    r.chips.innerHTML = "";
+    if (!isComplete(o)) {
+      r.card.classList.remove("done");
+      const p = document.createElement("span");
+      p.className = "pending";
+      p.textContent = "未填完";
+      r.chips.appendChild(p);
+      return;
+    }
+    done += 1;
+    r.card.classList.add("done");
+    const found = predict(o);
+    if (found.length) {
+      hits += 1;
+      found.forEach(([p, cls]) => {
+        per[p] += 1;
+        const c = document.createElement("span");
+        c.className = "chip " + cls;
+        c.textContent = p;
+        r.chips.appendChild(c);
+      });
+    } else {
+      const c = document.createElement("span");
+      c.className = "clean";
+      c.textContent = "干净";
+      r.chips.appendChild(c);
+    }
+  });
+
+  document.getElementById("doneCount").textContent = done;
+  document.getElementById("hitCount").textContent = hits;
+  const dist = Object.entries(per).map(([k, v]) => '<span class="k">' + k + "=" + v + "</span>").join(" ");
+  document.getElementById("live").innerHTML = done >= 11
+    ? "当前分布 " + dist + "　（阈值：命中 ≥ 8，且至少 3 条原语各命中 ≥ 2 次）"
+    : "还差 " + (11 - done) + " 条才能看出趋势（判定器要求填满 21 条才下结论）";
+}
+
+function csvCell(v) {
+  if (v === null || v === undefined) return "";
+  const s = String(v);
+  return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+}
+
+document.getElementById("btnExport").addEventListener("click", () => {
+  const lines = [COLS.join(",")];
+  state.forEach((r) => {
+    const o = readRow(r);
+    lines.push(COLS.map((c) => csvCell(o[c])).join(","));
+  });
+  const blob = new Blob(["\uFEFF" + lines.join("\r\n") + "\r\n"], { type: "text/csv;charset=utf-8" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "seed-sheet.csv";
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 3000);
+});
+
+document.getElementById("btnClear").addEventListener("click", () => {
+  if (!confirm("清空全部已填内容？")) return;
+  state.forEach((r) => {
+    r.key.value = "";
+    r.cnt.value = "";
+    r.note.value = "";
+    FIELDS.forEach(([k]) => { r.toggles[k] = null; });
+    r.card.querySelectorAll(".t").forEach((b) => b.classList.remove("on"));
+  });
+  refresh();
+});
+
+refresh();
+</script>
+</body>
+</html>

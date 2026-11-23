@@ -1,0 +1,18 @@
+{
+  "key": "KAN-9",
+  "summary": "Rebuild the audit log export (requested by one account manager)",
+  "projectKey": "KAN",
+  "status": "In Progress",
+  "statusCategory": "indeterminate",
+  "created": "2026-10-28T02:15:00.000Z",
+  "updated": "2026-11-18T06:00:00.000Z",
+  "asOf": "2026-11-18T06:00:00.000Z",
+  "inProgressSince": "2026-11-02T00:30:00.000Z",
+  "reopenedCount": 0,
+  "source": "fixture",
+  "edges": {
+    "decisions": { "state": "absent", "items": [] },
+    "goals": { "state": "absent", "items": [] },
+    "reviewTraces": { "state": "absent", "items": [] }
+  }
+}

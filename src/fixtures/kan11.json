@@ -1,0 +1,18 @@
+{
+  "key": "KAN-11",
+  "summary": "Bulk reindex of search attachments",
+  "projectKey": "KAN",
+  "status": "In Progress",
+  "statusCategory": "indeterminate",
+  "created": "2026-09-20T02:00:00.000Z",
+  "updated": "2026-11-16T02:00:00.000Z",
+  "asOf": "2026-11-16T02:00:00.000Z",
+  "inProgressSince": "2026-09-25T02:00:00.000Z",
+  "reopenedCount": 0,
+  "source": "twg",
+  "edges": {
+    "decisions": { "state": "unknown", "items": [], "reason": "E_SCOPE" },
+    "goals": { "state": "unknown", "items": [], "reason": "E_SCOPE" },
+    "reviewTraces": { "state": "unknown", "items": [], "reason": "E_TIMEOUT" }
+  }
+}

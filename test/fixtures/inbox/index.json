@@ -1,0 +1,15 @@
+{
+  "dataset": "mandate-test-inbox",
+  "nature": "synthetic",
+  "source": "test/fixtures/inbox/seed-21.csv mirrors data-inbox/site/seed-21.csv, produced by datasupply-mandate/1.0 with seed 20261120.",
+  "caveat": "Simulated corpus for pipeline tests. It is not live Jira capture, not a random sample, and must not be used to claim field accuracy or customer impact.",
+  "files": [
+    {
+      "path": "seed-21.csv",
+      "nature": "synthetic",
+      "source": "data-inbox/site/seed-21.csv (simulated; generator datasupply-mandate/1.0, seed 20261120)",
+      "sha256": "282d34004a6d5c7ee28cc18a91e57d64a1ca7f3755f52f27a95a2d303f18ca99",
+      "caveat": "21 constructed rows with same-source human labels. Use for pipeline regression only; never as external calibration."
+    }
+  ]
+}
