@@ -16,23 +16,36 @@ Canonical definition (formal model, category, value, proof obligations): [`docs/
 
 ---
 
-## 1. The 60-second path (installed app)
+## 1. The 60-second path
 
-| Step | Do | You should see |
-|---|---|---|
-| 1 | Open **KAN-3** in Jira | Issue panel: an **AUTHORITY RECEIPT** — `NOT CURRENT`, authorised by `Alice Ng`, last changed `14 Aug 2026`, recorded in `Archive policy…`, still valid `No`, and `28 · watch` as the small score chip |
-| 2 | Read the four receipt facts | Who / when / where / still valid are visible before any score; the reason line says `92 days since last change · no re-confirmation recorded` |
-| 3 | Expand `6 checks` | `+20 Change not propagated` + `+8 Single author, no review`; the hit weights sum to 28 |
-| 4 | Follow `Open decision record` | The Confluence page that authorised the work, with its edit date `2026-08-14`; `Next action` names the owner-level step |
-| 5 | Open the **KAN** project page | `PROJECT AUTHORITY`: `24 · watch`; coverage printed as `4/5 countable · 1 unknown`; each row carries its own verdict (`CONTESTED`, `NO`, `NO RECORD`, `UNKNOWN`, `YES`) |
-| 6 | Open **KAN-11** | `UNVERIFIABLE · NO SCORE` — owner, date and record all read `Unknown`; the action says restore access and recompute, never “nothing wrong” |
-| 7 | Ask Rovo **Context Auditor**: “Why is KAN-3 flagged?” | Same 28, same P2/P6 rows, same action — no second scoring engine |
-| 8 | In Cursor/Claude (Atlassian remote MCP), call `get-issue-provenance {issueKey:"KAN-3"}` | `debt: 28`, `grade: "watch"`, `criteria` six rows, `authority.verdict: "stale"`, `source: "fixture"` stated |
+**A. On a live Jira site (the shipped app).** The production build is installed on a seeded
+Atlassian demo tenant. The tenant is not shared with judges; the real screenshots and the 90-second
+video are captured from it. To see the same panel on your own site, use the public Try it out page
+(`https://telegra.ph/Install-Mandate-on-Jira-11-23`), then open any issue that has a decision
+record or an approval record linked to it. The first screen is the receipt:
+
+- `CURRENT` / `NOT CURRENT` / `CONTESTED` / `NO RECORD` / `UNVERIFIABLE`
+- `Authorised by`, `Approved on`, `Recorded in`, `Still valid`
+- `1703 · days unconfirmed` when stale, because a 0–100 score must never contradict the receipt
+- `6 checks` expands to six weighted rows; the hit weights sum to the displayed number
+- `Next action` names one owner-level step, with `Copy audit note`
 
 If your site has not granted the Teamwork Graph scopes, the panel says so (`degraded: {from, to,
 reason}`), scores only what REST can see, and marks partial results `†`. It never silently
-pretends the missing evidence was clean. The degraded KAN-3 sample is `20 / WATCH`, and the
-`unknown` rows name the missing scope.
+pretends the missing evidence was clean.
+
+**B. Offline, with no tenant.** The fixture harness renders the same current UI against the same
+engine output:
+
+```bash
+npm ci
+npm run harness          # builds preview/ui-harness.js from src/ui/src/app.js
+# open preview/ui-harness.html in a browser
+```
+
+The harness is clearly labelled `fixture`; it is not a live-tenant capture. In the fixture set,
+`KAN-3` is the stale receipt, `KAN-9` is `NO RECORD`, `KAN-11` is `UNVERIFIABLE · NO SCORE`, and
+`KAN-20` is the `CURRENT` control. The same payloads are asserted by `npm run verify`.
 
 ## 2. Reproduce without a tenant (offline)
 
@@ -73,7 +86,8 @@ not a live-tenant capture and is never presented as one.
 | Claim | Status |
 |---|---|
 | Scoring engine, six criteria, three lenses, arithmetic invariants | Real; 187 assertions, property test over 200 random bundles per lens |
-| Jira panel / project page / Rovo agent / MCP over one engine | Real Forge modules; same action layer, four surfaces |
+| Issue panel, Rovo agent and MCP over one engine | Real Forge modules on the live tenant; same action layer, three reachable surfaces |
+| Project page | `jira:projectPage` module ships in the manifest; on a **team-managed** project Jira does not expose a project-page slot, so the gallery image is a fixture render labelled `Sample data`. It is not claimed as a live-tenant capture |
 | Payloads in the hero screenshots | **Live:** `MOBL-57` on the demo tenant, produced by the real engine over Jira REST. Fixture renders are separately labelled `Sample data` in the gallery |
 | Live-tenant calibration (does P2 catch what a real team missed?) | **Not yet measured as accuracy.** One seeded demo tenant, 30 issues: 28 `missing`, 1 `stale` (1,703 days), 1 unscorable (`NO SCORE`). Enough to show the instrument works on live data, not enough to claim accuracy |
 | “Three delivery leads tested it” | **Not claimed.** Tester protocol (`08`) is scheduled; no quote goes on screen until a real session happens |
@@ -86,7 +100,7 @@ not a live-tenant capture and is never presented as one.
 | **Best Agents** | `rovo:agent` Context Auditor with a system prompt that forbids inventing a breakdown; three read-only actions it can call | `manifest.yml` (`rovo:agent`), `src/agent/prompt.md`, `test/agent-entry.test.js` |
 | **Best MCP** | `rovo:mcp` exposes the same three actions as MCP tools; client-side schema and a real fixture response are documented | `manifest.yml` (`rovo:mcp`), `docs/mcp-examples.md` |
 | **Best TWG** | Object-granular graph reads for **issue** and **user**; P2/P3/P4 use cross-object edges where available; a missing edge degrades to a named `unknown`, not a zero. We deliberately do **not** request Confluence page scope: see the scope rationale below. | `manifest.yml` scopes, `test/graph-fields.test.js`, `test/data-inbox.test.js` |
-| **Best Marketplace** | Listing copy, privacy policy, icon set, screenshot script, and an 8/8 pre-flight check | `marketplace/listing.md`, `marketplace/privacy-policy.md`, `marketplace/check.js`, `preview/*.png` |
+| **Best Marketplace** | Listing copy, privacy policy, icon set, screenshot script, and a 9/9 pre-flight check | `marketplace/listing.md`, `marketplace/privacy-policy.md`, `marketplace/check.js`, `preview/*.png` |
 
 **Why the scopes are proportional (and why one is absent):** the shipped app requests
 `read:jira-work`, `read:graph:issue:jira` and `read:graph:user:atlassian`. The user scope
@@ -120,7 +134,11 @@ The app requests no write scope by default; `write:jira-work` is commented out a
 
 ## 6. If the install link is not live yet
 
-Use the offline path in §2 and the generated screenshots in `preview/`. The screenshots are the
-real harness rendering the real engine output; they are labelled as fixture-derived in the
-submission text. The submission form states the install status plainly rather than linking to a
-dead URL — a dead link is a Stage One failure, an honest “review pending” is not.
+The public Try it out page (`https://telegra.ph/Install-Mandate-on-Jira-11-23`) carries a signed
+Jira install link generated on 2026-11-24. Without an Atlassian login it redirects to
+`id.atlassian.com`; with a login it targets the signed app. Atlassian may show `Invalid link` when
+the signed-in account administers no site that can accept the app; this is what the app-owner
+account saw when its only admin site already had Mandate installed, and it has not yet been
+verified on a second site. In that case, sign in with an account that administers a different
+Jira site, or use path B above. The submission does not link to a dead URL: the
+privacy policy, terms and install page are all public and return HTTP 200.

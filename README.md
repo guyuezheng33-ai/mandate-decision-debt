@@ -1,15 +1,15 @@
 # Mandate · Decision Debt
 
-**Try it out:** [Install Mandate on Jira](https://telegra.ph/Install-Mandate-on-Jira-11-23) · **90s demo:** [video](https://files.catbox.moe/7ktidb.mp4) · **Source:** this repository (MIT).
+**Try it out:** [Install Mandate on Jira](https://telegra.ph/Install-Mandate-on-Jira-11-23) · **90s demo:** [video](https://files.catbox.moe/l0iw16.mp4) · **Source:** this repository (MIT).
 
 > Every work item should be able to say **who authorised it, in which document, and when — and whether that authorisation still holds today.**
 > When it cannot, that gap is Decision Debt, scored 0–100.
 
-Mandate is a Forge app that audits the authorisation behind each Jira item, scores unmet conditions 0–100 as Decision Debt, and holds a P50 scoring path under 300 ms.
+Mandate is a Forge app that audits the authorisation behind each Jira item, scores unmet conditions 0–100 as Decision Debt, and holds a 300 ms scoring budget (measured 42.9 ms on the development laptop).
 
 Canonical definition (formal model, category, value, proof obligations): [`docs/PRODUCT-DEFINITION.md`](docs/PRODUCT-DEFINITION.md).
 
-Built for Atlassian Codegeist 2026. Primary user: the **delivery lead** — someone running 3–8 workstreams who has to explain "why is this being built" every week.
+Built for Atlassian Codegeist 2026. Primary user: the **delivery lead** — someone running several workstreams who has to explain "why is this being built" every week.
 
 Architecture (read path, write path, offline evaluation): [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
 
@@ -25,6 +25,8 @@ Four surfaces, one set of criteria:
 | Jira project page | How much debt does this project carry, and which item do I look at first? (coverage printed above the ranking) |
 | Rovo agent | Which work in this project is resting on evidence that needs re-confirmation? |
 | MCP (Cursor / Claude) | Same criteria, callable from the IDE. |
+
+The project-page module ships in the manifest; on a team-managed Jira project that surface is not exposed by Jira, so the gallery image for it is a fixture render labelled `Sample data`. The issue panel, Rovo agent and MCP are the three surfaces exercised on the live tenant.
 
 All four call the same three read-only actions (`get-issue-provenance`, `list-context-debt`, `trace-drift`); the panel reaches them through `@forge/resolver`, the agent and MCP through `action` modules. Nothing is computed twice, and nothing is computed in a prompt.
 
