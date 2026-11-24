@@ -11,6 +11,10 @@ Mandate is a Forge app that audits the authorisation behind each Jira item, scor
 
 Canonical definition (formal model, category, value, proof obligations): [`docs/PRODUCT-DEFINITION.md`](docs/PRODUCT-DEFINITION.md).
 
+**Five verdicts, not a binary:** `CURRENT`, `NOT CURRENT`, `CONTESTED`, `NO RECORD`, and `UNVERIFIABLE · NO SCORE`. `NO RECORD` means the absence is the finding; `UNVERIFIABLE` refuses to score and names what scope to restore. The 90-second demo shows `UNVERIFIABLE` at 1:03, not only the happy path.
+
+**Measured on the live tenant (2026-11-23):** 30 issues → 28 `missing`, 1 `stale` (`MOBL-57`, 1,703 days), 1 unscorable (`NO SCORE`). Scope: one seeded demo project, REST-only; not a benchmark of all Jira sites.
+
 **Live evidence (tenant captures; fixture labelled):** [MOBL-57 receipt](https://github.com/guyuezheng33-ai/mandate-decision-debt/blob/master/preview/real-panel-mobl57-en.png) · [MOBL-57 six checks](https://github.com/guyuezheng33-ai/mandate-decision-debt/blob/master/preview/real-panel-mobl57-en-checks.png) · [MOBL-56 no record](https://github.com/guyuezheng33-ai/mandate-decision-debt/blob/master/preview/real-panel-mobl56-en.png) · [30-item audit](runs/real-audit-mobl-30.json) · [live project page](https://one-atlas-ngpq.atlassian.net/jira/software/projects/MOBL/apps/ari:cloud:ecosystem::extension/c3df8fe6-3626-4829-9025-47d55b1bde54/696b5366-aa30-42fd-8cd6-1f4b2e7c8383/static/mandate-project-page). The gallery project-page image remains a `Sample data` fixture because the tenant is not shared; the route itself is live.
 
 Built for Atlassian Codegeist 2026. Primary user: the **delivery lead** — someone running several workstreams who has to explain "why is this being built" every week.
