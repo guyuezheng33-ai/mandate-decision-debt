@@ -24,10 +24,8 @@ jobs:
       - name: Test
         run: npm test
 
-      - name: Full engineering check
-        run: npm run check
+      - name: Build, manifest, verify, bench
+        run: npm run ci
 
-      - name: Submission and marketplace materials
-        run: |
-          npm run submission
-          npm run marketplace
+      - name: Marketplace materials
+        run: npm run marketplace
