@@ -61,6 +61,8 @@ npm run proof      # regenerates docs/verification.md with the run you just did
 npm run bench      # scoring path, budget 300 ms (measured ~55–75 ms on a laptop)
 ```
 
+**Evidence index.** The CI workflow is public and green on `master`: [`actions/workflows/ci.yml`](https://github.com/guyuezheng33-ai/mandate-decision-debt/actions/workflows/ci.yml). It runs `npm ci`, `npm test`, `npm run ci` (build + manifest + verify + bench), and `npm run marketplace` on every push. Live-tenant captures, not fixtures: [MOBL-57 receipt](https://github.com/guyuezheng33-ai/mandate-decision-debt/blob/master/preview/real-panel-mobl57-en.png), [MOBL-57 six checks](https://github.com/guyuezheng33-ai/mandate-decision-debt/blob/master/preview/real-panel-mobl57-en-checks.png), [MOBL-56 no record](https://github.com/guyuezheng33-ai/mandate-decision-debt/blob/master/preview/real-panel-mobl56-en.png). The 30-item audit is [`runs/real-audit-mobl-30.json`](../runs/real-audit-mobl-30.json). The project-page image is a `Sample data` fixture and is labelled as such.
+
 `npm run eval` writes `docs/evaluation.md` + `docs/evaluation.json`: F1 `1.00` against an
 always-flag baseline of `0.895`, a 95% bootstrap difference interval `[0.024, 0.235]`, a
 time-ordered 5-row holdout, and 6/6 P2 cases that disappear when the page update is moved
