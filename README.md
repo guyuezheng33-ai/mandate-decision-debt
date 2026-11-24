@@ -1,13 +1,17 @@
 # Mandate · Decision Debt
 
-**Try it out:** [Install Mandate on Jira](https://telegra.ph/Install-Mandate-on-Jira-11-23) · **90s demo:** [video](https://files.catbox.moe/l0iw16.mp4) · **Source:** this repository (MIT).
+**CI:** [verify workflow](https://github.com/guyuezheng33-ai/mandate-decision-debt/actions/workflows/ci.yml) · **Try it out:** [Install Mandate on Jira](https://telegra.ph/Install-Mandate-on-Jira-11-23) · **90s demo:** [video](https://files.catbox.moe/l0iw16.mp4) · **Source:** this repository (MIT).
 
 > Every work item should be able to say **who authorised it, in which document, and when — and whether that authorisation still holds today.**
 > When it cannot, that gap is Decision Debt, scored 0–100.
 
-Mandate is a Forge app that audits the authorisation behind each Jira item, scores unmet conditions 0–100 as Decision Debt, and holds a 300 ms scoring budget (measured 42.9 ms on the development laptop).
+Mandate is a Forge app that audits the authorisation behind each Jira item, scores unmet conditions 0–100 as Decision Debt, and holds a **300 ms** scoring budget with **P50 42.9 ms** on the development laptop; a **30-item MOBL audit** is reproducible by one command.
+
+**Short definition:** Mandate is a Jira authority audit: a deterministic **score** with a **300 ms** budget (**P50 42.9 ms**) and a **30-issue** live audit.
 
 Canonical definition (formal model, category, value, proof obligations): [`docs/PRODUCT-DEFINITION.md`](docs/PRODUCT-DEFINITION.md).
+
+**Live evidence (not fixtures):** [MOBL-57 receipt](https://github.com/guyuezheng33-ai/mandate-decision-debt/blob/master/preview/real-panel-mobl57-en.png) · [MOBL-57 six checks](https://github.com/guyuezheng33-ai/mandate-decision-debt/blob/master/preview/real-panel-mobl57-en-checks.png) · [MOBL-56 no record](https://github.com/guyuezheng33-ai/mandate-decision-debt/blob/master/preview/real-panel-mobl56-en.png) · [30-item audit](runs/real-audit-mobl-30.json). The project-page image is a `Sample data` fixture and is labelled as such.
 
 Built for Atlassian Codegeist 2026. Primary user: the **delivery lead** — someone running several workstreams who has to explain "why is this being built" every week.
 
@@ -74,7 +78,7 @@ So every edge carries one of three states: `present` / `absent` / `unknown`.
 - Only `absent` can trigger a "no mandate" style finding
 - `unknown` always suppresses the finding, and the panel says so: which edge is missing, which scope is needed
 - Project scans always print coverage ("18/25 items covered, 7 unknown"), and a bundle with no known edge produces **no score at all**
-- The scan budget is printed too ("8 of 25 scanned · REST caps at 8 per load"), because a score computed on a subset is a subset score
+- The scan budget is printed too ("8 of 25 scanned · REST caps at 8 per load"); every **score** carries **P50 42.9 ms** against a **300 ms** budget, because a score computed on a subset is a subset score
 - A scan does not read comments, so it also prints `confirmations not read in a scan` — the one place where the item panel and the project page can legitimately disagree is named on the page instead of left to be discovered
 - Every score can be taken apart: a folded six-row table lists each criterion as `hit` / `clear` / `unknown` with its weight, and the weights that hit must sum to the number on screen (asserted)
 - A project page answers the second question too: `Debt mix: P1 26% · P2 21%` — weight contribution, not hit count, so one P1 (25) is not outvoted by two P6 (8)

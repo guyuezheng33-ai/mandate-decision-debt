@@ -7,6 +7,8 @@ Mandate 是一个 Forge 应用：审计每条 Jira 工作项背后的授权边�
 
 完整定义（形式化模型、品类、价值、证明义务）见 [`docs/PRODUCT-DEFINITION.md`](docs/PRODUCT-DEFINITION.md)。
 
+**CI：** [verify workflow](https://github.com/guyuezheng33-ai/mandate-decision-debt/actions/workflows/ci.yml)。
+
 为 Atlassian Codegeist 2026 而写。主用户是 **交付负责人**：手上同时跑多条工作线，每周都要回答一次"这个东西为什么在做"。
 
 ---

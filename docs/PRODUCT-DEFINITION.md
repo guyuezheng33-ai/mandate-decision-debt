@@ -11,6 +11,8 @@ authorised a work item still holds at time *t*, scores the unmet authorisation c
 
 It is not a status report, not a compliance attestation tool, and not an AI summariser.
 
+**Acceptance gate (external, falsifiable):** the product is accepted only when P50 scoring latency stays ≤ 300 ms, the 30-item MOBL audit reproduces 28 missing / 1 stale / 1 unscorable, and panel, agent and MCP return the same debt / grade / six criteria for the same bundle.
+
 ## 2. Formal model
 
 For a work item `w`, an authorisation edge is:
@@ -103,7 +105,7 @@ A claim about precision, competitiveness or value is only valid if one of these 
 | Refusal to fake | `unknown` never triggers; no known edge → no score; covered by tests |
 | Competitiveness | the five-neighbour table above; four surfaces return one JSON shape |
 | Value | 1–3 real delivery-lead sessions; seed sheet filled by the user; no fabricated quotes or percentages |
-| Reproducibility | `npm run check`, `npm run eval`, `npm run eval:incremental`; 179 assertions |
+| Reproducibility | `npm run check`, `npm run eval`, `npm run eval:incremental`; 187 assertions |
 
 If the sensitivity run flips the top-5 ranking, the weights are not yet defensible; fix the
 weights or narrow the claim. If no real session exists, the value claim stays at “problem
