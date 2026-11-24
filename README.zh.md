@@ -3,7 +3,7 @@
 > 每条工作项都应该说得出**是谁、在哪份文档、什么时候**授权了它 —— 以及那份授权**今天还算不算数**。
 > 说不出来的时候，这个缺口就是 Decision Debt，0–100 分。
 
-Mandate 是一个 Forge 应用：审计每条 Jira 工作项背后的授权边（谁、哪份页面、何时），按六条条件检查该授权在 *t* 时刻是否仍成立，把未满足条件用三值证据量化为 0–100 的 Decision Debt，并给出一个 owner 级动作；只有 `absent` 触发 finding，打分确定性、基线可复现，打分预算 300ms（开发机实测 42.9ms）。
+Mandate 是一个 Forge 应用：审计每条 Jira 工作项背后的授权边（谁、哪份页面、何时），按六条条件检查该授权在 *t* 时刻是否仍成立，把未满足条件用三值证据量化为 0–100 的 Decision Debt，并给出一个 owner 级动作；只有 `absent` 触发 finding，打分确定性、基线可复现，打分预算 300ms（开发机 P50 30–43ms）。
 
 完整定义（形式化模型、品类、价值、证明义务）见 [`docs/PRODUCT-DEFINITION.md`](docs/PRODUCT-DEFINITION.md)。
 
@@ -93,7 +93,7 @@ node cli.js          # 列出样本
 node cli.js KAN-3    # 一条工作项的交付口径卡片
 node cli.js KAN-20 launch   # 同一条，换口径 —— 颜色不同
 node cli.js KAN-3 --en     # 英文输出
-node bench.js              # 500 条 × 3 口径，p50 约 80ms（7 轮取中位，预算 300ms），报文尺寸
+node bench.js              # 500 条 × 3 口径，p50 30–43ms 区间（7 轮取中位，预算 300ms），报文尺寸
 npm run manifest          # 离线校验 manifest 接线（action / tools / handler）
 npm run harness           # 重建本地面板 harness（顺带产出 preview/dev/payloads.json）
 npm run proof             # 用真实 TAP 输出重新生成 docs/verification.md
@@ -120,7 +120,7 @@ verify 2026-11-20  agent-entry 15/15  cache 4/4  chain 7/7  compact 10/10  contr
                    hardening 11/11  hydrate-batch 6/6  ports 20/20  profiles 4/4  property 4/4
                    robustness 3/3  rules 27/27  score 7/7  surface 4/4  tri 6/6  write 8/8
                    |  total 187/187  => PASS
-bench  500 items × 3 lenses · 1500 scores · p50 77ms（min 70 / max 107，7 轮，预算 300ms）· aggregate 759KB → project payload 2KB（上限 200KB）
+bench  500 items × 3 lenses · 1500 scores · p50 30.6ms（min 28.7 / max 42.7，7 轮，预算 300ms）· aggregate 927KB → project payload 3KB（上限 200KB）
        issue payload max 2KB · single-score p95 0.08ms
 ```
 

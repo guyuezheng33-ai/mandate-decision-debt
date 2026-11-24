@@ -5,9 +5,9 @@
 > Every work item should be able to say **who authorised it, in which document, and when — and whether that authorisation still holds today.**
 > When it cannot, that gap is Decision Debt, scored 0–100.
 
-Mandate is a Forge app that audits the authorisation behind each Jira item, scores unmet conditions 0–100 as Decision Debt, and holds a **300 ms** scoring budget with **P50 42.9 ms** on the development laptop; a **30-item MOBL audit** is reproducible by one command.
+Mandate is a Forge app that audits the authorisation behind each Jira item, scores unmet conditions 0–100 as Decision Debt, and holds a **300 ms** scoring budget with **P50 30–43 ms** on the development laptop; a **30-item MOBL audit** is reproducible by one command.
 
-**Short definition:** Mandate is a Jira authority audit: a deterministic **score** with a **300 ms** budget (**P50 42.9 ms**) and a **30-issue** live audit.
+**Short definition:** Mandate is a Jira authority audit: a deterministic **score** with a **300 ms** budget (**P50 30–43 ms**) and a **30-issue** live audit.
 
 Canonical definition (formal model, category, value, proof obligations): [`docs/PRODUCT-DEFINITION.md`](docs/PRODUCT-DEFINITION.md).
 
@@ -78,7 +78,7 @@ So every edge carries one of three states: `present` / `absent` / `unknown`.
 - Only `absent` can trigger a "no mandate" style finding
 - `unknown` always suppresses the finding, and the panel says so: which edge is missing, which scope is needed
 - Project scans always print coverage ("18/25 items covered, 7 unknown"), and a bundle with no known edge produces **no score at all**
-- The scan budget is printed too ("8 of 25 scanned · REST caps at 8 per load"); every **score** carries **P50 42.9 ms** against a **300 ms** budget, because a score computed on a subset is a subset score
+- The scan budget is printed too ("8 of 25 scanned · REST caps at 8 per load"); every **score** carries **P50 30–43 ms** against a **300 ms** budget, because a score computed on a subset is a subset score
 - A scan does not read comments, so it also prints `confirmations not read in a scan` — the one place where the item panel and the project page can legitimately disagree is named on the page instead of left to be discovered
 - Every score can be taken apart: a folded six-row table lists each criterion as `hit` / `clear` / `unknown` with its weight, and the weights that hit must sum to the number on screen (asserted)
 - A project page answers the second question too: `Debt mix: P1 26% · P2 21%` — weight contribution, not hit count, so one P1 (25) is not outvoted by two P6 (8)
@@ -99,7 +99,7 @@ node cli.js          # list samples
 node cli.js KAN-3    # delivery lens card for one work item
 node cli.js KAN-20 launch   # same item, different lens — different colour
 node cli.js KAN-3 --en     # English output
-node bench.js              # 500 items × 3 lenses, p50 ~80ms (7 rounds, budget 300ms), payload sizes, single-score p95
+node bench.js              # 500 items × 3 lenses, p50 in a 30–43ms band (7 rounds, budget 300ms), payload sizes, single-score p95
 npm run manifest          # offline manifest wiring check (actions / tools / handlers)
 npm run harness           # rebuild the local panel harness (also emits preview/dev/payloads.json)
 npm run proof             # regenerates docs/verification.md from the real TAP output
@@ -129,7 +129,7 @@ verify 2026-11-20  agent-entry 15/15  cache 4/4  chain 7/7  compact 10/10  contr
                    hardening 11/11  hydrate-batch 6/6  ports 20/20  profiles 4/4  property 4/4
                    robustness 3/3  rules 27/27  score 7/7  surface 4/4  tri 6/6  write 8/8
                    |  total 187/187  => PASS
-bench  500 items × 3 lenses · 1500 scores · p50 77ms (min 70 / max 107, 7 rounds, budget 300ms) · aggregate 759KB → project payload 2KB (cap 200KB)
+bench  500 items × 3 lenses · 1500 scores · p50 30.6ms (min 28.7 / max 42.7, 7 rounds, budget 300ms) · aggregate 927KB → project payload 3KB (cap 200KB)
        issue payload max 2KB · single-score p95 0.08ms
 ```
 
