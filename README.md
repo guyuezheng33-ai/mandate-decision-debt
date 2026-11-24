@@ -11,7 +11,7 @@ Mandate is a Forge app that audits the authorisation behind each Jira item, scor
 
 Canonical definition (formal model, category, value, proof obligations): [`docs/PRODUCT-DEFINITION.md`](docs/PRODUCT-DEFINITION.md).
 
-**Live evidence (not fixtures):** [MOBL-57 receipt](https://github.com/guyuezheng33-ai/mandate-decision-debt/blob/master/preview/real-panel-mobl57-en.png) · [MOBL-57 six checks](https://github.com/guyuezheng33-ai/mandate-decision-debt/blob/master/preview/real-panel-mobl57-en-checks.png) · [MOBL-56 no record](https://github.com/guyuezheng33-ai/mandate-decision-debt/blob/master/preview/real-panel-mobl56-en.png) · [30-item audit](runs/real-audit-mobl-30.json). The project-page image is a `Sample data` fixture and is labelled as such.
+**Live evidence (not fixtures):** [MOBL-57 receipt](https://github.com/guyuezheng33-ai/mandate-decision-debt/blob/master/preview/real-panel-mobl57-en.png) · [MOBL-57 six checks](https://github.com/guyuezheng33-ai/mandate-decision-debt/blob/master/preview/real-panel-mobl57-en-checks.png) · [MOBL-56 no record](https://github.com/guyuezheng33-ai/mandate-decision-debt/blob/master/preview/real-panel-mobl56-en.png) · [30-item audit](runs/real-audit-mobl-30.json) · [live project page](https://one-atlas-ngpq.atlassian.net/jira/software/projects/MOBL/apps/ari:cloud:ecosystem::extension/c3df8fe6-3626-4829-9025-47d55b1bde54/696b5366-aa30-42fd-8cd6-1f4b2e7c8383/static/mandate-project-page). The gallery project-page image remains a `Sample data` fixture because the tenant is not shared; the route itself is live.
 
 Built for Atlassian Codegeist 2026. Primary user: the **delivery lead** — someone running several workstreams who has to explain "why is this being built" every week.
 
@@ -30,7 +30,7 @@ Four surfaces, one set of criteria:
 | Rovo agent | Which work in this project is resting on evidence that needs re-confirmation? |
 | MCP (Cursor / Claude) | Same criteria, callable from the IDE. |
 
-The project-page module ships in the manifest; on a team-managed Jira project that surface is not exposed by Jira, so the gallery image for it is a fixture render labelled `Sample data`. The issue panel, Rovo agent and MCP are the three surfaces exercised on the live tenant.
+The project-page module is live on the company-managed `MOBL` project: [open the project page](https://one-atlas-ngpq.atlassian.net/jira/software/projects/MOBL/apps/ari:cloud:ecosystem::extension/c3df8fe6-3626-4829-9025-47d55b1bde54/696b5366-aa30-42fd-8cd6-1f4b2e7c8383/static/mandate-project-page). The page title is `Mandate · project context debt`; the gallery image is a labelled `Sample data` fixture because the tenant is not shared, not a claim that the gallery capture is the live tenant.
 
 All four call the same three read-only actions (`get-issue-provenance`, `list-context-debt`, `trace-drift`); the panel reaches them through `@forge/resolver`, the agent and MCP through `action` modules. Nothing is computed twice, and nothing is computed in a prompt.
 

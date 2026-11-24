@@ -29,7 +29,7 @@ that depends on it. Status dashboards aggregate work; they do not audit the auth
 ### 1b. Measured on a real site (2026-11-24)
 
 We ran the same REST port the panel uses against a live Atlassian demo tenant
-(`one-atlas-ngpq.atlassian.net`, project `MOBL`, 30 most recent issues, team-managed). The project
+(`one-atlas-ngpq.atlassian.net`, project `MOBL`, 30 most recent issues, company-managed). The project
 is a seeded demo, not a customer export; it is a live instance, not a benchmark population.
 The exact run is saved at `runs/real-audit-mobl-30.json` and reproducible with
 `LIMIT=30 node scripts/real-audit.js`.

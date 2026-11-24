@@ -89,7 +89,7 @@ not a live-tenant capture and is never presented as one.
 |---|---|
 | Scoring engine, six criteria, three lenses, arithmetic invariants | Real; 187 assertions, property test over 200 random bundles per lens |
 | Issue panel, Rovo agent and MCP over one engine | Real Forge modules on the live tenant; same action layer, three reachable surfaces |
-| Project page | `jira:projectPage` module ships in the manifest; on a **team-managed** project Jira does not expose a project-page slot, so the gallery image is a fixture render labelled `Sample data`. It is not claimed as a live-tenant capture |
+| Project page | Live on the company-managed `MOBL` project: [route](https://one-atlas-ngpq.atlassian.net/jira/software/projects/MOBL/apps/ari:cloud:ecosystem::extension/c3df8fe6-3626-4829-9025-47d55b1bde54/696b5366-aa30-42fd-8cd6-1f4b2e7c8383/static/mandate-project-page), title `Mandate · project context debt`. The gallery image is a labelled `Sample data` fixture, not a tenant capture |
 | Payloads in the hero screenshots | **Live:** `MOBL-57` on the demo tenant, produced by the real engine over Jira REST. Fixture renders are separately labelled `Sample data` in the gallery |
 | Live-tenant calibration (does P2 catch what a real team missed?) | **Not yet measured as accuracy.** One seeded demo tenant, 30 issues: 28 `missing`, 1 `stale` (1,703 days), 1 unscorable (`NO SCORE`). Enough to show the instrument works on live data, not enough to claim accuracy |
 | “Three delivery leads tested it” | **Not claimed.** Tester protocol (`08`) is scheduled; no quote goes on screen until a real session happens |
