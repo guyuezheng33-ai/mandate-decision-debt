@@ -74,7 +74,7 @@ AI summary of Jira. Mandate does none of those.
 | Today | With Mandate | Why it matters |
 |---|---|---|
 | "It's approved, I think" | Receipt: who, which page, when, still valid | The answer becomes a citation, not a memory |
-| Search Confluence for 10–20 minutes | Open the issue, read four facts | Time to evidence falls; no new process |
+| Search Confluence for the page and reconcile dates | Open the issue, read four facts | Time to evidence falls; no new process |
 | A stale approval is found in a release review | The issue is flagged before review | Rework moves earlier and gets cheaper |
 | "We should re-confirm" in a meeting | One named next action + copyable audit note | The fix has an owner and a paper trail |
 | A dashboard says "0 findings" because a scope is missing | `UNVERIFIABLE · NO SCORE` | Silence is not reported as safety |
