@@ -24,7 +24,7 @@ Mandate 是一个 Forge 应用：审计每条 Jira 工作项背后的授权边�
 | Rovo agent | 这个项目里哪些工作，压在需要重新确认的证据上？ |
 | MCP（Cursor / Claude） | 同一套判据，在 IDE 里直接调。 |
 
-项目页模块已在实际的 company-managed `MOBL` 项目上线：[打开项目页](https://one-atlas-ngpq.atlassian.net/jira/software/projects/MOBL/apps/ari:cloud:ecosystem::extension/c3df8fe6-3626-4829-9025-47d55b1bde54/696b5366-aa30-42fd-8cd6-1f4b2e7c8383/static/mandate-project-page)。页面标题是 `Mandate · project context debt`；图库里的项目页仍是标了 `Sample data` 的 fixture，因为租户不对外开放，不代表图库截图是实拍。
+项目页模块已在实际的 company-managed `MOBL` 项目上线：[打开项目页](https://one-atlas-ngpq.atlassian.net/jira/software/projects/MOBL/apps/c3df8fe6-3626-4829-9025-47d55b1bde54/696b5366-aa30-42fd-8cd6-1f4b2e7c8383)。页面标题是 `Mandate · project context debt`；图库里的项目页仍是标了 `Sample data` 的 fixture，因为租户不对外开放，不代表图库截图是实拍。
 
 这些入口都调同三个只读 action（`get-issue-provenance` / `list-context-debt` / `trace-drift`）；面板经 `@forge/resolver` 进，agent 与 MCP 经 `action` 模块进。没有任何东西算两遍，也没有任何东西在提示词里算。
 
@@ -203,3 +203,4 @@ verify.js      一条命令跑完
 - 页面编辑时间与贡献者集合只有 TWG 有；走 REST 降级时 P2/P6 报 `unknown`，不猜
 - `manifest.yml` 的接线由 `npm run manifest` 离线校验（action → function → handler 导出、`mcp.tools` → action key）；`forge lint` 本身要登录和已注册的 app id
 - 图访问需要两条已注册的持久化查询（`MANDATE_QK_BUNDLE` / `MANDATE_QK_SCAN`）。没有它们，应用走 Jira REST 并说明原因 —— 它不会失败
+
