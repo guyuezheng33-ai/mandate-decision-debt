@@ -7,7 +7,7 @@
 
 const test = require('node:test');
 const assert = require('node:assert');
-const { videoHostCheck, sourceHonestyCheck } = require('../tools/submission-rules');
+const { videoHostCheck, sourceHonestyCheck, competitorsCheck } = require('../tools/submission-rules');
 
 const vp = (url) => `| Video | [90-second demo](${url}) — happy path included |\n`;
 
@@ -66,4 +66,30 @@ test('sourceHonesty：scan.source 也算自报；twg/rest 放行', () => {
 
 test('sourceHonesty：没有任何响应块 → FAIL（空页不许蒙混）', () => {
   assert.equal(sourceHonestyCheck('# page\n\n## nothing\n\ntext only').status, 'FAIL');
+});
+
+const FULL_DEV = [
+  'Group Sign-Off https://marketplace.atlassian.com/apps/1211104/group-sign-off-parallel-multi-approvals',
+  'Approval Path https://marketplace.atlassian.com/apps/1220490/approval-path-for-jira',
+  'SealDoc https://marketplace.atlassian.com/apps/2595855992/sealdoc-electronic-signatures-audit-trails',
+].join('\n');
+const FULL_COMP = FULL_DEV;
+
+test('competitors：三名 + URL 齐全 → PASS', () => {
+  assert.equal(competitorsCheck(FULL_DEV, FULL_COMP).status, 'PASS');
+});
+
+test('competitors：07 不点名（某审批应用）→ FAIL', () => {
+  const vague = FULL_DEV.replace('SealDoc', '某审批应用');
+  const r = competitorsCheck(vague, FULL_COMP);
+  assert.equal(r.status, 'FAIL');
+});
+
+test('competitors：07 缺任一 Marketplace URL → FAIL', () => {
+  const noUrl = FULL_DEV.replace('https://marketplace.atlassian.com/apps/1220490/approval-path-for-jira', '(link)');
+  assert.equal(competitorsCheck(noUrl, FULL_COMP).status, 'FAIL');
+});
+
+test('competitors：COMPETITORS.md 缺失 → FAIL', () => {
+  assert.equal(competitorsCheck(FULL_DEV, '').status, 'FAIL');
 });

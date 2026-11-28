@@ -16,6 +16,7 @@
  *   7. access      评审真的点得开（安装链接不是占位符）
  *   8. videoHost   Video 字段必须是 YouTube 公开链接（拒 catbox/Vimeo/Unlisted）
  *   9. sourceHonesty MCP 示例响应块必须自报 source；fixture 不许被称 live
+ *  10. competitors  07 与 COMPETITORS.md 点名三个真实竞品 + Marketplace URL
  *
  * 退出码：0 = PASS 或只剩账号项（TODO）；1 = 有自相矛盾/假 claim（FAIL）
  *   node tools/submission-check.js
@@ -48,7 +49,7 @@ const verification = read('docs/verification.md');
 const countMatch = verification.match(/(\d+)\s+assertions\s+·\s+all passing/);
 const VERIFY = countMatch ? Number(countMatch[1]) : null;
 
-const { videoHostCheck, sourceHonestyCheck } = require('./submission-rules');
+const { videoHostCheck, sourceHonestyCheck, competitorsCheck } = require('./submission-rules');
 
 // 1) 断言数：提交面文档里任何 "N assertions / N 条断言" 都必须等于证明文件的数字
 {
@@ -179,6 +180,12 @@ const { videoHostCheck, sourceHonestyCheck } = require('./submission-rules');
 {
   const r = sourceHonestyCheck(read('docs/mcp-examples.md'));
   record('sourceHonesty', r.status, r.detail);
+}
+
+// 10) 竞品点名：07 与 COMPETITORS.md 必须出现三个真实产品 + Marketplace URL（D3）
+{
+  const r = competitorsCheck(devpost, read('docs/COMPETITORS.md'));
+  record('competitors', r.status, r.detail);
 }
 
 const width = Math.max(...rows.map((r) => r.name.length));

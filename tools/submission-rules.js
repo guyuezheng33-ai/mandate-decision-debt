@@ -89,4 +89,31 @@ function sourceHonestyCheck(mcpText) {
   return { status: 'PASS', detail: `${responses} 个响应块全部自报 source · fixture 未被称 live` };
 }
 
-module.exports = { videoHostCheck, sourceHonestyCheck, ALLOWED_VIDEO_HOSTS };
+/**
+ * D3 · 竞品必须点名：07 与 docs/COMPETITORS.md 都要出现三个真实产品名 + Marketplace URL。
+ * 「某审批应用 / some approval app」这类不点名写法直接 FAIL。
+ */
+const COMPETITORS = [
+  { name: 'Group Sign-Off', url: 'marketplace.atlassian.com/apps/1211104' },
+  { name: 'Approval Path', url: 'marketplace.atlassian.com/apps/1220490' },
+  { name: 'SealDoc', url: 'marketplace.atlassian.com/apps/2595855992' },
+];
+
+function competitorsCheck(devpostText, competitorsText) {
+  const dev = String(devpostText || '');
+  const comp = String(competitorsText || '');
+  const problems = [];
+  if (!comp.trim()) problems.push('docs/COMPETITORS.md 缺失或为空');
+  for (const c of COMPETITORS) {
+    if (!dev.includes(c.name)) problems.push(`07 未点名 ${c.name}`);
+    if (!dev.includes(c.url)) problems.push(`07 缺 ${c.name} 的 Marketplace URL`);
+    if (comp.trim() && !comp.includes(c.url)) problems.push(`COMPETITORS.md 缺 ${c.name} URL`);
+  }
+  if (/某审批应用|某个审批|some approval app|a certain approval/i.test(dev)) {
+    problems.push('07 出现不点名的「某审批应用」类写法');
+  }
+  if (problems.length) return { status: 'FAIL', detail: problems.join(' · ') };
+  return { status: 'PASS', detail: '三个真实竞品点名 + URL（07 与 COMPETITORS.md 一致）' };
+}
+
+module.exports = { videoHostCheck, sourceHonestyCheck, competitorsCheck, ALLOWED_VIDEO_HOSTS };
