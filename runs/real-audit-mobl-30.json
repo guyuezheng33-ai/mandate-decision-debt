@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T17:25:15.726Z",
+  "generatedAt": "2026-11-28T08:18:20.497Z",
   "site": "https://one-atlas-ngpq.atlassian.net",
   "project": "MOBL",
   "sample": {
@@ -3419,7 +3419,27 @@
       "daysOld": 1703,
       "record": "Product requirements — approval record",
       "debt": 0,
-      "grade": "watch"
+      "grade": "watch",
+      "p2": {
+        "state": "clear",
+        "why": null,
+        "decidedAt": "2026-11-23T09:16:22.636Z",
+        "hitEvidenceDecidedAt": null,
+        "lastConfirmAt": null,
+        "confirmSource": null,
+        "records": [
+          {
+            "id": "jira:MDEMO-2",
+            "updated": "2022-03-26T00:00:00.000Z",
+            "editedAt": "2026-11-23T09:16:22.636Z"
+          },
+          {
+            "id": "link-1",
+            "updated": null,
+            "editedAt": null
+          }
+        ]
+      }
     },
     {
       "issueKey": "MOBL-56",
@@ -3431,7 +3451,16 @@
       "daysOld": null,
       "record": null,
       "debt": 25,
-      "grade": "watch"
+      "grade": "watch",
+      "p2": {
+        "state": "clear",
+        "why": null,
+        "decidedAt": null,
+        "hitEvidenceDecidedAt": null,
+        "lastConfirmAt": null,
+        "confirmSource": null,
+        "records": []
+      }
     },
     {
       "issueKey": "MOBL-55",
@@ -3443,7 +3472,16 @@
       "daysOld": null,
       "record": null,
       "debt": 25,
-      "grade": "watch"
+      "grade": "watch",
+      "p2": {
+        "state": "clear",
+        "why": null,
+        "decidedAt": null,
+        "hitEvidenceDecidedAt": null,
+        "lastConfirmAt": null,
+        "confirmSource": null,
+        "records": []
+      }
     },
     {
       "issueKey": "MOBL-54",
@@ -3455,7 +3493,16 @@
       "daysOld": null,
       "record": null,
       "debt": 25,
-      "grade": "watch"
+      "grade": "watch",
+      "p2": {
+        "state": "clear",
+        "why": null,
+        "decidedAt": null,
+        "hitEvidenceDecidedAt": null,
+        "lastConfirmAt": null,
+        "confirmSource": null,
+        "records": []
+      }
     },
     {
       "issueKey": "MOBL-53",
@@ -3467,7 +3514,16 @@
       "daysOld": null,
       "record": null,
       "debt": 25,
-      "grade": "watch"
+      "grade": "watch",
+      "p2": {
+        "state": "clear",
+        "why": null,
+        "decidedAt": null,
+        "hitEvidenceDecidedAt": null,
+        "lastConfirmAt": null,
+        "confirmSource": null,
+        "records": []
+      }
     },
     {
       "issueKey": "MOBL-52",
@@ -3479,7 +3535,16 @@
       "daysOld": null,
       "record": null,
       "debt": 25,
-      "grade": "watch"
+      "grade": "watch",
+      "p2": {
+        "state": "clear",
+        "why": null,
+        "decidedAt": null,
+        "hitEvidenceDecidedAt": null,
+        "lastConfirmAt": null,
+        "confirmSource": null,
+        "records": []
+      }
     },
     {
       "issueKey": "MOBL-51",
@@ -3491,7 +3556,16 @@
       "daysOld": null,
       "record": null,
       "debt": 25,
-      "grade": "watch"
+      "grade": "watch",
+      "p2": {
+        "state": "clear",
+        "why": null,
+        "decidedAt": null,
+        "hitEvidenceDecidedAt": null,
+        "lastConfirmAt": null,
+        "confirmSource": null,
+        "records": []
+      }
     },
     {
       "issueKey": "MOBL-50",
@@ -3503,7 +3577,16 @@
       "daysOld": null,
       "record": null,
       "debt": 25,
-      "grade": "watch"
+      "grade": "watch",
+      "p2": {
+        "state": "clear",
+        "why": null,
+        "decidedAt": null,
+        "hitEvidenceDecidedAt": null,
+        "lastConfirmAt": null,
+        "confirmSource": null,
+        "records": []
+      }
     },
     {
       "issueKey": "MOBL-49",
@@ -3515,7 +3598,16 @@
       "daysOld": null,
       "record": null,
       "debt": 25,
-      "grade": "watch"
+      "grade": "watch",
+      "p2": {
+        "state": "clear",
+        "why": null,
+        "decidedAt": null,
+        "hitEvidenceDecidedAt": null,
+        "lastConfirmAt": null,
+        "confirmSource": null,
+        "records": []
+      }
     },
     {
       "issueKey": "MOBL-48",
@@ -3527,7 +3619,16 @@
       "daysOld": null,
       "record": null,
       "debt": 25,
-      "grade": "watch"
+      "grade": "watch",
+      "p2": {
+        "state": "clear",
+        "why": null,
+        "decidedAt": null,
+        "hitEvidenceDecidedAt": null,
+        "lastConfirmAt": null,
+        "confirmSource": null,
+        "records": []
+      }
     },
     {
       "issueKey": "MOBL-47",
@@ -3539,7 +3640,16 @@
       "daysOld": null,
       "record": null,
       "debt": 25,
-      "grade": "watch"
+      "grade": "watch",
+      "p2": {
+        "state": "clear",
+        "why": null,
+        "decidedAt": null,
+        "hitEvidenceDecidedAt": null,
+        "lastConfirmAt": null,
+        "confirmSource": null,
+        "records": []
+      }
     },
     {
       "issueKey": "MOBL-46",
@@ -3551,7 +3661,16 @@
       "daysOld": null,
       "record": null,
       "debt": 25,
-      "grade": "watch"
+      "grade": "watch",
+      "p2": {
+        "state": "clear",
+        "why": null,
+        "decidedAt": null,
+        "hitEvidenceDecidedAt": null,
+        "lastConfirmAt": null,
+        "confirmSource": null,
+        "records": []
+      }
     },
     {
       "issueKey": "MOBL-45",
@@ -3563,7 +3682,16 @@
       "daysOld": null,
       "record": null,
       "debt": 25,
-      "grade": "watch"
+      "grade": "watch",
+      "p2": {
+        "state": "clear",
+        "why": null,
+        "decidedAt": null,
+        "hitEvidenceDecidedAt": null,
+        "lastConfirmAt": null,
+        "confirmSource": null,
+        "records": []
+      }
     },
     {
       "issueKey": "MOBL-44",
@@ -3575,7 +3703,16 @@
       "daysOld": null,
       "record": null,
       "debt": 25,
-      "grade": "watch"
+      "grade": "watch",
+      "p2": {
+        "state": "clear",
+        "why": null,
+        "decidedAt": null,
+        "hitEvidenceDecidedAt": null,
+        "lastConfirmAt": null,
+        "confirmSource": null,
+        "records": []
+      }
     },
     {
       "issueKey": "MOBL-43",
@@ -3587,7 +3724,16 @@
       "daysOld": null,
       "record": null,
       "debt": 25,
-      "grade": "watch"
+      "grade": "watch",
+      "p2": {
+        "state": "clear",
+        "why": null,
+        "decidedAt": null,
+        "hitEvidenceDecidedAt": null,
+        "lastConfirmAt": null,
+        "confirmSource": null,
+        "records": []
+      }
     },
     {
       "issueKey": "MOBL-42",
@@ -3599,7 +3745,16 @@
       "daysOld": null,
       "record": null,
       "debt": 25,
-      "grade": "watch"
+      "grade": "watch",
+      "p2": {
+        "state": "clear",
+        "why": null,
+        "decidedAt": null,
+        "hitEvidenceDecidedAt": null,
+        "lastConfirmAt": null,
+        "confirmSource": null,
+        "records": []
+      }
     },
     {
       "issueKey": "MOBL-41",
@@ -3611,7 +3766,16 @@
       "daysOld": null,
       "record": null,
       "debt": 25,
-      "grade": "watch"
+      "grade": "watch",
+      "p2": {
+        "state": "clear",
+        "why": null,
+        "decidedAt": null,
+        "hitEvidenceDecidedAt": null,
+        "lastConfirmAt": null,
+        "confirmSource": null,
+        "records": []
+      }
     },
     {
       "issueKey": "MOBL-40",
@@ -3623,7 +3787,16 @@
       "daysOld": null,
       "record": null,
       "debt": 25,
-      "grade": "watch"
+      "grade": "watch",
+      "p2": {
+        "state": "clear",
+        "why": null,
+        "decidedAt": null,
+        "hitEvidenceDecidedAt": null,
+        "lastConfirmAt": null,
+        "confirmSource": null,
+        "records": []
+      }
     },
     {
       "issueKey": "MOBL-39",
@@ -3635,7 +3808,16 @@
       "daysOld": null,
       "record": null,
       "debt": 25,
-      "grade": "watch"
+      "grade": "watch",
+      "p2": {
+        "state": "clear",
+        "why": null,
+        "decidedAt": null,
+        "hitEvidenceDecidedAt": null,
+        "lastConfirmAt": null,
+        "confirmSource": null,
+        "records": []
+      }
     },
     {
       "issueKey": "MOBL-38",
@@ -3647,7 +3829,16 @@
       "daysOld": null,
       "record": null,
       "debt": 25,
-      "grade": "watch"
+      "grade": "watch",
+      "p2": {
+        "state": "clear",
+        "why": null,
+        "decidedAt": null,
+        "hitEvidenceDecidedAt": null,
+        "lastConfirmAt": null,
+        "confirmSource": null,
+        "records": []
+      }
     },
     {
       "issueKey": "MOBL-37",
@@ -3659,7 +3850,16 @@
       "daysOld": null,
       "record": null,
       "debt": 25,
-      "grade": "watch"
+      "grade": "watch",
+      "p2": {
+        "state": "clear",
+        "why": null,
+        "decidedAt": null,
+        "hitEvidenceDecidedAt": null,
+        "lastConfirmAt": null,
+        "confirmSource": null,
+        "records": []
+      }
     },
     {
       "issueKey": "MOBL-36",
@@ -3671,7 +3871,16 @@
       "daysOld": null,
       "record": null,
       "debt": 25,
-      "grade": "watch"
+      "grade": "watch",
+      "p2": {
+        "state": "clear",
+        "why": null,
+        "decidedAt": null,
+        "hitEvidenceDecidedAt": null,
+        "lastConfirmAt": null,
+        "confirmSource": null,
+        "records": []
+      }
     },
     {
       "issueKey": "MOBL-32",
@@ -3683,7 +3892,16 @@
       "daysOld": null,
       "record": null,
       "debt": 25,
-      "grade": "watch"
+      "grade": "watch",
+      "p2": {
+        "state": "clear",
+        "why": null,
+        "decidedAt": null,
+        "hitEvidenceDecidedAt": null,
+        "lastConfirmAt": null,
+        "confirmSource": null,
+        "records": []
+      }
     },
     {
       "issueKey": "MOBL-31",
@@ -3695,7 +3913,16 @@
       "daysOld": null,
       "record": null,
       "debt": 25,
-      "grade": "watch"
+      "grade": "watch",
+      "p2": {
+        "state": "clear",
+        "why": null,
+        "decidedAt": null,
+        "hitEvidenceDecidedAt": null,
+        "lastConfirmAt": null,
+        "confirmSource": null,
+        "records": []
+      }
     },
     {
       "issueKey": "MOBL-30",
@@ -3707,7 +3934,16 @@
       "daysOld": null,
       "record": null,
       "debt": 25,
-      "grade": "watch"
+      "grade": "watch",
+      "p2": {
+        "state": "clear",
+        "why": null,
+        "decidedAt": null,
+        "hitEvidenceDecidedAt": null,
+        "lastConfirmAt": null,
+        "confirmSource": null,
+        "records": []
+      }
     },
     {
       "issueKey": "MOBL-29",
@@ -3719,7 +3955,16 @@
       "daysOld": null,
       "record": null,
       "debt": 25,
-      "grade": "watch"
+      "grade": "watch",
+      "p2": {
+        "state": "clear",
+        "why": null,
+        "decidedAt": null,
+        "hitEvidenceDecidedAt": null,
+        "lastConfirmAt": null,
+        "confirmSource": null,
+        "records": []
+      }
     },
     {
       "issueKey": "MOBL-28",
@@ -3731,7 +3976,16 @@
       "daysOld": null,
       "record": null,
       "debt": 25,
-      "grade": "watch"
+      "grade": "watch",
+      "p2": {
+        "state": "clear",
+        "why": null,
+        "decidedAt": null,
+        "hitEvidenceDecidedAt": null,
+        "lastConfirmAt": null,
+        "confirmSource": null,
+        "records": []
+      }
     },
     {
       "issueKey": "MOBL-27",
@@ -3743,7 +3997,22 @@
       "daysOld": null,
       "record": "Page",
       "debt": 0,
-      "grade": "unknown"
+      "grade": "unknown",
+      "p2": {
+        "state": "unknown",
+        "why": "decisions-no-updated",
+        "decidedAt": null,
+        "hitEvidenceDecidedAt": null,
+        "lastConfirmAt": null,
+        "confirmSource": null,
+        "records": [
+          {
+            "id": "appId=ba4525e9-6d06-3a39-967a-f82093b4d003&pageId=1458208934",
+            "updated": null,
+            "editedAt": null
+          }
+        ]
+      }
     },
     {
       "issueKey": "MOBL-26",
@@ -3755,7 +4024,16 @@
       "daysOld": null,
       "record": null,
       "debt": 25,
-      "grade": "watch"
+      "grade": "watch",
+      "p2": {
+        "state": "clear",
+        "why": null,
+        "decidedAt": null,
+        "hitEvidenceDecidedAt": null,
+        "lastConfirmAt": null,
+        "confirmSource": null,
+        "records": []
+      }
     },
     {
       "issueKey": "MOBL-25",
@@ -3767,7 +4045,16 @@
       "daysOld": null,
       "record": null,
       "debt": 25,
-      "grade": "watch"
+      "grade": "watch",
+      "p2": {
+        "state": "clear",
+        "why": null,
+        "decidedAt": null,
+        "hitEvidenceDecidedAt": null,
+        "lastConfirmAt": null,
+        "confirmSource": null,
+        "records": []
+      }
     }
   ]
 }

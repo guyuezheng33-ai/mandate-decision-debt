@@ -87,7 +87,8 @@ for (const file of FILES) {
     return `total ${passed}/${total}${verdict}`;
   });
 
-  // 3) 正文里的总数（三种写法）
+  // 3) 正文里的总数（四种写法；offline 变体须先于裸 assertions 处理）
+  text = text.replace(/(\d+)\s+offline\s+assertions/gi, `${total} offline assertions`);
   text = text.replace(/(\d+)\s+assertions/g, `${total} assertions`);
   text = text.replace(/(\d+)\s+条断言/g, `${total} 条断言`);
   text = text.replace(/\*\*(\d+)\s+条\*\*/g, `**${total} 条**`);

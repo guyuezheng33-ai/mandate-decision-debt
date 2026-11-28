@@ -137,6 +137,8 @@ function createRestPort({ client, cache = null, timeoutMs = 4_000, concurrency =
                 url: l.url || l.object?.url || null,
                 // Jira 原生记录自带 approved 日期与 owner；页面链接则留空，等页面元数据。
                 updated: l.updated || null,
+                // 服务器编辑时间（Jira 原生记录才有）：P2 用它判"变更未传导"。
+                editedAt: l.editedAt || null,
                 owner: l.owner || null,
                 ownerName: l.ownerName || null,
                 contributors: l.ownerName ? [l.ownerName] : [],

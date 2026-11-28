@@ -10,7 +10,7 @@ const { summarize, aggregate } = require('../engine/score');
 const { compactIssue, compactProject, enforceBudget, clip } = require('../io/compact');
 const { makeError, isErrorPayload, classify, CODES } = require('../io/errors');
 const { fingerprintOf } = require('../io/fingerprint');
-const { parseDate, maxUpdated, daysBetween } = require('../engine/rules');
+const { parseDate, maxDecided, daysBetween } = require('../engine/rules');
 
 function readInputs(payload) {
   const raw = payload?.inputs ?? payload?.context ?? payload ?? {};
@@ -133,7 +133,7 @@ function createActions({ evidencePort, repairPort = null, defaultProfile = 'soft
           issueKey,
         };
       }
-      const decided = maxUpdated(edge.items);
+      const decided = maxDecided(edge.items);
       const started = parseDate(bundle.inProgressSince) ?? parseDate(bundle.createdAt);
       if (decided == null || started == null) {
         return { ok: true, issueKey, drifting: false, reason: 'INSUFFICIENT_TIMESTAMPS', decidedAt: null };
@@ -154,7 +154,7 @@ function createActions({ evidencePort, repairPort = null, defaultProfile = 'soft
         lastConfirmAt: bundle.lastConfirmAt,
         daysSinceChange: gap,
         thresholdDays: p.driftDays,
-        sources: edge.items.slice(0, 3).map((d) => ({ id: d.id, url: d.url, updated: d.updated })),
+        sources: edge.items.slice(0, 3).map((d) => ({ id: d.id, url: d.url, updated: d.updated, editedAt: d.editedAt ?? null })),
         summary: drifting
           ? clip(
               lang === 'zh'

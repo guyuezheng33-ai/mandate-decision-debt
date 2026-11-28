@@ -40,6 +40,17 @@ function maxUpdated(items) {
   return stamps.length ? Math.max(...stamps) : null;
 }
 
+/**
+ * P2 / traceDrift 共用的"记录最近一次变更"时间：
+ * 优先服务器编辑时间 editedAt（Jira 原生授权记录的 fields.updated），
+ * 没有时退回 updated（页面最后修改 / 批准日期）。
+ * 两个入口必须用同一个函数，否则面板与 agent 会对同一条 issue 给出不同的漂移天数。
+ */
+function maxDecided(items) {
+  const stamps = items.map((d) => parseDate(d.editedAt) ?? parseDate(d.updated) ?? 0).filter(Boolean);
+  return stamps.length ? Math.max(...stamps) : null;
+}
+
 function isDone(bundle) {
   if (bundle.statusCategory === 'done') return true;
   return /^(done|closed|resolved|completed|已完成|已关闭)$/i.test(bundle.status || '');
@@ -147,10 +158,10 @@ const RULES = [
     gaps(bundle) {
       const items = bundle.edges.decisions.items || [];
       const out = [];
-      if (items.length && items.every((d) => !d.updated)) out.push('decisions-no-updated');
+      if (items.length && items.every((d) => !d.updated && !d.editedAt)) out.push('decisions-no-updated');
       // 依据页有时间、但"开工时间"没回来：算不出先后，只能判 unknown。
       // 以前这里直接 return false，屏幕上就是"变更未传导：未命中"——一条假 clear。
-      const decided = maxUpdated(items);
+      const decided = maxDecided(items);
       if (decided != null) {
         const started = parseDate(bundle.inProgressSince) ?? parseDate(bundle.createdAt);
         if (started == null) out.push('issue-no-start');
@@ -159,7 +170,7 @@ const RULES = [
       return out;
     },
     test(bundle, profile) {
-      const decided = maxUpdated(bundle.edges.decisions.items);
+      const decided = maxDecided(bundle.edges.decisions.items);
       if (decided == null) return false;
       const started = parseDate(bundle.inProgressSince) ?? parseDate(bundle.createdAt);
       if (started == null) return false;
@@ -173,7 +184,7 @@ const RULES = [
       return gap >= profile.driftDays;
     },
     detail(bundle, profile) {
-      const decided = maxUpdated(bundle.edges.decisions.items);
+      const decided = maxDecided(bundle.edges.decisions.items);
       const started = parseDate(bundle.inProgressSince) ?? parseDate(bundle.createdAt);
       const gap = daysBetween(parseDate(bundle.asOf ?? bundle.updatedAt), decided);
       const startText = started ? new Date(started).toISOString().slice(0, 10) : '?';
@@ -186,13 +197,13 @@ const RULES = [
       };
     },
     evidence(bundle) {
-      const decided = maxUpdated(bundle.edges.decisions.items);
+      const decided = maxDecided(bundle.edges.decisions.items);
       return {
         issueKey: bundle.issueKey,
         decidedAt: decided ? new Date(decided).toISOString() : null,
         inProgressSince: bundle.inProgressSince ?? bundle.createdAt,
         lastConfirmAt: bundle.lastConfirmAt,
-        decisions: bundle.edges.decisions.items.map((d) => ({ id: d.id, title: d.title, url: d.url, updated: d.updated })),
+        decisions: bundle.edges.decisions.items.map((d) => ({ id: d.id, title: d.title, url: d.url, updated: d.updated, editedAt: d.editedAt ?? null })),
       };
     },
     suggest(bundle, profile) {
@@ -314,7 +325,7 @@ const RULES = [
     },
     test(bundle) {
       if ((bundle.reopenedCount || 0) < 2) return false;
-      const decided = maxUpdated(bundle.edges.decisions.items);
+      const decided = maxDecided(bundle.edges.decisions.items);
       const lastReopen = parseDate(bundle.lastReopenedAt);
       if (lastReopen != null) return decided == null || decided < lastReopen;
       const created = parseDate(bundle.createdAt);
@@ -471,6 +482,7 @@ module.exports = {
   daysBetween,
   parseDate,
   maxUpdated,
+  maxDecided,
   isDone,
   isEnded,
 };

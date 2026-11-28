@@ -43,6 +43,10 @@ function normalizeDecision(raw) {
     title: str(raw.title ?? raw.name, '(untitled)'),
     url: raw.url ?? null,
     updated: iso(raw.updated ?? raw.lastModified),
+    // 记录最近一次被编辑的服务器时间（Jira 原生授权记录 = 关联 issue 的 fields.updated）。
+    // 与 updated（批准日期 / 页面最后修改）分开：P2 判"变更未传导"用的是编辑时间，
+    // 收据讲的是批准日期。两者混用会把"记录最近的编辑"错说成"批准日期被改过"，漂移天数随之失真。
+    editedAt: iso(raw.editedAt ?? raw.serverUpdated),
     owner: ownerRaw && typeof ownerRaw === 'object' ? ownerRaw.id ?? ownerRaw.accountId ?? null : ownerRaw,
     // 有些图返回 owner 对象，有些返回纯 accountId。名字只作为显示层可选字段，
     // 缺名字时 UI 退回 accountId，绝不把 id 编成一个像人名的东西。

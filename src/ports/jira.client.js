@@ -97,6 +97,9 @@ function shapeDecisionIssue(raw) {
     title: f.summary || key,
     url: key && base ? `${base}/browse/${key}` : null,
     updated: date[1],
+    // 服务器时间：这条授权记录最近一次被编辑的真实时刻。P2 的"变更未传导"
+    // 必须建立在它上面，而不是描述里人手写的 approved 日期（后者可以被写成任何一天）。
+    editedAt: f.updated || null,
     owner: f.assignee?.accountId || null,
     ownerName: ownerName ? ownerName[1].trim() : f.assignee?.displayName || null,
     application: 'Jira',
