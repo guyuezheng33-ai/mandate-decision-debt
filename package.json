@@ -26,6 +26,7 @@
     "docs:check": "node tools/sync-counts.js --check",
     "check": "node tools/full-check.js",
     "submission": "node tools/submission-check.js",
+    "matrix": "node tools/surface-matrix.js",
     "ci": "npm run ui:build && node manifest.check.js && node verify.js && node bench.js",
     "ci:release": "node release.js"
   },

@@ -8,11 +8,12 @@
 
 | 事实 | 状态（2026-11-28） | 谁来做 |
 |---|---|---|
-| 断言与闸门 | 217 条断言全过；full-check 11/12，唯一 FAIL = submission/videoHost | 工程已绿；videoHost 见下 |
+| 断言与闸门 | 221 条断言全过；full-check 11/12，唯一 FAIL = submission/videoHost | 工程已绿；videoHost 见下 |
 | 视频 | 已产出：90s MP4（catbox 临时托管）；**YouTube public 上传待办**（赛事硬要求，Unlisted/非 YouTube 不合规） | owner 上传后把 07 Video 字段换成 YouTube 链接 |
 | 截图 | 3 张真实 Jira 外框已备：MOBL-57 收据 / MOBL-57 展开 6 checks / MOBL-56 NO RECORD；项目页完整图待补（live 路由当前 E_PARTIAL） | owner 补项目页与 MOBL-27 面板图 |
 | 安装链接 | 旧 install-link 已死（落到 http://6.12.0.0 证书页）；Console Distribution 重生成 + 第二站点实测待办 | owner |
 | live 审计 | `runs/real-audit-mobl-30.json`：28 missing / 1 stale / 1 unknown；P2_ASSERT=judged PASS；P2 hit 受日期门（记录编辑 2026-11-23 + 14 天，最早 2026-12-07，且需 asOf 推进） | 工程届时复跑 P2_ASSERT=hit |
+| 四端矩阵 | `docs/surface-matrix.md`（fixture KAN-3）与 `docs/surface-matrix-live.md`（MOBL-57）均 PASS；NO SCORE 发布口径统一为 debt=null | 完成 |
 | seed | 真实项目 seed 0/21 待 owner 填；simulated corpus 21 行与引擎逐行 0 分歧（形状证据，非校准） | owner |
 | AI 披露 | 已完成：`docs/AI-DISCLOSURE.md` + 07 §11.6 | 完成 |
 | GitHub | 本地 master 自 61ce41c 起未 push（凭据弹窗需 owner）；D1/D6/D3/D9 已本地 commit | owner push |

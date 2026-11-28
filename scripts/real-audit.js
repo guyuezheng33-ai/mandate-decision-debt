@@ -122,7 +122,7 @@ async function main() {
       approvedAt: s.authority.updatedAt,
       daysOld: s.authority.daysWithoutConfirm,
       record: s.authority.title,
-      debt: s.debt,
+      debt: s.grade === 'unknown' ? null : s.debt,
       grade: s.grade,
       // P2 逐条可核查：state 是 hit/clear/unknown；decidedAt 必须来自真实记录的
       // 服务器编辑时间（editedAt），不是描述里手写的 approved 日期，更不是常量。

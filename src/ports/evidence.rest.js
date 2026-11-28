@@ -16,6 +16,7 @@
 const { normalizeBundle, STATES } = require('../engine/normalize');
 const { classify } = require('../io/errors');
 const { guarded } = require('../io/timeout');
+const { withStamps } = require('./confirm');
 
 /**
  * REST 扫描的硬预算：一次项目页加载最多取回 8 条。
@@ -204,8 +205,19 @@ function createRestPort({ client, cache = null, timeoutMs = 4_000, concurrency =
         source: 'rest',
         edges: { decisions, goals, reviewTraces: { state: STATES.UNKNOWN, items: [], reason: 'rest-has-no-commenters' } },
       });
-      if (ck) cache.set(ck, bundle, token);
-      return bundle;
+      // 单条回读复核留痕（D1/D7）：只认带 mandate:dd-<8hex> 指纹的评论，时间取服务器 created。
+      // 没有这一步，面板/agent/MCP 在真站点上永远看不见"还款"，与审计脚本各说各话。
+      // 扫描（opts.scan）绝不逐条 N+1；审计脚本的 withStamps 与此同纪律、幂等。
+      let stamped = bundle;
+      if (!opts.scan && typeof client?.getComments === 'function') {
+        try {
+          stamped = await withStamps(bundle, client, { timeoutMs });
+        } catch {
+          stamped = bundle;
+        }
+      }
+      if (ck) cache.set(ck, stamped, token);
+      return stamped;
       };
       // 单飞：同一 key 并发只打一次 REST（面板 + agent 同秒点开是常态）。
       return ck && typeof cache.single === 'function' ? cache.single(ck, build) : build();
@@ -215,7 +227,7 @@ function createRestPort({ client, cache = null, timeoutMs = 4_000, concurrency =
       const requested = Math.min(Number(limit) || 25, 50);
       const wanted = Math.min(requested, REST_SCAN_CAP);
       const ids = await guarded(() => client.searchIssues(projectKey, wanted), { timeoutMs: timeoutMs * 2 });
-      const out = await mapLimit((ids || []).slice(0, wanted), concurrency, (id) => this.getBundle(id, opts));
+      const out = await mapLimit((ids || []).slice(0, wanted), concurrency, (id) => this.getBundle(id, { ...opts, scan: true }));
       // 预算写在结果上，而不是藏在注释里：聚合层、payload、界面都要能说出"这次只算了 8 条"。
       out.scan = {
         source: 'rest',

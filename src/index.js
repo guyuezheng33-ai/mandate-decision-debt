@@ -32,6 +32,12 @@ const ACTIONS = ['getIssueProvenance', 'listContextDebt', 'traceDrift', 'stampMa
 const CACHE = createCache({ ttlMs: 60_000, max: 200 });
 
 function buildPort(context) {
+  // 依赖注入缝：离线复现 / 四端一致性矩阵可注入满足端口契约的实现。
+  // Forge 运行时的 context 不带 evidencePort，生产路径不变。
+  const injected = context?.evidencePort;
+  if (injected && typeof injected.getBundle === 'function' && typeof injected.status === 'function') {
+    return injected;
+  }
   const scopes = (context?.scopes || []).map(String);
 
   // 面板进来时 context 里可能带 product client；Rovo action / MCP 的 context 里没有，

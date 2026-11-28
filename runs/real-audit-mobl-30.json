@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-28T08:18:20.497Z",
+  "generatedAt": "2026-11-28T08:46:14.566Z",
   "site": "https://one-atlas-ngpq.atlassian.net",
   "project": "MOBL",
   "sample": {
@@ -3996,7 +3996,7 @@
       "approvedAt": null,
       "daysOld": null,
       "record": "Page",
-      "debt": 0,
+      "debt": null,
       "grade": "unknown",
       "p2": {
         "state": "unknown",

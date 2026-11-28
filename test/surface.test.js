@@ -88,7 +88,9 @@ test('同一条工作项：面板 / resolver / agent / MCP 四个入口的判决
   }
 
   const base = comparable(viaResolver);
-  assert.equal(typeof base.debt, 'number');
+  // 发布口径：grade unknown = NO SCORE → debt 必须是 null，不是 0（0 会被误读成健康）。
+  if (base.grade === 'unknown') assert.equal(base.debt, null);
+  else assert.equal(typeof base.debt, 'number');
   for (const [name, out] of [
     ['panel', viaPanel],
     ['agent', viaAgent],

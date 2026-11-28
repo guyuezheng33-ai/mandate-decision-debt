@@ -110,7 +110,9 @@ function compactIssue(summary, { maxFlags = 6 } = {}) {
     summary: clip(summary.summary),
     status: summary.status,
     profile: summary.profile,
-    debt: summary.debt,
+    // 发布口径与项目行一致：grade unknown = NO SCORE，debt 发 null 不发 0。
+    // 0 会被 agent/评审误读成"很健康"；内部下界仍留在 summarize 里供审计。
+    debt: summary.grade === 'unknown' ? null : summary.debt,
     grade: summary.grade,
     authority: compactAuthority(summary.authority),
     // 三个入口（面板 / agent / MCP）必须能对"这条只判了一半"说同一句话，

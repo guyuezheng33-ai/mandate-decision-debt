@@ -53,6 +53,8 @@ Rules that make the number defensible:
    property test asserts it can never happen.
 3. **Ordinal index, not probability.** `28` means "watch, with these named missing
    conditions", never "28% chance of failure". Bands are the decision unit.
+   Publication rule: when `grade = unknown` (NO SCORE), every surface publishes
+   `debt = null`, never `0` — a zero would be misread as "healthy".
 4. **One engine, four surfaces.** Panel, Rovo agent, MCP tools and the REST audit call the
    same actions; the agent restates rows and is forbidden by prompt from computing a score.
 5. **Propagation is a diff, not a threshold on age.** P2 fires when
@@ -70,7 +72,7 @@ with prose.
 |---|---|---|---|
 | F1 | score can never exceed its structural ceiling | any bundle scoring above the lens ceiling | `npm test` (property suite) |
 | F2 | a missing field can never become "no finding" | P2 `clear` when the record has no readable date | `node --test test/p2-live-evidence.test.js` |
-| F3 | the four surfaces agree on one bundle | any debt / grade / criteria mismatch across surfaces | `npm run verify` (agent-entry + shape suites); `docs/surface-matrix.md` when present |
+| F3 | the four surfaces agree on one bundle | any debt / grade / criteria mismatch across surfaces | `npm run verify`; `npm run matrix` (fixture) and `ISSUE=MOBL-57 MODE=live npm run matrix` (live, needs `JIRA_TOKEN`) → `docs/surface-matrix.md` / `docs/surface-matrix-live.md` |
 | F4 | the live audit is reproducible | MOBL 30-item run not reproducing 28 missing / 1 stale / 1 unscorable, or P2 fully `unknown` | `LIMIT=30 OUT=runs/real-audit-mobl-30.json P2_ASSERT=judged node scripts/real-audit.js` (needs `JIRA_TOKEN`) |
 | F5 | scoring stays inside the latency budget | P50 above 300 ms | `npm run bench` |
 | F6 | weights are defensible under ±20% perturbation | top-5 ranking flips under perturbation | **not yet automated — claim withheld.** `npm run eval` currently reports date-robustness (P2 flip rate) and a holdout split, not weight sensitivity. Until a weight-sensitivity runner exists, no precision claim rests on F6. |
@@ -112,6 +114,7 @@ Commands, in order of strength:
 
 ```bash
 npm run check        # 12-gate local proof: tests ×2, corpus bytes ×2, bench, docs, submission
+npm run matrix       # four-surface equality matrix (fixture); MODE=live for the real tenant
 npm run corpus       # regenerate corpus report from the 26 simulated files
 npm run probe        # sha256 re-verification of corpus provenance
 npm run eval         # date-robustness + holdout report (not weight sensitivity, see F6)

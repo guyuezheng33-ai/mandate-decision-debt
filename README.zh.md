@@ -85,7 +85,7 @@ Mandate 是一个 Forge 应用：审计每条 Jira 工作项背后的授权边�
 ## 跑起来（不需要 Forge CLI，不需要站点）
 
 ```bash
-npm run verify       # 217 条断言，输出一行结论
+npm run verify       # 221 条断言，输出一行结论
 npm run seed:dry     # 自检 seed 判定器（虚构样本）
 npm run preview      # 生成 preview/panel.html，双击即看
 npm run ui:build     # 打包真正的 Forge 面板 UI（esbuild）
@@ -119,7 +119,7 @@ verify 2026-11-20  agent-entry 15/15  cache 4/4  chain 7/7  compact 10/10  contr
                    data-inbox 10/10  entry 9/9  golden 2/2  grade-floor 6/6  graph-fields 3/3
                    hardening 11/11  hydrate-batch 6/6  ports 20/20  profiles 4/4  property 4/4
                    robustness 3/3  rules 27/27  score 7/7  surface 4/4  tri 6/6  write 8/8
-                   |  total 217/217  => PASS
+                   |  total 221/221  => PASS
 bench  500 items × 3 lenses · 1500 scores · p50 30.6ms（min 28.7 / max 42.7，7 轮，预算 300ms）· aggregate 927KB → project payload 3KB（上限 200KB）
        issue payload max 2KB · single-score p95 0.08ms
 ```
@@ -149,7 +149,7 @@ src/
 ├─ agent/      Rovo agent 提示词 + 三个 action handler（与面板同一契约）
 ├─ ui/         Forge 面板 + 项目页（自定义 UI，esbuild 打包）
 └─ fixtures/   KAN-3 漂移 · KAN-7 冲突 · KAN-9 无依据 · KAN-11 全不可知 · KAN-20 口径差异
-test/          217 条断言（rules · tri · profiles · score · compact · ports · chain · entry · agent-entry · copy · hardening · write · robustness · golden · cache · property · contract · surface · data-inbox · grade-floor · graph-fields · hydrate-batch）
+test/          221 条断言（rules · tri · profiles · score · compact · ports · chain · entry · agent-entry · copy · hardening · write · robustness · golden · cache · property · contract · surface · data-inbox · grade-floor · graph-fields · hydrate-batch）
 verify.js      一条命令跑完
 ```
 

@@ -46,7 +46,9 @@ test('MCP 调用 getIssueProvenance 能跑通并返回可读结果（注入 jira
   const r = await handlers.getIssueProvenance({ issueKey: 'KAN-3' }, context);
   assert.equal(r.ok, true);
   assert.equal(r.issueKey, 'KAN-3');
-  assert.equal(typeof r.debt, 'number');
+  // NO SCORE（grade unknown）发布 null；其余情况 debt 是数字下界。
+  if (r.grade === 'unknown') assert.equal(r.debt, null);
+  else assert.equal(typeof r.debt, 'number');
   assert.equal(r.source, 'rest');
   assert.ok(r.degraded === null || typeof r.degraded === 'object');
 });
