@@ -95,7 +95,7 @@ In one line: **it never reports "not there" when the truth is "could not see".**
 ## Run it (no Forge CLI, no site required)
 
 ```bash
-npm run verify       # 213 assertions, one line of output
+npm run verify       # 217 assertions, one line of output
 npm run seed:dry     # self-test for the seed grader (fictional samples)
 npm run preview      # renders preview/panel.html — open it in a browser
 npm run ui:build     # bundles the real Forge panel UI (esbuild)
@@ -132,7 +132,7 @@ verify 2026-11-20  agent-entry 15/15  cache 4/4  chain 7/7  compact 10/10  contr
                    data-inbox 10/10  entry 9/9  golden 2/2  grade-floor 6/6  graph-fields 3/3
                    hardening 11/11  hydrate-batch 6/6  ports 20/20  profiles 4/4  property 4/4
                    robustness 3/3  rules 27/27  score 7/7  surface 4/4  tri 6/6  write 8/8
-                   |  total 213/213  => PASS
+                   |  total 217/217  => PASS
 bench  500 items × 3 lenses · 1500 scores · p50 30.6ms (min 28.7 / max 42.7, 7 rounds, budget 300ms) · aggregate 927KB → project payload 3KB (cap 200KB)
        issue payload max 2KB · single-score p95 0.08ms
 ```
@@ -162,7 +162,7 @@ src/
 ├─ agent/      Rovo agent prompt + the three action handlers (same contract as the panel)
 ├─ ui/         the Forge panel + project page (custom UI, bundled with esbuild)
 └─ fixtures/   KAN-3 drift · KAN-7 conflict · KAN-9 no mandate · KAN-11 all unknown · KAN-20 lens difference
-test/          213 assertions (rules · tri · profiles · score · compact · ports · chain · entry · agent-entry · copy · hardening · write · robustness · golden · cache · property · contract · surface · data-inbox · grade-floor · graph-fields · hydrate-batch)
+test/          217 assertions (rules · tri · profiles · score · compact · ports · chain · entry · agent-entry · copy · hardening · write · robustness · golden · cache · property · contract · surface · data-inbox · grade-floor · graph-fields · hydrate-batch)
 verify.js      one command for everything
 ```
 

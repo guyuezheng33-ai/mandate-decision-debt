@@ -32,6 +32,7 @@ const FILES = [
   path.join(DESKTOP, '07_Devpost提交稿.md'),
   path.join(DESKTOP, '09_数据包回灌_变更说明.md'),
   path.join(ROOT, 'docs', 'data-inbox-verification.md'),
+  path.join(ROOT, 'docs', 'STATUS.md'),
 ];
 
 function runVerify() {
@@ -112,6 +113,21 @@ for (const line of report) console.log(line);
   const text = fs.existsSync(methodPath) ? fs.readFileSync(methodPath, 'utf8') : '';
   const r = methodDocCheck(text);
   console.log(`${r.status === 'PASS' ? 'ok     ' : 'DRIFT  '} docs/METHOD.md  ${r.detail}`);
+  if (r.status !== 'PASS') drift += 1;
+}
+
+// D8 · 状态基线：STATUS.md 为单一事实源，00/07/10 必须引用且无相反陈述
+{
+  const { statusBaselineCheck } = require('./doc-structure');
+  const readIf = (p) => (fs.existsSync(p) ? fs.readFileSync(p, 'utf8') : '');
+  const statusText = readIf(path.join(ROOT, 'docs', 'STATUS.md'));
+  const docs = [
+    { name: '00', text: readIf(path.join(DESKTOP, '00_你手上的事_操作手册.md')) },
+    { name: '07', text: readIf(path.join(DESKTOP, '07_Devpost提交稿.md')) },
+    { name: '10', text: readIf(path.join(DESKTOP, '10_评审打分表.md')) },
+  ];
+  const r = statusBaselineCheck(statusText, docs);
+  console.log(`${r.status === 'PASS' ? 'ok     ' : 'DRIFT  '} docs/STATUS.md  ${r.detail}`);
   if (r.status !== 'PASS') drift += 1;
 }
 
