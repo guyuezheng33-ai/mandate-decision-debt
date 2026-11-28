@@ -1,6 +1,6 @@
 # Surface matrix · 四端一致性（D7）
 
-Generated: 2026-11-28T08:45:04.549Z · mode: **fixture** · issue: **KAN-3** · profile: software
+Generated: 2026-11-28T09:04:17.091Z · mode: **fixture** · issue: **KAN-3** · profile: software
 
 同一 issue 经 panel / agent / mcp / audit 四条入口，逐字段比 debt / grade / criteria / coverage。
 任一字段不等即 FAIL（`node tools/surface-matrix.js` 退出码 1）。
