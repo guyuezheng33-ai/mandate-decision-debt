@@ -136,7 +136,7 @@ function createActions({ evidencePort, repairPort = null, defaultProfile = 'soft
       const decided = maxDecided(edge.items);
       const started = parseDate(bundle.inProgressSince) ?? parseDate(bundle.createdAt);
       if (decided == null || started == null) {
-        return { ok: true, issueKey, drifting: false, reason: 'INSUFFICIENT_TIMESTAMPS', decidedAt: null };
+        return { ok: true, issueKey, drifting: false, reason: 'INSUFFICIENT_TIMESTAMPS', decidedAt: null, source: bundle.source };
       }
       const confirmed = parseDate(bundle.lastConfirmAt);
       const propagated = confirmed != null && confirmed >= decided;
@@ -147,6 +147,7 @@ function createActions({ evidencePort, repairPort = null, defaultProfile = 'soft
         ok: true,
         issueKey,
         profile: p.key,
+        source: bundle.source,
         timezoneNote: 'UTC',
         drifting,
         decidedAt: new Date(decided).toISOString(),

@@ -14,6 +14,8 @@
  *   5. banned      没有样本支撑的百分比、或"真实客户"类说法
  *   6. video       脚本时长 ≤ 5:00，且首帧在 Jira
  *   7. access      评审真的点得开（安装链接不是占位符）
+ *   8. videoHost   Video 字段必须是 YouTube 公开链接（拒 catbox/Vimeo/Unlisted）
+ *   9. sourceHonesty MCP 示例响应块必须自报 source；fixture 不许被称 live
  *
  * 退出码：0 = PASS 或只剩账号项（TODO）；1 = 有自相矛盾/假 claim（FAIL）
  *   node tools/submission-check.js
@@ -45,6 +47,8 @@ const verification = read('docs/verification.md');
 
 const countMatch = verification.match(/(\d+)\s+assertions\s+·\s+all passing/);
 const VERIFY = countMatch ? Number(countMatch[1]) : null;
+
+const { videoHostCheck, sourceHonestyCheck } = require('./submission-rules');
 
 // 1) 断言数：提交面文档里任何 "N assertions / N 条断言" 都必须等于证明文件的数字
 {
@@ -163,6 +167,18 @@ const VERIFY = countMatch ? Number(countMatch[1]) : null;
   const row = devpost.split(/\r?\n/).find((l) => l.trim().startsWith('| Try it out |')) || '';
   const usable = /https?:\/\/\S+/.test(row) && !/\[/.test(row);
   record('access', usable ? 'PASS' : 'TODO', usable ? '安装/试用链接已填' : '安装链接仍是占位符（Stage One 风险）');
+}
+
+// 8) 视频托管：官方要 public 视频；catbox/Vimeo/Unlisted 一律拒绝（D6）
+{
+  const r = videoHostCheck(devpost, script);
+  record('videoHost', r.status, r.detail);
+}
+
+// 9) 来源诚实：MCP 示例的每个响应块自报 source；fixture 不许被散文称 live（D6）
+{
+  const r = sourceHonestyCheck(read('docs/mcp-examples.md'));
+  record('sourceHonesty', r.status, r.detail);
 }
 
 const width = Math.max(...rows.map((r) => r.name.length));

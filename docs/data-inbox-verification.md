@@ -89,7 +89,7 @@ portfolio `13`（drivers P2 84 / P4 52）。
 
 `certainty 0.90` 不是瑕疵，是披露：REST 拿不到重开历史，P5 永远缺一条，
 所以项目页写"4 条带缺口 · 确定度 47%"这类话，而不是把 16 分当成完整结论。
-`inbox/project` 与 `hydrate-batch` 共 195 条断言把这个行为钉住，
+`inbox/project` 与 `hydrate-batch` 共 205 条断言把这个行为钉住，
 其中一条专门断言"失败后不许退化成 N 次单条补水"。
 
 同一页在**21 条 seed** 上（`preview/ui-harness.html?sample=seed`）的实测：
@@ -118,7 +118,7 @@ scale : 120 条 · p50 页=1 p90=1 · REST cap 8 会漏 112
 
 ## 6. 现在的断言账
 
-`npm run verify`：**195 条**，其中数据包这一轮新增 9 条（`data-inbox` 10、`hydrate-batch` 6、
+`npm run verify`：**205 条**，其中数据包这一轮新增 9 条（`data-inbox` 10、`hydrate-batch` 6、
 `graph-fields` 3、`grade-floor` 6、`agent-entry` +2、`compact` +1）：
 
 | 组 | 条数 | 钉住的是什么 |

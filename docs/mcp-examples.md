@@ -180,6 +180,7 @@ Response:
   "ok": true,
   "issueKey": "KAN-3",
   "profile": "software",
+  "source": "fixture",
   "timezoneNote": "UTC",
   "drifting": true,
   "decidedAt": "2026-08-14T06:00:00.000Z",
