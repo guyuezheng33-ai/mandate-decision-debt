@@ -181,4 +181,4 @@ async function main() {
 
 if (require.main === module) main().catch((err) => { console.error(err); process.exit(1); });
 
-module.exports = { runMatrix, projection, diffProjections, render };
+module.exports = { runMatrix, projection, diffProjections, render, liveClient };

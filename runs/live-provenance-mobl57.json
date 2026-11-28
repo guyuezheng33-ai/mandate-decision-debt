@@ -1,0 +1,110 @@
+{
+  "ok": true,
+  "issueKey": "MOBL-57",
+  "summary": "Compliance",
+  "status": "待办",
+  "profile": "software",
+  "debt": 0,
+  "grade": "watch",
+  "authority": {
+    "state": "present",
+    "verdict": "stale",
+    "owner": "712020:9b024745-5dbc-43d3-8abb-191fc6ea4527",
+    "ownerName": "Alana Grant",
+    "title": "Product requirements — approval record",
+    "url": "https://one-atlas-ngpq.atlassian.net/browse/MDEMO-2",
+    "updatedAt": "2022-03-26T00:00:00.000Z",
+    "lastConfirmAt": null,
+    "daysSinceUpdate": 1703,
+    "daysWithoutConfirm": 1703,
+    "contributors": 1,
+    "decisionCount": 2
+  },
+  "partial": true,
+  "unknownPrims": [
+    "P1",
+    "P3",
+    "P4",
+    "P5",
+    "P6"
+  ],
+  "certainty": 0.21,
+  "thin": true,
+  "flagCount": 0,
+  "flags": [],
+  "suppressed": [
+    {
+      "p": "P1",
+      "why": "unknown:goals"
+    },
+    {
+      "p": "P3",
+      "why": "insufficient:decisions-no-owner"
+    },
+    {
+      "p": "P4",
+      "why": "unknown:goals"
+    },
+    {
+      "p": "P5",
+      "why": "insufficient:issue-no-reopen-count"
+    },
+    {
+      "p": "P6",
+      "why": "unknown:reviewTraces"
+    }
+  ],
+  "criteria": [
+    {
+      "p": "P1",
+      "w": 25,
+      "state": "unknown",
+      "label": "No mandate",
+      "why": "goals"
+    },
+    {
+      "p": "P2",
+      "w": 20,
+      "state": "clear",
+      "label": "Change not propagated",
+      "why": null
+    },
+    {
+      "p": "P3",
+      "w": 15,
+      "state": "unknown",
+      "label": "Conflicting mandates",
+      "why": "decisions-no-owner"
+    },
+    {
+      "p": "P4",
+      "w": 18,
+      "state": "unknown",
+      "label": "Goal drift",
+      "why": "goals"
+    },
+    {
+      "p": "P5",
+      "w": 10,
+      "state": "unknown",
+      "label": "Re-litigation",
+      "why": "issue-no-reopen-count"
+    },
+    {
+      "p": "P6",
+      "w": 8,
+      "state": "unknown",
+      "label": "Single author, no review",
+      "why": "reviewTraces"
+    }
+  ],
+  "coverage": {
+    "known": 1,
+    "total": 3,
+    "ratio": 0.3333333333333333
+  },
+  "source": "rest",
+  "degraded": null,
+  "fingerprint": "dd-6e2c9910",
+  "canWrite": false
+}

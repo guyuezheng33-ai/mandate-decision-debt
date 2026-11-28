@@ -102,6 +102,79 @@ Two things to notice, because they are the difference between a tool and a text 
   `thin: true` is required to say "under half the weight was judged" and must not print a grade —
   the panel prints `PARTIAL` in exactly the same case, so the two surfaces cannot disagree.
 
+## Call 1b — the same tool on a live tenant (REST capture, 2026-11-28)
+
+The block above is the fixture port. This one is a **real capture** from the seeded demo
+tenant `one-atlas-ngpq.atlassian.net`, produced by the same action over the REST port on
+2026-11-28. Full unabridged payload: `runs/live-provenance-mobl57.json`; the 30-item run it
+belongs to is `runs/real-audit-mobl-30.json` (28 missing / 1 stale / 1 unscorable).
+
+Request:
+
+```json
+{ "name": "get-issue-provenance", "arguments": { "issueKey": "MOBL-57", "profile": "software" } }
+```
+
+Response (abridged; `source: "rest"` is the live REST port, not a fixture):
+
+```json
+{
+  "ok": true,
+  "issueKey": "MOBL-57",
+  "summary": "Compliance",
+  "profile": "software",
+  "debt": 0,
+  "grade": "watch",
+  "authority": {
+    "state": "present",
+    "verdict": "stale",
+    "ownerName": "Alana Grant",
+    "title": "Product requirements — approval record",
+    "url": "https://one-atlas-ngpq.atlassian.net/browse/MDEMO-2",
+    "updatedAt": "2022-03-26T00:00:00.000Z",
+    "lastConfirmAt": null,
+    "daysSinceUpdate": 1703,
+    "daysWithoutConfirm": 1703,
+    "decisionCount": 2
+  },
+  "partial": true,
+  "certainty": 0.21,
+  "thin": true,
+  "flagCount": 0,
+  "flags": [],
+  "criteria": [
+    { "p": "P1", "w": 25, "state": "unknown", "why": "goals" },
+    { "p": "P2", "w": 20, "state": "clear", "why": null },
+    { "p": "P3", "w": 15, "state": "unknown", "why": "decisions-no-owner" },
+    { "p": "P4", "w": 18, "state": "unknown", "why": "goals" },
+    { "p": "P5", "w": 10, "state": "unknown", "why": "issue-no-reopen-count" },
+    { "p": "P6", "w": 8,  "state": "unknown", "why": "reviewTraces" }
+  ],
+  "coverage": { "known": 1, "total": 3, "ratio": 0.33 },
+  "source": "rest",
+  "degraded": null,
+  "fingerprint": "dd-6e2c9910",
+  "canWrite": false
+}
+```
+
+Three things this live block proves that a fixture cannot:
+
+- The hero fact is real: an approval dated 2022-03-26, owner Alana Grant, **1,703 days**
+  without re-confirmation, read from a Jira-native approval record (`MDEMO-2`) — no
+  cross-product Confluence token involved.
+- `debt: 0` with `grade: "watch"` is not a contradiction: no criterion *hit*, but the
+  authority verdict is `stale`, and the grade floor refuses to print "healthy" over a
+  1,703-day-old approval. `thin: true` and `certainty: 0.21` force the agent to disclose
+  that only one of six criteria could be judged on REST.
+- `P2: clear` here is honest, not a miss: the record's server-side edit (2026-11-23) is
+  newer than the work start, and the audit's `asOf` has not yet aged past the 14-day drift
+  threshold. A hit becomes observable once the edit ages past the threshold — the engine
+  does not invent one to make the demo exciting.
+
+A TWG-port capture (`source: "twg"`) requires the Forge runtime on the installed site and
+is pending; until then this page labels every block with its true port.
+
 ## Call 2 — `list-context-debt` (the one with a budget)
 
 Request:
@@ -217,7 +290,12 @@ and they would drift apart.
 npm run manifest        # 3 actions · 4 functions · 4 scopes, tools = action keys
 npm run verify          # agent-entry: payload shape accepted, accountId taken from context
 npm run harness         # local panel, same payloads as above
+npm run matrix          # four-surface equality, fixture; MODE=live ISSUE=MOBL-57 for the tenant
 ```
+
+The live block in Call 1b was produced with `JIRA_TOKEN` set, via
+`buildActions({ jira: liveClient() }).getIssueProvenance(...)` (see `tools/surface-matrix.js`),
+and saved unmodified to `runs/live-provenance-mobl57.json`.
 
 The MCP endpoint above is Atlassian's, not ours; if their URL changes, this page changes with
 it and nothing in the app does.
