@@ -1,7 +1,9 @@
 # Product definition — Mandate
 
 > Canonical definition for judges and for the engine. If a sentence here conflicts with
-> marketing copy, this file wins.
+> marketing copy, this file wins. The citable method note (formal model, falsifiable
+> conditions, reproduction kit) is `docs/METHOD.md`; named competitor checks are in
+> `docs/COMPETITORS.md`.
 
 ## 1. One sentence
 
@@ -75,6 +77,7 @@ not probability. A weight change must be justified by a sensitivity run (see §6
 
 **Category to own:** authority audit / decision provenance for software delivery.
 **Not the category:** another Jira dashboard, another compliance checklist, another chat agent.
+Named, URL-checked neighbours (Group Sign-Off / Approval Path / SealDoc): `docs/COMPETITORS.md`.
 
 ## 5. User and value
 
@@ -105,7 +108,7 @@ A claim about precision, competitiveness or value is only valid if one of these 
 | Refusal to fake | `unknown` never triggers; no known edge → no score; covered by tests |
 | Competitiveness | the five-neighbour table above; four surfaces return one JSON shape |
 | Value | 1–3 real delivery-lead sessions; seed sheet filled by the user; no fabricated quotes or percentages |
-| Reproducibility | `npm run check`, `npm run eval`, `npm run eval:incremental`; 187 assertions |
+| Reproducibility | `npm run check`, `npm run eval`, `npm run eval:incremental`; the live assertion count is in `docs/verification.md` |
 
 If the sensitivity run flips the top-5 ranking, the weights are not yet defensible; fix the
 weights or narrow the claim. If no real session exists, the value claim stays at “problem

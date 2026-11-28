@@ -104,8 +104,19 @@ for (const file of FILES) {
 
 console.log(`verify ${passed}/${total} · ${Object.keys(suites).length} suites`);
 for (const line of report) console.log(line);
+
+// D9 · 结构断言：METHOD.md 必须可独立引用（缺章节 = 漂移，--check 时 FAIL）
+{
+  const { methodDocCheck } = require('./doc-structure');
+  const methodPath = path.join(ROOT, 'docs', 'METHOD.md');
+  const text = fs.existsSync(methodPath) ? fs.readFileSync(methodPath, 'utf8') : '';
+  const r = methodDocCheck(text);
+  console.log(`${r.status === 'PASS' ? 'ok     ' : 'DRIFT  '} docs/METHOD.md  ${r.detail}`);
+  if (r.status !== 'PASS') drift += 1;
+}
+
 if (CHECK && drift > 0) {
-  console.error(`\n${drift} 个文件的断言数与实际不符：跑 node tools/sync-counts.js 回填。`);
+  console.error(`\n${drift} 处文档漂移（断言数或 METHOD.md 结构）：数字跑 node tools/sync-counts.js 回填；结构缺章节须补写 docs/METHOD.md。`);
   process.exit(1);
 }
 console.log(CHECK ? '\n文档与断言数一致。' : `\n回填完成：${drift} 个文件。`);
